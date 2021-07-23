@@ -20,12 +20,12 @@ function App() {
           : "Move your mouse around."}
       </h1>
       <SampleVideoFrame
-        pos={{x:10, y:10}}
+        initPos={{x:10, y:10}}
         screenSize={{height, width}}
         src="video/mov_bbb.mp4"
       />
       <SampleVideoFrame
-        pos={{x:200, y:180}}
+        initPos={{x:200, y:180}}
         screenSize={{height, width}}
         src="video/mov_bbb.mp4"
       />
