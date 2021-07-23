@@ -1,6 +1,6 @@
 import './App.css';
 import SampleVideoFrame from './components/SampleVideoFrame';
-import useWindowDimensions from './components/useWindowDimensions'
+import useWindowDimensions from './hooks/useWindowDimensions'
 
 function App() {
   const { height, width } = useWindowDimensions();
