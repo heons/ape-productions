@@ -10,10 +10,11 @@ const computeSizeFromWidth = (size, width) => {
   }
 }
 
-const SampleVideoFrame = ({ src, screenSize, initPos, isMouseOver }) => {
+const SampleVideoFrame = ({ src, screenSize, initPos }) => {
   // const [naturalSize, setNaturalSize] = useState({width: 300, height: 200});
   const [naturalSize, setNaturalSize] = useState({width: 100, height: 100});
-  
+  const [isMouseOver, setIsMouseOver] = useState(false);
+
   const size = computeSizeFromWidth(naturalSize, screenSize.width);
 
   const styles = {
@@ -40,6 +41,8 @@ const SampleVideoFrame = ({ src, screenSize, initPos, isMouseOver }) => {
           const { videoWidth, videoHeight } = response.target;      
           setNaturalSize({width: videoWidth, height: videoHeight});
         }}
+        onMouseOver={() => setIsMouseOver(true)}
+        onMouseLeave={() => setIsMouseOver(false)}
       >
         Your browser does not support the HTML5 Video element.
       </video>
