@@ -10,7 +10,7 @@ const computeSizeFromWidth = (size, width) => {
   }
 }
 
-const SampleVideoFrame = ({ src, screenSize, initPos }) => {
+const SampleVideoFrame = ({ src, screenSize, initPos, addPos }) => {
   // const [naturalSize, setNaturalSize] = useState({width: 300, height: 200});
   const [naturalSize, setNaturalSize] = useState({width: 100, height: 100});
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -20,14 +20,14 @@ const SampleVideoFrame = ({ src, screenSize, initPos }) => {
   const styles = {
     opacity: isMouseOver ? 1 : 0.5,
     position: 'absolute',
-    top: Math.round(initPos.y * size.ratio),    // computed based on child and parent's height
-    left: Math.round(initPos.x * size.ratio)   // computed based on child and parent's width
+    top: Math.round(initPos.y * size.ratio + addPos.y),    // computed based on child and parent's height
+    left: Math.round(initPos.x * size.ratio + addPos.x)   // computed based on child and parent's width
   };
 
   // useEffect(() => {
   //   setSize(computeSizeFromWidth(size, screenSize.width));
   // }, [screenSize]);
-  
+
 
   return (
     <div>
