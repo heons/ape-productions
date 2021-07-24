@@ -4,9 +4,14 @@ import { useState, useEffect } from "react";
 
 const useMousePosition = () => {
   const [mousePosition, setMousePosition] = useState({ x: null, y: null });
+  const [mouseSpeed, setMouseSpeed] = useState({ x: 0, y: 0 });
 
   const updateMousePosition = ev => {
     setMousePosition({ x: ev.x, y: ev.y });
+    setMouseSpeed({
+      x: ev.movementX,
+      y: ev.movementY,
+    });
   };
 
   useEffect(() => {
@@ -15,7 +20,7 @@ const useMousePosition = () => {
     return () => window.removeEventListener("mousemove", updateMousePosition);
   }, []);
 
-  return mousePosition;
+  return { mousePosition, mouseSpeed };
 };
 
 export default useMousePosition;
