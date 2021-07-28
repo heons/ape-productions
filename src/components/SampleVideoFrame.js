@@ -1,3 +1,6 @@
+// Reference: For the animations - https://css-tricks.com/using-multi-step-animations-transitions/
+
+
 import React from 'react'
 import { useState, useRef } from 'react';
 import styled from 'styled-components';
