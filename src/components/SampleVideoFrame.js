@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 
 const computeSizeFromWidth = (size, width) => {
-  const ratio = width / 800;
+  const ratio = width / 1024;
   return {
     width: Math.round(size.width * ratio),
     height: Math.round(size.height * ratio),
