@@ -15,7 +15,7 @@ const Home = () => {
     const targetPos1 = useRef({x: 0, y: 0});
     const targetPos2 = useRef({x: 0, y: 0});
   
-    const hasMovedCursor = typeof mousePosition.x === "number" && typeof mousePosition.y === "number";
+    // const hasMovedCursor = typeof mousePosition.x === "number" && typeof mousePosition.y === "number";
   
     artists.current = artists.current.map((artist) => {
         return {
@@ -43,11 +43,11 @@ const Home = () => {
     
     return (
         <div>
-            <h1>
+            {/* <h1>
                 {hasMovedCursor
                 ? `Your cursor is at ${mousePosition.x}, ${mousePosition.y}.`
                 : "Move your mouse around."}
-            </h1>
+            </h1> */}
             {artists.current.map((artist) => (
                 <SampleVideoFrame
                     key={artist.title}
