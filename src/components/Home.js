@@ -49,6 +49,7 @@ const Home = () => {
     };
 
     const [ title, setTitle ] = useState('');
+    // TODO: Change name.
     const onMouseOver = useCallback(newTitle => setTitle(newTitle), [setTitle]);
     
     return (

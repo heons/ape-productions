@@ -58,11 +58,16 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
           }}
           onMouseOver={
             () => {
-              setIsMouseOver(true)
-              onMouseOver(artist.title)
+              setIsMouseOver(true);
+              onMouseOver(artist.title);
             }
           }
-          onMouseLeave={() => setIsMouseOver(false)}
+          onMouseLeave={
+            () => {
+              setIsMouseOver(false);
+              onMouseOver("");
+            }
+          }
         >
           Your browser does not support the HTML5 Video element.
         </video>
