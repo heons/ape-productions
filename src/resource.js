@@ -17,7 +17,7 @@ const getInitArtists = () => {
                     url: 'https://vimeo.com/manage/videos/493064042'
                 },
             ],
-            sampleVideoSrc: 'video/mov_bbb.mp4',
+            sampleVideoSrc: 'video/APE_A_pictures_book_makers.webm',
             initPos: {
                 x: 0,
                 y: 0
@@ -37,7 +37,7 @@ const getInitArtists = () => {
                     url: 'https://vimeo.com/manage/videos/379467383',
                 },
             ],
-            sampleVideoSrc: 'video/mov_bbb.mp4',
+            sampleVideoSrc: 'video/APE_ADIDAS_x_EYESMAG.webm',
             initPos: {
                 x: 300,
                 y: 0
@@ -57,7 +57,7 @@ const getInitArtists = () => {
                     url: 'https://vimeo.com/manage/videos/406102148',
                 },
             ],
-            sampleVideoSrc: 'video/mov_bbb.mp4',
+            sampleVideoSrc: 'video/APE_musinsa adidas_ape.webm',
             initPos: {
                 x: 600,
                 y: 0
@@ -77,7 +77,7 @@ const getInitArtists = () => {
                     url: 'https://vimeo.com/manage/videos/379467842',
                 },
             ],
-            sampleVideoSrc: 'video/mov_bbb.mp4',
+            sampleVideoSrc: 'video/APE_DEMI_FASHION_FILM.webm',
             initPos: {
                 x: 900,
                 y: 0
@@ -101,7 +101,7 @@ const getInitArtists = () => {
                     url: 'https://vimeo.com/manage/videos/394382257',
                 },
             ],
-            sampleVideoSrc: 'video/mov_bbb.mp4',
+            sampleVideoSrc: 'video/APE_JINBOTHESUPERFREAK.webm',
             initPos: {
                 x: 100,
                 y: 250
