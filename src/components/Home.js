@@ -40,6 +40,13 @@ const Home = () => {
         x: -(mousePosition.x - width/2) + width/50,
         y: -(mousePosition.y - height/2) + height/50
     };
+
+    const stylesTitle = {
+        position: 'absolute',
+        color: 'white',
+        top: `${height - 80}px`,
+        left: '10px',
+    };
     
     return (
         <div>
@@ -57,6 +64,9 @@ const Home = () => {
                     targetPos={artist.group === 'group1' ? targetPos1.current : targetPos2.current}
                 />
             ))}
+            <h1 style={stylesTitle}>
+                This is title.
+            </h1>
         </div>
     );
 }
