@@ -62,9 +62,7 @@ const Home = () => {
                 <SampleVideoFrame
                     key={artist.title}
                     artist = {artist}
-                    src={artist.sampleVideoSrc}
                     screenSize={{height, width}}
-                    initPos={artist.seedPos}
                     targetPos={artist.group === 'group1' ? targetPos1.current : targetPos2.current}
                     onMouseOver={onMouseOver}
                 />

@@ -21,12 +21,12 @@ const MoveDivWrap = styled.div`
   transform: translate(${props => props.endPos.x}px, ${props => props.endPos.y}px);
 `;
 
-const SampleVideoFrame = ({ artist, src, screenSize, initPos, targetPos, onMouseOver }) => {
+const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
   // const [naturalSize, setNaturalSize] = useState({width: 300, height: 200});
   const [naturalSize, setNaturalSize] = useState({width: 100, height: 100});
   const [isMouseOver, setIsMouseOver] = useState(false);
 
-  const newTargetPos = useRef({...initPos});
+  const newTargetPos = useRef({...artist.seedPos});
 
   const size = computeSizeFromWidth(naturalSize, screenSize.width);
 
@@ -38,8 +38,8 @@ const SampleVideoFrame = ({ artist, src, screenSize, initPos, targetPos, onMouse
   const ACT_RESOLUTION = 10;
   if(Math.round(targetPos.x) % ACT_RESOLUTION === 0) {
     newTargetPos.current = {
-      x: targetPos.x + initPos.x,
-      y: targetPos.y + initPos.y,
+      x: targetPos.x + artist.seedPos.x,
+      y: targetPos.y + artist.seedPos.y,
     };
   }
   
@@ -47,7 +47,7 @@ const SampleVideoFrame = ({ artist, src, screenSize, initPos, targetPos, onMouse
     <div>
       <MoveDivWrap endPos={newTargetPos.current}>
         <video
-          src={src}
+          src={artist.sampleVideoSrc}
           width={size.width}
           height={size.height}
           style={styles}
