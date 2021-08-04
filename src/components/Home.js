@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useRef } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import SampleVideoFrame from './SampleVideoFrame';
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
@@ -47,6 +47,9 @@ const Home = () => {
         top: `${height - 80}px`,
         left: '10px',
     };
+
+    const [ title, setTitle ] = useState('');
+    const onMouseOver = useCallback(newTitle => setTitle(newTitle), [setTitle]);
     
     return (
         <div>
@@ -58,14 +61,16 @@ const Home = () => {
             {artists.current.map((artist) => (
                 <SampleVideoFrame
                     key={artist.title}
+                    artist = {artist}
                     src={artist.sampleVideoSrc}
                     screenSize={{height, width}}
                     initPos={artist.seedPos}
                     targetPos={artist.group === 'group1' ? targetPos1.current : targetPos2.current}
+                    onMouseOver={onMouseOver}
                 />
             ))}
             <h1 style={stylesTitle}>
-                This is title.
+                {title}
             </h1>
         </div>
     );

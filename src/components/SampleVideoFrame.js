@@ -21,7 +21,7 @@ const MoveDivWrap = styled.div`
   transform: translate(${props => props.endPos.x}px, ${props => props.endPos.y}px);
 `;
 
-const SampleVideoFrame = ({ src, screenSize, initPos, targetPos }) => {
+const SampleVideoFrame = ({ artist, src, screenSize, initPos, targetPos, onMouseOver }) => {
   // const [naturalSize, setNaturalSize] = useState({width: 300, height: 200});
   const [naturalSize, setNaturalSize] = useState({width: 100, height: 100});
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -56,7 +56,12 @@ const SampleVideoFrame = ({ src, screenSize, initPos, targetPos }) => {
             const { videoWidth, videoHeight } = response.target;      
             setNaturalSize({width: videoWidth, height: videoHeight});
           }}
-          onMouseOver={() => setIsMouseOver(true)}
+          onMouseOver={
+            () => {
+              setIsMouseOver(true)
+              onMouseOver(artist.title)
+            }
+          }
           onMouseLeave={() => setIsMouseOver(false)}
         >
           Your browser does not support the HTML5 Video element.
