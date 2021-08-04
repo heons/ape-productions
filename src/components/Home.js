@@ -3,39 +3,8 @@ import { useState, useRef } from 'react';
 import SampleVideoFrame from './SampleVideoFrame';
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
+import getInitArtists from '../resource';
 
-const getInitArtists = () => {
-    return [
-        {
-            name: 'name1',
-            workUrls: [],
-            sampleVideoSrc: 'video/mov_bbb.mp4',
-            initPos: {
-                x: 100,
-                y: 100
-            },
-            seedPos: {
-                x: 0,
-                y: 0
-            },
-            group: 'group1'
-        },
-        {
-            name: 'name2',
-            workUrls: [],
-            sampleVideoSrc: 'video/mov_bbb.mp4',
-            initPos: {
-                x: 0,
-                y: 0
-            },
-            seedPos: {
-                x: 0,
-                y: 0
-            },
-            group: 'group2'
-        }
-    ];
-}
 
 const Home = () => {
     const { height, width } = useWindowDimensions();
@@ -51,7 +20,7 @@ const Home = () => {
     artists.current = artists.current.map((artist) => {
         return {
             ...artist,
-            workUrls: [...artist.workUrls],
+            subItems: [artist.subItems.map((subItem) => { return {...subItem}})],
             initPos: {
                 ...artist.initPos
             },
@@ -81,7 +50,7 @@ const Home = () => {
             </h1>
             {artists.current.map((artist) => (
                 <SampleVideoFrame
-                    key={artist.name}
+                    key={artist.title}
                     src={artist.sampleVideoSrc}
                     screenSize={{height, width}}
                     initPos={artist.seedPos}
