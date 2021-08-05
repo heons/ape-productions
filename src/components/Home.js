@@ -3,15 +3,15 @@ import { useState, useRef, useCallback } from 'react';
 import SampleVideoFrame from './SampleVideoFrame';
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
-import getInitArtists from '../resource';
+import { getInitSampleArtistsInfo } from '../resource';
 
 
 const Home = () => {
     const { height, width } = useWindowDimensions();
     const { mousePosition } = useMousePosition();
-    // const [artists, setArtists] = useState(getInitArtists);
+    // const [artists, setArtists] = useState(getInitSampleArtistsInfo);
   
-    const artists = useRef(getInitArtists());
+    const artists = useRef(getInitSampleArtistsInfo());
     const targetPos1 = useRef({x: 0, y: 0});
     const targetPos2 = useRef({x: 0, y: 0});
   
@@ -20,7 +20,6 @@ const Home = () => {
     artists.current = artists.current.map((artist) => {
         return {
             ...artist,
-            subItems: artist.subItems.map((subItem) => { return {...subItem}}),
             initPos: {
                 ...artist.initPos
             },
