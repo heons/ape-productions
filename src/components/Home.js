@@ -20,7 +20,7 @@ const Home = () => {
     artists.current = artists.current.map((artist) => {
         return {
             ...artist,
-            subItems: [artist.subItems.map((subItem) => { return {...subItem}})],
+            subItems: artist.subItems.map((subItem) => { return {...subItem}}),
             initPos: {
                 ...artist.initPos
             },
