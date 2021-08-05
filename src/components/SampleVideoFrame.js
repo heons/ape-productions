@@ -4,6 +4,7 @@
 import React from 'react'
 import { useState, useRef } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
 
 
 const computeSizeFromWidth = (size, width) => {
@@ -46,31 +47,33 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
   return (
     <div>
       <MoveDivWrap endPos={newTargetPos.current}>
-        <video
-          src={artist.sampleVideoSrc}
-          width={size.width}
-          height={size.height}
-          style={styles}
-          preload="auto" loop muted autoPlay playsInline
-          onLoadedData={response => {
-            const { videoWidth, videoHeight } = response.target;      
-            setNaturalSize({width: videoWidth, height: videoHeight});
-          }}
-          onMouseOver={
-            () => {
-              setIsMouseOver(true);
-              onMouseOver(artist.title);
+        <Link to={'/'+artist.title}>
+          <video
+            src={artist.sampleVideoSrc}
+            width={size.width}
+            height={size.height}
+            style={styles}
+            preload="auto" loop muted autoPlay playsInline
+            onLoadedData={response => {
+              const { videoWidth, videoHeight } = response.target;      
+              setNaturalSize({width: videoWidth, height: videoHeight});
+            }}
+            onMouseOver={
+              () => {
+                setIsMouseOver(true);
+                onMouseOver(artist.title);
+              }
             }
-          }
-          onMouseLeave={
-            () => {
-              setIsMouseOver(false);
-              onMouseOver("");
+            onMouseLeave={
+              () => {
+                setIsMouseOver(false);
+                onMouseOver("");
+              }
             }
-          }
-        >
-          Your browser does not support the HTML5 Video element.
-        </video>
+          >
+            Your browser does not support the HTML5 Video element.
+          </video>
+        </Link>
       </MoveDivWrap>
     </div>
   )
