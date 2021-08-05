@@ -127,3 +127,6 @@ export const getInitSampleArtistsInfo = () => {
     });
 }
 
+export const getArtistDetail = (title) => {
+    return artistInfos.find((artist) => artist.title === title);
+}
