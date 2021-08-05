@@ -5,15 +5,15 @@ const artistInfos = [
         subItems: [
             {
                 title: 'LEE HEE EUN',
-                url: 'https://vimeo.com/manage/videos/493065854',
+                url: 'https://player.vimeo.com/video/493065854',
             },
             {
                 title: 'KIM SEUNG YEON',
-                url: 'https://vimeo.com/manage/videos/493066261'
+                url: 'https://player.vimeo.com/video/493066261'
             },
             {
                 title: 'KIM JI ANN',
-                url: 'https://vimeo.com/manage/videos/493064042'
+                url: 'https://player.vimeo.com/video/493064042'
             },
         ],
         sampleVideoSrc: 'video/APE_A_pictures_book_makers.webm',
@@ -33,7 +33,7 @@ const artistInfos = [
         subItems: [
             {
                 title: '',
-                url: 'https://vimeo.com/manage/videos/379467383',
+                url: 'https://player.vimeo.com/video/379467383',
             },
         ],
         sampleVideoSrc: 'video/APE_ADIDAS_x_EYESMAG.webm',
@@ -53,7 +53,7 @@ const artistInfos = [
         subItems: [
             {
                 title: '',
-                url: 'https://vimeo.com/manage/videos/406102148',
+                url: 'https://player.vimeo.com/video/406102148',
             },
         ],
         sampleVideoSrc: 'video/APE_musinsa adidas_ape.webm',
@@ -73,7 +73,7 @@ const artistInfos = [
         subItems: [
             {
                 title: '',
-                url: 'https://vimeo.com/manage/videos/379467842',
+                url: 'https://player.vimeo.com/video/379467842',
             },
         ],
         sampleVideoSrc: 'video/APE_DEMI_FASHION_FILM.webm',
@@ -93,11 +93,11 @@ const artistInfos = [
         subItems: [
             {
                 title: 'JINBO THE SUPERFREAK DOCUMENTARY',
-                url: 'https://vimeo.com/manage/videos/418429463',
+                url: 'https://player.vimeo.com/video/418429463',
             },
             {
                 title: `JINBO ‘비싸’ VISUAL FILM`,
-                url: 'https://vimeo.com/manage/videos/394382257',
+                url: 'https://player.vimeo.com/video/394382257',
             },
         ],
         sampleVideoSrc: 'video/APE_JINBOTHESUPERFREAK.webm',
