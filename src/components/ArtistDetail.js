@@ -11,13 +11,15 @@ const ArtistDetail = ({ match }) =>{
 
     const { height, width } = useWindowDimensions();
     const ratio = 7 / 10;
+    const numItems = artist.subItems.length;
+    console.log(numItems);
 
     return (
         <div>
             <h1>{artist.title}</h1>
             <iframe
                 title={artist.title}
-                src={artist.subItems[0].url}
+                src={artist.subItems[0].url+'?autoplay=1'}
                 width={width * ratio}
                 height={height * ratio}
                 frameBorder="0"
