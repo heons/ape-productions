@@ -3,6 +3,22 @@
   color: white;
 }
 
+.ArtistDetail h3 {
+  margin-top: 0;
+  color: white;
+}
+
+
 .ArtistDetail iframe {
   margin-top: 1em;
+}
+
+.ArtistDetail-item {
+  text-decoration: none;
+  color: white;
+}
+
+.ArtistDetail-item-selected {
+  color: white;
+  text-decoration: underline;
 }

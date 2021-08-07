@@ -47,7 +47,7 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
   return (
     <div>
       <MoveDivWrap endPos={newTargetPos.current}>
-        <Link to={'/'+artist.title}>
+        <Link to={`/${artist.title}?idx=0`}>
           <video
             src={artist.sampleVideoSrc}
             width={size.width}
