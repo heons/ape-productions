@@ -6,18 +6,18 @@ const Menu = ({ category, onSelect }) => {
 
     const items = useRef(
         [
-            'Film',
-            'Photo',
-            'Client',
-            'Note',
-            'Contact',
+            'film',
+            'photo',
+            'client',
+            'note',
+            'contact',
         ]
     );
 
     return (
         <div className='Menu'>
             <h1>
-                <Link to={'/'} className='Menu-item' onClick={() => onSelect('item')}>
+                <Link to={'/'} className='Menu-item' onClick={() => onSelect(undefined)}>
                     APE.
                 </Link>
             </h1>
@@ -26,12 +26,12 @@ const Menu = ({ category, onSelect }) => {
                 {items.current.map((item) => {
                     return (
                         <Link 
-                            to={'/?' + item.toLowerCase()}
+                            to={'/?' + item}
                             key={item}
                             className={category === item ? 'Menu-item-selected' : 'Menu-item'}
                             onClick={() => onSelect(item)}
                         >
-                            {item + ' / '}
+                            {item.charAt(0).toUpperCase() + item.slice(1) + ' / '}
                         </Link>
                     )
                 })}
