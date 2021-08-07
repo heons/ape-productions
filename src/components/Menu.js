@@ -2,7 +2,7 @@ import './Menu.css';
 import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 
-const Menu = ({ category, onSelect }) => {
+const Menu = ({ category }) => {
 
     const items = useRef(
         [
@@ -17,7 +17,7 @@ const Menu = ({ category, onSelect }) => {
     return (
         <div className='Menu'>
             <h1>
-                <Link to={'/'} className='Menu-item' onClick={() => onSelect(undefined)}>
+                <Link to={'/'} className='Menu-item'>
                     APE.
                 </Link>
             </h1>
@@ -26,10 +26,9 @@ const Menu = ({ category, onSelect }) => {
                 {items.current.map((item) => {
                     return (
                         <Link 
-                            to={'/?' + item}
+                            to={`/?category=${item}`}
                             key={item}
                             className={category === item ? 'Menu-item-selected' : 'Menu-item'}
-                            onClick={() => onSelect(item)}
                         >
                             {item.charAt(0).toUpperCase() + item.slice(1) + ' / '}
                         </Link>
