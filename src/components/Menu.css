@@ -7,3 +7,18 @@
 
   text-align: left;
 }
+
+.Menu h1 {
+  margin: 0.1em 0;
+  color: white;
+}
+
+.Menu-item {
+  text-decoration: none;
+  color: white;
+}
+
+.Menu-item-selected {
+  color: white;
+  text-decoration: underline;
+}
