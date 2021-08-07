@@ -1,0 +1,9 @@
+.Menu {
+  position: absolute; /* Reposition logo from the natural layout */
+  left: 25px;
+  top: 0px;
+  z-index: 2;
+  color: white;
+
+  text-align: left;
+}
