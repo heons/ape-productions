@@ -1,3 +1,4 @@
+import './ArtistDetail.css';
 import React from 'react'
 import { getArtistDetail } from '../resource'
 import useWindowDimensions from '../hooks/useWindowDimensions'
@@ -15,7 +16,7 @@ const ArtistDetail = ({ match }) =>{
     console.log(numItems);
 
     return (
-        <div>
+        <div className="ArtistDetail">
             <h1>{artist.title}</h1>
             <iframe
                 title={artist.title}
