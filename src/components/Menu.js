@@ -26,7 +26,7 @@ const Menu = ({ category }) => {
                 {items.current.map((item) => {
                     return (
                         <Link 
-                            to={`/?category=${item}`}
+                            to={category === item ? `/` : `/?category=${item}`}
                             key={item}
                             className={category === item ? 'Menu-item-selected' : 'Menu-item'}
                         >
