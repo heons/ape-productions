@@ -1,7 +1,7 @@
 const artistInfos = [
     {
         title: 'A PICTURES BOOK MAKERS',
-        category: 'FILMS',
+        category: 'FILM',
         subItems: [
             {
                 title: 'LEE HEE EUN',
@@ -29,7 +29,7 @@ const artistInfos = [
     },
     {
         title: 'ADIDAS x EYESMAG',
-        category: 'FILMS',
+        category: 'FILM',
         subItems: [
             {
                 title: '',
@@ -49,7 +49,7 @@ const artistInfos = [
     },
     {
         title: 'ADIDAS X MUSINSA (EK, BIG ONE)',
-        category: 'FILMS',
+        category: 'FILM',
         subItems: [
             {
                 title: '',
@@ -69,7 +69,7 @@ const artistInfos = [
     },
     {
         title: 'DEMI FASHION FILM',
-        category: 'FILMS',
+        category: 'FILM',
         subItems: [
             {
                 title: '',
@@ -89,7 +89,7 @@ const artistInfos = [
     },
     {
         title: 'JINBO THE SUPERFREAK',
-        category: 'FILMS',
+        category: 'FILM',
         subItems: [
             {
                 title: 'JINBO THE SUPERFREAK DOCUMENTARY',
@@ -129,4 +129,14 @@ export const getInitSampleArtistsInfo = () => {
 
 export const getArtistDetail = (title) => {
     return artistInfos.find((artist) => artist.title === title);
+}
+
+export const getArtistListInCategory = (category) => {
+    if (category === undefined) {
+        return artistInfos;
+        // return [];
+    } else {
+        console.log(category.toUpperCase());
+        return artistInfos.filter((artist) => artist.category === category.toUpperCase());
+    }
 }

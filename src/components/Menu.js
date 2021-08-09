@@ -1,6 +1,7 @@
 import './Menu.css';
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { getArtistListInCategory } from '../resource'
 
 const Menu = ({ category }) => {
 
@@ -14,8 +15,39 @@ const Menu = ({ category }) => {
         ]
     );
 
+    const [ isMouseOver, setIsMouseOver ] = useState(false);
+
+    const artistByCategory = getArtistListInCategory(category);
+
+    const ArtistList = () => {
+        if (isMouseOver) {
+            return <div onMouseLeave={() => setIsMouseOver(false)}>
+                {
+                    artistByCategory.map((artist) => {
+                        return (    
+                            <div key={artist.title}>
+                                <Link
+                                    className={'Menu-sub-item'}
+                                    to={`/${artist.title}?idx=0`}
+                                >
+                                    {artist.title}
+                                </Link>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        } else {
+            return <div></div>
+        }
+    }
+
+
     return (
-        <div className='Menu'>
+        <div
+            className='Menu'
+            onMouseOver={() => setIsMouseOver(true)}
+        >
             <h1>
                 <Link to={'/'} className='Menu-item'>
                     APE.
@@ -35,6 +67,7 @@ const Menu = ({ category }) => {
                     )
                 })}
             </h1>
+            <ArtistList />
         </div>
     )
 }
