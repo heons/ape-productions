@@ -1,6 +1,6 @@
 import './ArtistDetail.css';
 import React from 'react'
-import { getArtistDetail } from '../resource'
+import { getArtistDetailById } from '../resource'
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import { Link } from 'react-router-dom'
 import qs from 'qs'
@@ -9,7 +9,7 @@ const ArtistDetail = ({ match, location }) =>{
     const query = qs.parse(location.search, { ignoreQueryPrefix: true });
     const workIdx = parseInt(query.idx);
 
-    const artist = getArtistDetail(match.params.title);
+    const artist = getArtistDetailById(match.params.id);
     // console.log(artist);
     // console.log(artist.subItems[0].url);
 
@@ -38,7 +38,7 @@ const ArtistDetail = ({ match, location }) =>{
                     <div key={i}>
                         <h3>
                             <Link
-                                to={`/${artist.title}?idx=${i}`}
+                                to={`/${artist.id}?idx=${i}`}
                                 className={subItem.title === item.title ? 'ArtistDetail-item-selected' : 'ArtistDetail-item'}
                             >
                                 {item.title}

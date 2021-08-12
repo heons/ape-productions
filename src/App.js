@@ -14,7 +14,7 @@ function App({location, history}) {
             {/* <Menu category={category ? category : categoryFromUrl} onSelect={onSelectCategory}/> */}
             <Menu category={query.category} />
             <Route path="/" component={Home} exact={true}/>
-            <Route path="/:title" component={ArtistDetail}/>
+            <Route path="/:id" component={ArtistDetail}/>
         </div>
     );
 }
