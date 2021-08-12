@@ -24,8 +24,8 @@ const Home = () => {
                 ...artist.initPos
             },
             seedPos: {
-                x: artist.initPos.x * width / 1024,
-                y: artist.initPos.y * height / 768
+                x: artist.initPos.x * width / 1024 - width/3,
+                y: artist.initPos.y * height / 768 - height/3
             }
         }
     });
@@ -36,8 +36,8 @@ const Home = () => {
     };
   
     targetPos2.current = {
-        x: -(mousePosition.x - width/2) + width/50,
-        y: -(mousePosition.y - height/2) + height/50
+        x: -(mousePosition.x - width/2) + width/200,
+        y: -(mousePosition.y - height/2) + height/200
     };
 
     const stylesTitle = {
