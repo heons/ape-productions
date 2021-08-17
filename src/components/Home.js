@@ -6,7 +6,8 @@ import useMousePosition from '../hooks/useMousePosition';
 import { getInitSampleArtistsInfo } from '../resource';
 
 
-const Home = () => {
+const Home = ({category}) => {
+    // console.log(category);
     const { height, width } = useWindowDimensions();
     const { mousePosition } = useMousePosition();
     // const [artists, setArtists] = useState(getInitSampleArtistsInfo);
@@ -47,6 +48,8 @@ const Home = () => {
         left: '10px',
     };
 
+    const isCategoryFilm = category ===undefined || category === 'film';
+
     const [ title, setTitle ] = useState('');
     // TODO: Change name.
     const onMouseOver = useCallback(newTitle => setTitle(newTitle), [setTitle]);
@@ -58,7 +61,7 @@ const Home = () => {
                 ? `Your cursor is at ${mousePosition.x}, ${mousePosition.y}.`
                 : "Move your mouse around."}
             </h1> */}
-            {artists.current.map((artist) => (
+            {isCategoryFilm && artists.current.map((artist) => (
                 <SampleVideoFrame
                     key={artist.title}
                     artist = {artist}

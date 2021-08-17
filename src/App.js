@@ -12,8 +12,14 @@ function App({location, history}) {
     return (
         <div className="App">
             {/* <Menu category={category ? category : categoryFromUrl} onSelect={onSelectCategory}/> */}
-            <Menu category={query.category} />
-            <Route path="/" component={Home} exact={true}/>
+            <Menu category={query.category} />    
+            <Route
+                path="/"
+                exact={true}
+                render={(props) => (
+                    <Home {...props} category={query.category}/>
+                )}
+            />
             <Route path="/:id" component={ArtistDetail}/>
         </div>
     );
