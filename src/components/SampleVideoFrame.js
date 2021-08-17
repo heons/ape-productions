@@ -3,7 +3,6 @@
 
 import React from 'react'
 import { useState, useRef } from 'react';
-import styled from 'styled-components';
 import { Link } from 'react-router-dom'
 
 
@@ -16,12 +15,6 @@ const computeSizeFromWidth = (size, width) => {
   }
 }
 
-const MoveDivWrap = styled.div`
-  position: absolute;
-  transition: all 3s linear;
-  transform: translate(${props => props.endPos.x}px, ${props => props.endPos.y}px);
-`;
-
 const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
   // const [naturalSize, setNaturalSize] = useState({width: 300, height: 200});
   const [naturalSize, setNaturalSize] = useState({width: 100, height: 100});
@@ -31,10 +24,7 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
 
   const size = computeSizeFromWidth(naturalSize, screenSize.width);
 
-  const styles = {
-    opacity: isMouseOver ? 1 : 0.5,
-  };
-
+  
   // console.log(targetPos)
   const ACT_RESOLUTION = 10;
   if(Math.round(targetPos.x) % ACT_RESOLUTION === 0) {
@@ -44,37 +34,45 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
     };
   }
   
+  const styles = {
+    opacity: isMouseOver ? 1 : 0.5,
+  };
+
+  const motionStypes = {
+    position: 'absolute',
+    transition: 'all 3s linear',
+    transform: `translate(${newTargetPos.current.x}px, ${newTargetPos.current.y}px)`,
+  }
+
   return (
-    <div>
-      <MoveDivWrap endPos={newTargetPos.current}>
-        <Link to={`/${artist.id}?idx=0`}>
-          <video
-            src={artist.sampleVideoSrc}
-            width={size.width}
-            height={size.height}
-            style={styles}
-            preload="auto" loop muted autoPlay playsInline
-            onLoadedData={response => {
-              const { videoWidth, videoHeight } = response.target;      
-              setNaturalSize({width: videoWidth, height: videoHeight});
-            }}
-            onMouseOver={
-              () => {
-                setIsMouseOver(true);
-                onMouseOver(artist.title);
-              }
+    <div style={motionStypes}>
+      <Link to={`/${artist.id}?idx=0`}>
+        <video
+          src={artist.sampleVideoSrc}
+          width={size.width}
+          height={size.height}
+          style={styles}
+          preload="auto" loop muted autoPlay playsInline
+          onLoadedData={response => {
+            const { videoWidth, videoHeight } = response.target;      
+            setNaturalSize({width: videoWidth, height: videoHeight});
+          }}
+          onMouseOver={
+            () => {
+              setIsMouseOver(true);
+              onMouseOver(artist.title);
             }
-            onMouseLeave={
-              () => {
-                setIsMouseOver(false);
-                onMouseOver("");
-              }
+          }
+          onMouseLeave={
+            () => {
+              setIsMouseOver(false);
+              onMouseOver("");
             }
-          >
-            Your browser does not support the HTML5 Video element.
-          </video>
-        </Link>
-      </MoveDivWrap>
+          }
+        >
+          Your browser does not support the HTML5 Video element.
+        </video>
+      </Link>
     </div>
   )
 }
