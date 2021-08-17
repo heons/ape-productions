@@ -3,7 +3,8 @@ import { useState, useRef, useCallback } from 'react';
 import SampleVideoFrame from './SampleVideoFrame';
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
-import { getInitSampleArtistsInfo } from '../resource';
+import { getInitSampleArtistsInfo, clientCompanyList, clientArtistList } from '../resource';
+import TextList from './TextList'
 
 
 const Home = ({category}) => {
@@ -70,6 +71,24 @@ const Home = ({category}) => {
                     onMouseOver={onMouseOver}
                 />
             ))}
+            {category === 'client' && 
+                <div
+                    style={{position: 'absolute', top: `60px`, left: `10px`, color: 'white'}}
+                >
+                    <h1>Company</h1>
+                    <TextList textList={clientCompanyList} width='300px' height='300px'/>
+                </div>
+            }
+            
+            {category === 'client' && 
+                <div
+                    style={{position: 'absolute', top: `${height-400}px`, left:`${width-410}px`, color: 'white'}}
+                >
+                    <h1>Artist</h1>
+                    <TextList textList={clientArtistList} width='400px' height='300px'/>
+                </div>
+            }
+
             <h1 style={stylesTitle}>
                 {title}
             </h1>
