@@ -15,13 +15,12 @@ const Menu = ({ category }) => {
         ]
     );
 
-    const [ isMouseOver, setIsMouseOver ] = useState(false);
 
     const artistByCategory = getArtistListInCategory(category);
 
     const ArtistList = () => {
-        if (isMouseOver) {
-            return <div onMouseLeave={() => setIsMouseOver(false)}>
+        if (category) {
+            return <div>
                 {
                     artistByCategory.map((artist) => {
                         return (    
@@ -44,10 +43,7 @@ const Menu = ({ category }) => {
 
 
     return (
-        <div
-            className='Menu'
-            onMouseOver={() => setIsMouseOver(true)}
-        >
+        <div className='Menu'>
             <h1>
                 <Link to={'/'} className='Menu-item'>
                     APE.
