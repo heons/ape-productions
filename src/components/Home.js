@@ -50,7 +50,7 @@ const Home = ({category}) => {
         left: '10px',
     };
 
-    const isCategoryFilm = category ===undefined || category === 'film';
+    const isCategoryFilmDisplay = category === undefined || category === 'film' || category === 'client' ;
 
     const [ title, setTitle ] = useState('');
     // TODO: Change name.
@@ -92,7 +92,7 @@ const Home = ({category}) => {
                 ? `Your cursor is at ${mousePosition.x}, ${mousePosition.y}.`
                 : "Move your mouse around."}
             </h1> */}
-            {/* {isCategoryFilm && artists.current.map((artist) => (
+            {/* {isCategoryFilmDisplay && artists.current.map((artist) => (
                 <SampleVideoFrame
                     key={artist.title}
                     artist = {artist}
@@ -101,7 +101,7 @@ const Home = ({category}) => {
                     onMouseOver={onMouseOver}
                 />
             ))} */}
-            {isCategoryFilm && 
+            {isCategoryFilmDisplay && 
                 <SampleVideoContainer
                     artists = {artistGroup1}
                     screenSize={{height, width}}
@@ -110,7 +110,7 @@ const Home = ({category}) => {
                 />
             }
 
-            {isCategoryFilm && 
+            {isCategoryFilmDisplay && 
                 <SampleVideoContainer
                     artists = {artistGroup2}
                     screenSize={{height, width}}
