@@ -1,5 +1,8 @@
+// Reference: For the animations - https://css-tricks.com/using-multi-step-animations-transitions/
+
+
 import React from 'react'
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom'
 
 
@@ -12,27 +15,39 @@ const computeSizeFromWidth = (size, width) => {
   }
 }
 
-const SampleVideoFrame = ({ artist, screenSize, onMouseOver }) => {
+const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
   // const [naturalSize, setNaturalSize] = useState({width: 300, height: 200});
   const [naturalSize, setNaturalSize] = useState({width: 100, height: 100});
   const [isMouseOver, setIsMouseOver] = useState(false);
 
+  const newTargetPos = useRef({...artist.seedPos});
 
   const size = computeSizeFromWidth(naturalSize, screenSize.width);
 
-    
+  
+  // console.log(targetPos)
+  const ACT_RESOLUTION = 10;
+  if(Math.round(targetPos.x) % ACT_RESOLUTION === 0) {
+    newTargetPos.current = {
+      x: targetPos.x + artist.seedPos.x,
+      y: targetPos.y + artist.seedPos.y,
+    };
+  }
+  
   const styles = {
-    position: 'fixed',
-    left: artist.seedPos.x,
-    top: artist.seedPos.y,
     opacity: isMouseOver ? 1 : 0.5,
-    // 'transition-delay': artist.group === 'group1' ? '1000ms': '0ms',
   };
 
+  const motionStypes = {
+    position: 'absolute',
+    transition: 'all 3s linear',
+    transform: `translate(${newTargetPos.current.x}px, ${newTargetPos.current.y}px)`,
+  }
+
   return (
+    <div style={motionStypes}>
       <Link to={`/${artist.id}?idx=0`}>
         <video
-          id={'video'+artist.id}
           src={artist.sampleVideoSrc}
           width={size.width}
           height={size.height}
@@ -58,6 +73,7 @@ const SampleVideoFrame = ({ artist, screenSize, onMouseOver }) => {
           Your browser does not support the HTML5 Video element.
         </video>
       </Link>
+    </div>
   )
 }
 

@@ -11,6 +11,10 @@ function App({location, history}) {
 
     return (
         <div className="App">
+            {/* <canvas id="canvas_test" width = "600" height = "600"
+            style = {{"border": "1px solid black"}}>
+                {}
+            </canvas> */}
             {/* <Menu category={category ? category : categoryFromUrl} onSelect={onSelectCategory}/> */}
             <Menu category={query.category} />    
             <Route

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useRef, useCallback } from 'react';
-import SampleVideoFrame from './SampleVideoFrame';
+import SampleVideoContainer from './SampleVideoContainer';
+// import SampleVideoFrame from './SampleVideoFrameV1';
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
 import { getInitSampleArtistsInfo, clientCompanyList, clientArtistList } from '../resource';
@@ -55,14 +56,43 @@ const Home = ({category}) => {
     // TODO: Change name.
     const onMouseOver = useCallback(newTitle => setTitle(newTitle), [setTitle]);
     
+    // const tmpFunc = async () => {
+    //     let canvas = document.getElementById("canvas_test");
+    //     var video = document.getElementById('video1');
+    //     if (canvas && video) {
+    //         let cx = canvas.getContext("2d");
+    //         let grd = cx.createRadialGradient(100, 
+    //                         100, 5, 100, 100, 100);
+    //         grd.addColorStop(0, "red");
+    //         grd.addColorStop(1, "green");
+    //         cx.fillStyle = grd;
+    //         cx.fillRect(0, 0, 200, 200);
+
+    //         canvas.getContext('2d').drawImage(video, 0, 0, video.videoWidth, video.videoHeight);  
+
+    //         // c.srcObject = captureStream;
+    //         // cx.drawImage(c, 0, 0, window.width, window.height);
+    //     };
+    // }
+    
+    // tmpFunc();
+    const artistGroup1 = artists.current.filter(artist => artist.group === 'group1')
+    const artistGroup2 = artists.current.filter(artist => artist.group === 'group2')
+    console.log(artistGroup1);
+    console.log(artistGroup2);
+            
     return (
         <div>
+            {/* <canvas id="canvas_test" width = {width} height = {height}
+            style = {{position: 'absolute', left:'0px', right:'0px', "border": "1px solid black"}}>
+                {}
+            </canvas> */}
             {/* <h1>
                 {hasMovedCursor
                 ? `Your cursor is at ${mousePosition.x}, ${mousePosition.y}.`
                 : "Move your mouse around."}
             </h1> */}
-            {isCategoryFilm && artists.current.map((artist) => (
+            {/* {isCategoryFilm && artists.current.map((artist) => (
                 <SampleVideoFrame
                     key={artist.title}
                     artist = {artist}
@@ -70,7 +100,25 @@ const Home = ({category}) => {
                     targetPos={artist.group === 'group1' ? targetPos1.current : targetPos2.current}
                     onMouseOver={onMouseOver}
                 />
-            ))}
+            ))} */}
+            {isCategoryFilm && 
+                <SampleVideoContainer
+                    artists = {artistGroup1}
+                    screenSize={{height, width}}
+                    targetPos={targetPos1.current}
+                    onMouseOver={onMouseOver}
+                />
+            }
+
+            {isCategoryFilm && 
+                <SampleVideoContainer
+                    artists = {artistGroup2}
+                    screenSize={{height, width}}
+                    targetPos={targetPos2.current}
+                    onMouseOver={onMouseOver}
+                />
+            }
+
             {category === 'client' && 
                 <div
                     style={{position: 'absolute', top: `60px`, left: `10px`, color: 'white'}}
