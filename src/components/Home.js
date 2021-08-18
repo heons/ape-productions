@@ -50,7 +50,8 @@ const Home = ({category}) => {
         left: '10px',
     };
 
-    const isCategoryFilmDisplay = category === undefined || category === 'film' || category === 'client' ;
+    const isCategoryFilmDisplay = category !== 'photo';
+
 
     const [ title, setTitle ] = useState('');
     // TODO: Change name.
@@ -118,34 +119,52 @@ const Home = ({category}) => {
                     onMouseOver={onMouseOver}
                 />
             }
-
-            {category === 'client' && 
-                <div
-                    style={{position: 'absolute', top: `60px`, left: `10px`, color: 'white'}}
-                >
-                    <h1>Company</h1>
-                    <TextList textList={clientCompanyList} width='300px' height='300px'/>
-                </div>
-            }
             
             {category === 'client' && 
                 <div
-                    style={{position: 'absolute', top: `${height-400}px`, left:`${width-410}px`, color: 'white'}}
+                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`,}}
                 >
-                    <h1>Artist</h1>
-                    <TextList textList={clientArtistList} width='400px' height='300px'/>
+                    <div
+                        style={{position: 'absolute', top: `60px`, left: `10px`, color: 'white'}}
+                    >
+                        <h1>Company</h1>
+                        <TextList textList={clientCompanyList} width='300px' height='300px'/>
+                    </div>
+                    
+                    <div
+                        style={{position: 'absolute', top: `${height-400}px`, left:`${width-410}px`, color: 'white'}}
+                    >
+                        <h1>Artist</h1>
+                        <TextList textList={clientArtistList} width='400px' height='300px'/>
+                    </div>
+                </div>
+            }
+
+            {category === 'note' && 
+                <div
+                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`, 'background-color': 'black'}}
+                >
+                    <div
+                        style={{position: 'absolute', top: `80px`, left: `30px`, color: 'white', 'text-align': 'left'}}
+                    >
+                        <h1>Note.</h1>
+                    </div>
                 </div>
             }
 
             {category === 'contact' && 
                 <div
-                style={{position: 'absolute', top: `80px`, left: `30px`, color: 'white', 'text-align': 'left'}}
+                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`,}}
                 >
-                    <h1>APE.</h1>
-                    <h2>서울특별시 마포구 양화진길 6, 6층</h2>
-                    <h2>+82-10-8487-2110</h2>
-                    <h2>+82-10-4642-8321</h2>
-                    <h2>apeproductionskr@gmail.com</h2>
+                    <div
+                        style={{position: 'absolute', top: `80px`, left: `30px`, color: 'white', 'text-align': 'left'}}
+                    >
+                        <h1>APE.</h1>
+                        <h2>서울특별시 마포구 양화진길 6, 6층</h2>
+                        <h2>+82-10-8487-2110</h2>
+                        <h2>+82-10-4642-8321</h2>
+                        <h2>apeproductionskr@gmail.com</h2>
+                    </div>
                 </div>
             }
 
