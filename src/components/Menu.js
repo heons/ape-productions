@@ -25,12 +25,15 @@ const Menu = ({ category }) => {
                     artistByCategory.map((artist) => {
                         return (    
                             <div key={artist.title}>
-                                <Link
-                                    className={'Menu-sub-item'}
-                                    to={`/${artist.id}?idx=0`}
-                                >
-                                    {artist.title}
-                                </Link>
+                                <h1>
+                                    <Link
+                                        className={'Menu-sub-item'}
+                                        to={`/${artist.id}?idx=0`}
+                                    >
+                                        {artist.title}
+                                        
+                                    </Link>
+                                </h1>
                             </div>
                         )
                     })
