@@ -28,7 +28,7 @@ const Menu = ({ category }) => {
                                 <h1>
                                     <Link
                                         className={'Menu-sub-item'}
-                                        to={`/${artist.id}?idx=0`}
+                                        to={`/${artist.id}`}
                                     >
                                         {artist.title}
                                         
