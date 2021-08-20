@@ -31,6 +31,12 @@
   }
 }
 
+.App h3 {
+  margin: 0.1em 0;
+  color: white;
+  font-weight: bold;
+}
+
 @media (max-width: 1440px) {
   .App h3 {
     font-size: 1.4em;

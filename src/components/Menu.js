@@ -25,7 +25,7 @@ const Menu = ({ category }) => {
                     artistByCategory.map((artist) => {
                         return (    
                             <div key={artist.title}>
-                                <h1>
+                                <h3>
                                     <Link
                                         className={'Menu-sub-item'}
                                         to={`/${artist.id}`}
@@ -33,7 +33,7 @@ const Menu = ({ category }) => {
                                         {artist.title}
                                         
                                     </Link>
-                                </h1>
+                                </h3>
                             </div>
                         )
                     })
