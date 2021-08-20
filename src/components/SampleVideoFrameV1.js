@@ -23,14 +23,14 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
     opacity: isMouseOver ? 1 : 0.5,
   };
 
-  const motionStypes = {
+  const motionStyle = {
     position: 'absolute',
     transition: 'all 2s linear',
     transform: `translate(${newTargetPos.x}px, ${newTargetPos.y}px)`,
   }
 
   return (
-    <div style={motionStypes}>
+    <div style={motionStyle}>
       <Link to={`/${artist.id}?idx=0`}>
         <video
           src={artist.sampleVideoSrc}
