@@ -20,19 +20,15 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
   const [naturalSize, setNaturalSize] = useState({width: 100, height: 100});
   const [isMouseOver, setIsMouseOver] = useState(false);
 
-  const newTargetPos = useRef({...artist.seedPos});
-
   const size = computeSizeFromWidth(naturalSize, screenSize.width);
 
-  
-  // console.log(targetPos)
-  const ACT_RESOLUTION = 10;
-  if(Math.round(targetPos.x) % ACT_RESOLUTION === 0) {
-    newTargetPos.current = {
-      x: targetPos.x + artist.seedPos.x,
-      y: targetPos.y + artist.seedPos.y,
-    };
-  }
+  const row = Math.floor((parseInt(artist.id) - 1) / 4);
+  const col = (parseInt(artist.id) - 1) % 4;
+  const OVERLAP_RATIO = 1.05;
+  const newTargetPos = {
+    x: targetPos.x + col * size.width * OVERLAP_RATIO,
+    y: targetPos.y + row * size.height * OVERLAP_RATIO,
+  };
   
   const styles = {
     opacity: isMouseOver ? 1 : 0.5,
@@ -41,7 +37,7 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
   const motionStypes = {
     position: 'absolute',
     transition: 'all 3s linear',
-    transform: `translate(${newTargetPos.current.x}px, ${newTargetPos.current.y}px)`,
+    transform: `translate(${newTargetPos.x}px, ${newTargetPos.y}px)`,
   }
 
   return (

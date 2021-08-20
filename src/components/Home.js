@@ -33,17 +33,20 @@ const Home = ({category}) => {
         }
     });
 
-    const offsetRatio = 10;
+    const offsetRatio = -100;
     const diifRatioGroup = 200;
-    targetPos1.current = {
-        x: -(mousePosition.x - width/2) + width/offsetRatio,
-        y: -(mousePosition.y - height/2) + height/offsetRatio
-    };
-  
-    targetPos2.current = {
-        x: -(mousePosition.x - width/2) + width/diifRatioGroup + width/offsetRatio,
-        y: -(mousePosition.y - height/2) + height/diifRatioGroup + height/offsetRatio
-    };
+    const ACT_RESOLUTION = 10;
+    if(Math.round(mousePosition.x) % ACT_RESOLUTION === 0) {
+        targetPos1.current = {
+            x: -(mousePosition.x - width/2) + width/offsetRatio,
+            y: -(mousePosition.y - height/2) + height/offsetRatio
+        };
+      
+        targetPos2.current = {
+            x: -(mousePosition.x - width/2) + width/diifRatioGroup + width/offsetRatio,
+            y: -(mousePosition.y - height/2) + height/diifRatioGroup + height/offsetRatio
+        };
+    }
 
     const stylesTitle = {
         position: 'absolute',
