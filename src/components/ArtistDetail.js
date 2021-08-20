@@ -1,14 +1,15 @@
 import './ArtistDetail.css';
 import React, { useState } from 'react';
 import { getArtistDetailById } from '../resource';
-import {Carousel} from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Carousel } from 'react-bootstrap';
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
 
 const ArtistDetail = ({ match }) =>{
-
+    const { width } = useWindowDimensions();
     const artist = getArtistDetailById(match.params.id);
 
+    // TODO: Break down the video to a list when the width is less than xx.
     // const numItems = artist.subItems.length;
     // console.log(numItems);
     
@@ -17,6 +18,16 @@ const ArtistDetail = ({ match }) =>{
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);
     };
+
+    // Compute and set the hight of iframe with width.
+    // TODO: We have magic numbers here.
+    let ratio = Math.max((56.25 / (width / 800)), 50);
+    ratio = Math.min(ratio, 80);
+    // console.log(ratio)
+    const styleIframe = {
+        'width': '70vw',
+        'height': `${ratio}vw`
+    }
 
     return (
         <div className="ArtistDetail">
@@ -28,6 +39,7 @@ const ArtistDetail = ({ match }) =>{
                             {
                                 index === i ? 
                                 <iframe
+                                    style={styleIframe}
                                     id={`${artist.id}-${i}`}
                                     title={artist.title}
                                     src={item.url+'?autoplay=1'}
@@ -43,7 +55,6 @@ const ArtistDetail = ({ match }) =>{
                         </Carousel.Item>
                     )
                 })}
-               
             </Carousel>
         </div>
     )

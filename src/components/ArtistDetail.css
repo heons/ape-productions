@@ -5,15 +5,9 @@
 .ArtistDetail h3 {
   margin-top: 0em;
   margin-bottom: 0em;
-  padding-bottom: 0.5em;
+  padding-top: 0.5em;
   color: white;
   background-color: black;
-}
-
-.ArtistDetail iframe {
-  margin-top: 1em;
-  width: 70vw; 
-  height: 56.25vw; /* 100/56.25 = 560/315 = 1.778 */
 }
 
 .ArtistDetail-item {

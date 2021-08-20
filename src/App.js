@@ -4,6 +4,8 @@ import Home from './components/Home'
 import Menu from './components/Menu'
 import ArtistDetail from './components/ArtistDetail'
 import qs from 'qs'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App({location, history}) {
     const query = qs.parse(location.search, { ignoreQueryPrefix: true });
