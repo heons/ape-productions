@@ -19,8 +19,8 @@ const SampleVideoFrame = ({ artist, screenSize, onMouseOver }) => {
 
     const styles = {
       position: 'fixed',
-      left: artist.seedPos.x * ratio,
-      top: artist.seedPos.y * ratio,
+      left: artist.seedPos.x,
+      top: artist.seedPos.y,
       opacity: isMouseOver ? 1 : 0.5,
     };
 

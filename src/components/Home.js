@@ -33,14 +33,16 @@ const Home = ({category}) => {
         }
     });
 
+    const offsetRatio = 10;
+    const diifRatioGroup = 200;
     targetPos1.current = {
-        x: -(mousePosition.x - width/2),
-        y: -(mousePosition.y - height/2)
+        x: -(mousePosition.x - width/2) + width/offsetRatio,
+        y: -(mousePosition.y - height/2) + height/offsetRatio
     };
   
     targetPos2.current = {
-        x: -(mousePosition.x - width/2) + width/200,
-        y: -(mousePosition.y - height/2) + height/200
+        x: -(mousePosition.x - width/2) + width/diifRatioGroup + width/offsetRatio,
+        y: -(mousePosition.y - height/2) + height/diifRatioGroup + height/offsetRatio
     };
 
     const stylesTitle = {
@@ -79,8 +81,6 @@ const Home = ({category}) => {
     // tmpFunc();
     const artistGroup1 = artists.current.filter(artist => artist.group === 'group1')
     const artistGroup2 = artists.current.filter(artist => artist.group === 'group2')
-    console.log(artistGroup1);
-    console.log(artistGroup2);
             
     return (
         <div>

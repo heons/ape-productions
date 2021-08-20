@@ -29,10 +29,10 @@ const SampleVideoContainer = ({ artists, screenSize, targetPos, onMouseOver }) =
         <div style={motionStyles}>
             {artists.map((artist) => (
                 <SampleVideoFrame
-                key={artist.title}
-                artist = {artist}
-                screenSize={screenSize}
-                onMouseOver={onMouseOver}
+                    key={artist.title}
+                    artist = {artist}
+                    screenSize={screenSize}
+                    onMouseOver={onMouseOver}
                 />
             ))}
         </div>

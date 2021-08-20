@@ -1,5 +1,5 @@
-const distX = 350
-const distY = 300
+const distX = 320
+const distY = 280
 const lineOffstX = 50
 
 const artistInfos = [
