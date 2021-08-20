@@ -3,30 +3,26 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom'
 
 
-const computeSizeFromWidth = (size, width) => {
-  const ratio = width / 1024;
+const computeSizeFromWidth = (size, ratio) => {
   return {
     width: Math.round(size.width * ratio),
     height: Math.round(size.height * ratio),
-    ratio: ratio
   }
 }
 
 const SampleVideoFrame = ({ artist, screenSize, onMouseOver }) => {
-  // const [naturalSize, setNaturalSize] = useState({width: 300, height: 200});
   const [naturalSize, setNaturalSize] = useState({width: 100, height: 100});
   const [isMouseOver, setIsMouseOver] = useState(false);
 
+  const ratio = screenSize.width / 1024;
 
-  const size = computeSizeFromWidth(naturalSize, screenSize.width);
+  const size = computeSizeFromWidth(naturalSize, ratio);
 
-    
   const styles = {
     position: 'fixed',
-    left: artist.seedPos.x,
-    top: artist.seedPos.y,
+    left: artist.seedPos.x * ratio,
+    top: artist.seedPos.y * ratio,
     opacity: isMouseOver ? 1 : 0.5,
-    // 'transition-delay': artist.group === 'group1' ? '1000ms': '0ms',
   };
 
   return (
