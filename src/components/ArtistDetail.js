@@ -1,47 +1,50 @@
 import './ArtistDetail.css';
-import React from 'react'
-import { getArtistDetailById } from '../resource'
-import { Link } from 'react-router-dom'
-import qs from 'qs'
+import React, { useState } from 'react';
+import { getArtistDetailById } from '../resource';
+import {Carousel} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const ArtistDetail = ({ match, location }) =>{
-    const query = qs.parse(location.search, { ignoreQueryPrefix: true });
-    const workIdx = parseInt(query.idx);
+
+const ArtistDetail = ({ match }) =>{
 
     const artist = getArtistDetailById(match.params.id);
-    // console.log(artist);
-    // console.log(artist.subItems[0].url);
-
-    const subItem = artist.subItems[workIdx]; 
 
     // const numItems = artist.subItems.length;
     // console.log(numItems);
+    
+    const [ index, setIndex ] = useState(0);
+
+    const handleSelect = (selectedIndex, e) => {
+        setIndex(selectedIndex);
+    };
 
     return (
         <div className="ArtistDetail">
             <h1>{artist.title}</h1>
-            <iframe
-                key={`${artist.title}-${workIdx}`}
-                title={artist.title}
-                src={subItem.url+'?autoplay=1'}
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen>
-            </iframe>
-            {artist.subItems.map((item, i) => {
-                return (
-                    <div key={i}>
-                        <h3>
-                            <Link
-                                to={`/${artist.id}?idx=${i}`}
-                                className={subItem.title === item.title ? 'ArtistDetail-item-selected' : 'ArtistDetail-item'}
-                            >
-                                {item.title}
-                            </Link>
-                        </h3>
-                    </div>
-                )
-            })}
+            <Carousel interval={null} onSelect={handleSelect}>
+                {artist.subItems.map((item, i) => {
+                    return (
+                        <Carousel.Item key={`${artist.title}-${i}`}>
+                            {
+                                index === i ? 
+                                <iframe
+                                    id={`${artist.id}-${i}`}
+                                    title={artist.title}
+                                    src={item.url+'?autoplay=1'}
+                                    frameBorder="0"
+                                    allow="autoplay; fullscreen; picture-in-picture"
+                                    allowFullScreen>
+                                </iframe>
+                                : <div></div>
+                            }                            
+                            <Carousel.Caption>
+                                <h3>{item.title}</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    )
+                })}
+               
+            </Carousel>
         </div>
     )
 }

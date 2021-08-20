@@ -12,7 +12,7 @@
 
 .ArtistDetail iframe {
   margin-top: 1em;
-  width: 90vw; 
+  width: 70vw; 
   height: 56.25vw; /* 100/56.25 = 560/315 = 1.778 */
 }
 
