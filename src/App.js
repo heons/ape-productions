@@ -3,6 +3,7 @@ import { Route, withRouter } from 'react-router-dom'
 import Home from './components/Home'
 import Menu from './components/Menu'
 import ArtistDetail from './components/ArtistDetail'
+import PhotoList from './components/PhotoList'
 import qs from 'qs'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -26,7 +27,8 @@ function App({location, history}) {
                     <Home {...props} category={query.category}/>
                 )}
             />
-            <Route path="/:id" component={ArtistDetail}/>
+            <Route path="/:id" component={ArtistDetail} exact={true}/>
+            <Route path="/photo/:id" component={PhotoList}/>
         </div>
     );
 }

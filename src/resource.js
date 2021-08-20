@@ -475,3 +475,24 @@ export const clientArtistList = [
     'BIG ONE',
     'YOUNG COCO',
 ];
+
+export const photoWorkList = [
+    {
+        name: 'ONEHUNNNIT20SS',
+        numItems: 28,
+    },
+    {
+        name: 'ZOOYORK20FW',
+        numItems: 20,
+    },
+];
+
+export const getPhotoUrlsByIndex = (idx) => {
+    const baseUrl = `photo/${photoWorkList[idx].name}/${photoWorkList[idx].name}`
+
+    const photoList = [];
+    for (let i = 0; i < photoWorkList[idx].numItems; i++) {
+        photoList.push(`${baseUrl}_${i+1}.jpeg`);
+    }
+    return photoList;
+};
