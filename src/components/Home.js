@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useRef, useCallback } from 'react';
-import SampleVideoContainer from './SampleVideoContainer';
-// import SampleVideoFrame from './SampleVideoFrameV1';
+// import SampleVideoContainer from './SampleVideoContainer';
+import SampleVideoFrameV1 from './SampleVideoFrameV1';
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
 import { getInitSampleArtistsInfo, clientCompanyList, clientArtistList } from '../resource';
@@ -93,16 +93,16 @@ const Home = ({category}) => {
                 ? `Your cursor is at ${mousePosition.x}, ${mousePosition.y}.`
                 : "Move your mouse around."}
             </h1> */}
-            {/* {isCategoryFilmDisplay && artists.current.map((artist) => (
-                <SampleVideoFrame
+            {isCategoryFilmDisplay && artists.current.map((artist) => (
+                <SampleVideoFrameV1
                     key={artist.title}
                     artist = {artist}
                     screenSize={{height, width}}
                     targetPos={artist.group === 'group1' ? targetPos1.current : targetPos2.current}
                     onMouseOver={onMouseOver}
                 />
-            ))} */}
-            {isCategoryFilmDisplay && 
+            ))}
+            {/* {isCategoryFilmDisplay && 
                 <SampleVideoContainer
                     artists = {artistGroup1}
                     screenSize={{height, width}}
@@ -118,7 +118,7 @@ const Home = ({category}) => {
                     targetPos={targetPos2.current}
                     onMouseOver={onMouseOver}
                 />
-            }
+            } */}
             
             {category === 'client' && 
                 <div
