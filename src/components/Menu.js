@@ -2,6 +2,8 @@ import './Menu.css';
 import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { getArtistListInCategory } from '../resource'
+import { photoWorkList } from '../resource'
+
 
 const Menu = ({ category }) => {
 
@@ -19,7 +21,7 @@ const Menu = ({ category }) => {
     const artistByCategory = getArtistListInCategory(category);
 
     const ArtistList = () => {
-        if (category) {
+        if (category === 'film') {
             return <div>
                 {
                     artistByCategory.map((artist) => {
@@ -31,6 +33,32 @@ const Menu = ({ category }) => {
                                         to={`/${artist.id}`}
                                     >
                                         {artist.title}
+                                        
+                                    </Link>
+                                </h3>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        } else {
+            return <div></div>
+        }
+    }
+
+    const PhotoList = () => {
+        if (category === 'photo') {
+            return <div>
+                {
+                    photoWorkList.map((photo, i) => {
+                        return (    
+                            <div key={photo.title}>
+                                <h3>
+                                    <Link
+                                        className={'Menu-sub-item'}
+                                        to={`/photo/${i}`}
+                                    >
+                                        {photo.title}
                                         
                                     </Link>
                                 </h3>
@@ -67,6 +95,7 @@ const Menu = ({ category }) => {
                 })}
             </h1>
             <ArtistList />
+            <PhotoList />
         </div>
     )
 }

@@ -2,10 +2,12 @@ import React from 'react';
 import { useState, useRef, useCallback } from 'react';
 // import SampleVideoContainer from './SampleVideoContainer';
 import SampleVideoFrameV1 from './SampleVideoFrameV1';
+import SamplePhotoFrameV1 from './SamplePhotoFrameV1';
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
 import { getInitSampleArtistsInfo, clientCompanyList, clientArtistList } from '../resource';
 import TextList from './TextList'
+import { getPhotoUrlsByIndex } from '../resource'
 
 
 const Home = ({category}) => {
@@ -15,7 +17,7 @@ const Home = ({category}) => {
     // const [artists, setArtists] = useState(getInitSampleArtistsInfo);
   
     const artists = useRef(getInitSampleArtistsInfo());
-    const targetPos1 = useRef({x: 0, y: 0});
+    const targetPos1 = useRef({x: 100, y: 100});
     const targetPos2 = useRef({x: 0, y: 0});
   
     // const hasMovedCursor = typeof mousePosition.x === "number" && typeof mousePosition.y === "number";
@@ -36,7 +38,10 @@ const Home = ({category}) => {
     const offsetRatio = -100;
     const diifRatioGroup = 200;
     const ACT_RESOLUTION = 10;
-    if(Math.round(mousePosition.x) % ACT_RESOLUTION === 0) {
+    console.log(targetPos1.current);
+    console.log(mousePosition);
+    if(mousePosition.x && Math.round(mousePosition.x) % ACT_RESOLUTION === 0) {
+        console.log("inside resolution check")
         targetPos1.current = {
             x: -(mousePosition.x - width/2) + width/offsetRatio,
             y: -(mousePosition.y - height/2) + height/offsetRatio
@@ -47,6 +52,7 @@ const Home = ({category}) => {
             y: -(mousePosition.y - height/2) + height/diifRatioGroup + height/offsetRatio
         };
     }
+    console.log(targetPos1.current);
 
     const stylesTitle = {
         position: 'absolute',
@@ -55,7 +61,7 @@ const Home = ({category}) => {
         left: '10px',
     };
 
-    const isCategoryFilmDisplay = category !== 'photo';
+    // const isCategoryFilmDisplay = category !== 'photo';
 
 
     const [ title, setTitle ] = useState('');
@@ -82,9 +88,13 @@ const Home = ({category}) => {
     // }
     
     // tmpFunc();
-    const artistGroup1 = artists.current.filter(artist => artist.group === 'group1')
-    const artistGroup2 = artists.current.filter(artist => artist.group === 'group2')
-            
+
+    // const artistGroup1 = artists.current.filter(artist => artist.group === 'group1')
+    // const artistGroup2 = artists.current.filter(artist => artist.group === 'group2')
+
+    // Photo
+    const photoList = getPhotoUrlsByIndex(0);
+
     return (
         <div>
             {/* <canvas id="canvas_test" width = {width} height = {height}
@@ -96,7 +106,11 @@ const Home = ({category}) => {
                 ? `Your cursor is at ${mousePosition.x}, ${mousePosition.y}.`
                 : "Move your mouse around."}
             </h1> */}
-            {isCategoryFilmDisplay && artists.current.map((artist) => (
+
+           
+            
+
+            {/* {isCategoryFilmDisplay &&*/ artists.current.map((artist) => (
                 <SampleVideoFrameV1
                     key={artist.title}
                     artist = {artist}
@@ -122,7 +136,23 @@ const Home = ({category}) => {
                     onMouseOver={onMouseOver}
                 />
             } */}
-            
+
+            {category === 'photo' && 
+                <div
+                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`, backgroundColor: 'black'}}
+                >
+                    {photoList.map((photo, i) => (
+                        <SamplePhotoFrameV1
+                            key={i}
+                            photo = {{url:photo, id:i+1}}
+                            screenSize={{height, width}}
+                            targetPos={targetPos1.current}
+                            onMouseOver={onMouseOver}
+                        />
+                    ))}
+                </div>
+            }
+        
             {category === 'client' && 
                 <div
                     style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`,}}

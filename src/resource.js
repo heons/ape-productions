@@ -478,17 +478,17 @@ export const clientArtistList = [
 
 export const photoWorkList = [
     {
-        name: 'ONEHUNNNIT20SS',
+        title: 'ONEHUNNNIT20SS',
         numItems: 28,
     },
     {
-        name: 'ZOOYORK20FW',
+        title: 'ZOOYORK20FW',
         numItems: 20,
     },
 ];
 
 export const getPhotoUrlsByIndex = (idx) => {
-    const baseUrl = `photo/${photoWorkList[idx].name}/${photoWorkList[idx].name}`
+    const baseUrl = `photo/${photoWorkList[idx].title}/${photoWorkList[idx].title}`
 
     const photoList = [];
     for (let i = 0; i < photoWorkList[idx].numItems; i++) {
