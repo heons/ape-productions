@@ -4,6 +4,7 @@ import { useState, useRef, useCallback } from 'react';
 import PhotoPage from './PhotoPage';
 import FilmPage from './FilmPage';
 import ClientPage from './ClientPage';
+import NotePage from './NotePage';
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
 import { getInitSampleArtistsInfo } from '../resource';
@@ -152,15 +153,10 @@ const Home = ({category}) => {
             }
 
             {category === 'note' && 
-                <div
-                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`, 'background-color': 'black', zIndex: `${zIndex.note}`}}
-                >
-                    <div
-                        style={{position: 'absolute', top: `80px`, left: `30px`, color: 'white', 'text-align': 'left'}}
-                    >
-                        <h1>Note.</h1>
-                    </div>
-                </div>
+                <NotePage 
+                    screenSize={{height, width}}
+                    zIndex={zIndex.note}
+                />
             }
 
             {category === 'contact' && 
