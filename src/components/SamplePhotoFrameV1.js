@@ -10,12 +10,13 @@ const SamplePhotoFrameV1 = ({ photo, screenSize, targetPos, onMouseOver }) => {
 
     const size = computeSizeFromWidth(naturalSize, screenSize.width);
 
-    const row = Math.floor((parseInt(photo.id) - 1) / 8);
-    const col = (parseInt(photo.id) - 1) % 8;
+    const row = Math.floor((parseInt(photo.id) - 1) / 7);
+    const col = (parseInt(photo.id) - 1) % 7;
     const OVERLAP_RATIO = 1.05;
+    const targetGroup = photo.id % 2 === 0 ? 1 : 0
     const newTargetPos = {
-        x: targetPos.x + col * size.width * OVERLAP_RATIO,
-        y: targetPos.y + row * size.height * OVERLAP_RATIO,
+        x: targetPos[targetGroup].x + col * size.width * OVERLAP_RATIO,
+        y: targetPos[targetGroup].y + row * size.height * OVERLAP_RATIO,
     };
     
     const styles = {

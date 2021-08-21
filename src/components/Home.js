@@ -37,21 +37,19 @@ const Home = ({category}) => {
     const offsetRatio = -100;
     const diifRatioGroup = 200;
     const ACT_RESOLUTION = 10;
-    console.log(targetPos1.current);
-    console.log(mousePosition);
+
     if(mousePosition.x && Math.round(mousePosition.x) % ACT_RESOLUTION === 0) {
-        console.log("inside resolution check")
         targetPos1.current = {
             x: -(mousePosition.x - width/2) + width/offsetRatio,
             y: -(mousePosition.y - height/2) + height/offsetRatio
         };
-      
+    }
+    if(mousePosition.x && Math.round(mousePosition.x + 5) % ACT_RESOLUTION === 0) {
         targetPos2.current = {
             x: -(mousePosition.x - width/2) + width/diifRatioGroup + width/offsetRatio,
             y: -(mousePosition.y - height/2) + height/diifRatioGroup + height/offsetRatio
         };
     }
-    console.log(targetPos1.current);
 
     const stylesTitle = {
         position: 'absolute',
@@ -152,7 +150,7 @@ const Home = ({category}) => {
 
             <PhotoPage
                 screenSize={{height, width}}
-                targetPos={targetPos1.current}
+                targetPos={[targetPos1.current, targetPos2.current]}
                 zIndex={zIndex.photo}
             ></PhotoPage>
         
