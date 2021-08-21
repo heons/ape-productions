@@ -95,6 +95,15 @@ const Home = ({category}) => {
     // Photo
     const photoList = getPhotoUrlsByIndex(0);
 
+    const zIndex = {
+        film: (category !== 'photo' || category !== 'note') ? 3 : 1,
+        photo: category === 'photo' ? 3 : 1,
+        client: category === 'client' ? 3 : 1,
+        note: category === 'note' ? 3 : 1,
+        contact: category === 'contact' ? 3 : 1,
+    }
+
+
     return (
         <div>
             {/* <canvas id="canvas_test" width = {width} height = {height}
@@ -110,15 +119,21 @@ const Home = ({category}) => {
            
             
 
-            {/* {isCategoryFilmDisplay &&*/ artists.current.map((artist) => (
-                <SampleVideoFrameV1
-                    key={artist.title}
-                    artist = {artist}
-                    screenSize={{height, width}}
-                    targetPos={artist.group === 'group1' ? targetPos1.current : targetPos2.current}
-                    onMouseOver={onMouseOver}
-                />
-            ))}
+            {/* {isCategoryFilmDisplay &&*/ 
+                <div
+                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`, backgroundColor: 'black', zIndex: `${zIndex.film}`}}
+                >
+                    {artists.current.map((artist) => (
+                        <SampleVideoFrameV1
+                            key={artist.title}
+                            artist = {artist}
+                            screenSize={{height, width}}
+                            targetPos={artist.group === 'group1' ? targetPos1.current : targetPos2.current}
+                            onMouseOver={onMouseOver}
+                        />
+                    ))}
+            </div>
+            }
             {/* {isCategoryFilmDisplay && 
                 <SampleVideoContainer
                     artists = {artistGroup1}
@@ -137,9 +152,9 @@ const Home = ({category}) => {
                 />
             } */}
 
-            {category === 'photo' && 
+            {
                 <div
-                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`, backgroundColor: 'black'}}
+                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`, backgroundColor: 'black', zIndex: `${zIndex.photo}`}}
                 >
                     {photoList.map((photo, i) => (
                         <SamplePhotoFrameV1
@@ -155,7 +170,7 @@ const Home = ({category}) => {
         
             {category === 'client' && 
                 <div
-                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`,}}
+                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`, zIndex: `${zIndex.client}`}}
                 >
                     <div
                         style={{position: 'absolute', top: `60px`, left: `10px`, color: 'white'}}
@@ -175,7 +190,7 @@ const Home = ({category}) => {
 
             {category === 'note' && 
                 <div
-                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`, 'background-color': 'black'}}
+                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`, 'background-color': 'black', zIndex: `${zIndex.note}`}}
                 >
                     <div
                         style={{position: 'absolute', top: `80px`, left: `30px`, color: 'white', 'text-align': 'left'}}
@@ -187,7 +202,7 @@ const Home = ({category}) => {
 
             {category === 'contact' && 
                 <div
-                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`,}}
+                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`, zIndex: `${zIndex.contact}`}}
                 >
                     <div
                         style={{position: 'absolute', top: `80px`, left: `30px`, color: 'white', 'text-align': 'left'}}
