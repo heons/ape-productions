@@ -5,6 +5,7 @@ import PhotoPage from './PhotoPage';
 import FilmPage from './FilmPage';
 import ClientPage from './ClientPage';
 import NotePage from './NotePage';
+import ContactPage from './ContactPage';
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
 import { getInitSampleArtistsInfo } from '../resource';
@@ -159,20 +160,11 @@ const Home = ({category}) => {
                 />
             }
 
-            {category === 'contact' && 
-                <div
-                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`, zIndex: `${zIndex.contact}`}}
-                >
-                    <div
-                        style={{position: 'absolute', top: `80px`, left: `30px`, color: 'white', 'text-align': 'left'}}
-                    >
-                        <h1>APE.</h1>
-                        <h2>서울특별시 마포구 양화진길 6, 6층</h2>
-                        <h2>+82-10-8487-2110</h2>
-                        <h2>+82-10-4642-8321</h2>
-                        <h2>apeproductionskr@gmail.com</h2>
-                    </div>
-                </div>
+            {category === 'contact' &&     
+                <ContactPage 
+                    screenSize={{height, width}}
+                    zIndex={zIndex.contact}
+                />
             }
 
             <h1 style={stylesTitle}>
