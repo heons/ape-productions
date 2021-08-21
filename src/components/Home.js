@@ -2,12 +2,11 @@ import React from 'react';
 import { useState, useRef, useCallback } from 'react';
 // import SampleVideoContainer from './SampleVideoContainer';
 import SampleVideoFrameV1 from './SampleVideoFrameV1';
-import SamplePhotoFrameV1 from './SamplePhotoFrameV1';
+import PhotoPage from './PhotoPage';
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
 import { getInitSampleArtistsInfo, clientCompanyList, clientArtistList } from '../resource';
 import TextList from './TextList'
-import { getPhotoUrlsByIndex } from '../resource'
 
 
 const Home = ({category}) => {
@@ -92,8 +91,7 @@ const Home = ({category}) => {
     // const artistGroup1 = artists.current.filter(artist => artist.group === 'group1')
     // const artistGroup2 = artists.current.filter(artist => artist.group === 'group2')
 
-    // Photo
-    const photoList = getPhotoUrlsByIndex(0);
+    
 
     const zIndex = {
         film: (category !== 'photo' || category !== 'note') ? 3 : 1,
@@ -152,21 +150,11 @@ const Home = ({category}) => {
                 />
             } */}
 
-            {
-                <div
-                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`, backgroundColor: 'black', zIndex: `${zIndex.photo}`}}
-                >
-                    {photoList.map((photo, i) => (
-                        <SamplePhotoFrameV1
-                            key={i}
-                            photo = {{url:photo, id:i+1}}
-                            screenSize={{height, width}}
-                            targetPos={targetPos1.current}
-                            onMouseOver={onMouseOver}
-                        />
-                    ))}
-                </div>
-            }
+            <PhotoPage
+                screenSize={{height, width}}
+                targetPos={targetPos1.current}
+                zIndex={zIndex.photo}
+            ></PhotoPage>
         
             {category === 'client' && 
                 <div

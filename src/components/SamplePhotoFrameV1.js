@@ -39,13 +39,13 @@ const SamplePhotoFrameV1 = ({ photo, screenSize, targetPos, onMouseOver }) => {
                 onMouseOver={
                     () => {
                         setIsMouseOver(true);
-                        onMouseOver(photo.id);
+                        onMouseOver && onMouseOver(photo.id);
                     }
                 }
                 onMouseLeave={
                     () => {
                         setIsMouseOver(false);
-                        onMouseOver("");
+                        onMouseOver && onMouseOver("");
                     }
                 }
             />
