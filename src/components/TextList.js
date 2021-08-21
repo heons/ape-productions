@@ -5,13 +5,13 @@ const TextList = ({ textList, width, height }) =>{
     const [idxMouseOver, setIdxMouseOver] = useState(0)
 
     const styleNoraml = {
-        'font-size': '100%',
+        'fontSize': '100%',
         'color': 'white',
         'margin': '0px',
         'padding': '0px',
     };
     const styleMouseOver = {
-        'font-size': '130%',
+        'fontSize': '130%',
         'color': 'white',
         'margin': '0px',
         'padding': '0px',
@@ -21,10 +21,11 @@ const TextList = ({ textList, width, height }) =>{
     return (
         <div>
             <div
-                style={{width: width, height: height, 'overflow-y': 'scroll'}}
+                style={{width: width, height: height, 'overflowY': 'scroll'}}
             >
                 {textList.map((company, idx) => (
                     <h4
+                        key={company+idx}
                         style={idx === idxMouseOver ? styleMouseOver : styleNoraml}
                         onMouseOver={() => setIdxMouseOver(idx)}
                     >
