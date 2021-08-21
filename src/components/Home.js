@@ -3,10 +3,10 @@ import { useState, useRef, useCallback } from 'react';
 // import SampleVideoContainer from './SampleVideoContainer';
 import PhotoPage from './PhotoPage';
 import FilmPage from './FilmPage';
+import ClientPage from './ClientPage';
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
-import { getInitSampleArtistsInfo, clientCompanyList, clientArtistList } from '../resource';
-import TextList from './TextList'
+import { getInitSampleArtistsInfo } from '../resource';
 
 
 const Home = ({category}) => {
@@ -143,25 +143,12 @@ const Home = ({category}) => {
                 targetPos={[targetPos1.current, targetPos2.current]}
                 zIndex={zIndex.photo}
             ></PhotoPage>
-        
+
             {category === 'client' && 
-                <div
-                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`, zIndex: `${zIndex.client}`}}
-                >
-                    <div
-                        style={{position: 'absolute', top: `60px`, left: `10px`, color: 'white'}}
-                    >
-                        <h1>Company</h1>
-                        <TextList textList={clientCompanyList} width='300px' height='300px'/>
-                    </div>
-                    
-                    <div
-                        style={{position: 'absolute', top: `${height-400}px`, left:`${width-410}px`, color: 'white'}}
-                    >
-                        <h1>Artist</h1>
-                        <TextList textList={clientArtistList} width='400px' height='300px'/>
-                    </div>
-                </div>
+                <ClientPage 
+                    screenSize={{height, width}}
+                    zIndex={zIndex.client}
+                />
             }
 
             {category === 'note' && 
