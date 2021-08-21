@@ -19,14 +19,13 @@ const SamplePhotoFrameV1 = ({ photo, screenSize, targetPos, onMouseOver }) => {
         y: targetPos[targetGroup].y + row * size.height * OVERLAP_RATIO,
     };
     
-    const styles = {
-        opacity: isMouseOver ? 1 : 0.5,
-    };
-
     const motionStyle = {
         position: 'absolute',
-        transition: 'all 2s linear',
-        transform: `translate(${newTargetPos.x}px, ${newTargetPos.y}px)`,
+        transition: isMouseOver ? 'all 0.8s linear' : 'all 2s linear',
+        // transform: `translate(${newTargetPos.x}px, ${newTargetPos.y}px)`,
+        transform: isMouseOver ? `translate(${newTargetPos.x}px, ${newTargetPos.y}px) scale(1.5)` : `translate(${newTargetPos.x}px, ${newTargetPos.y}px)`,
+        zIndex: isMouseOver ? 4 : 3,
+        opacity: isMouseOver ? 1 : 0.5,
     }
 
     return (
@@ -36,7 +35,6 @@ const SamplePhotoFrameV1 = ({ photo, screenSize, targetPos, onMouseOver }) => {
                 alt=""
                 width={size.width}
                 height={size.height}
-                style={styles}
                 onMouseOver={
                     () => {
                         setIsMouseOver(true);

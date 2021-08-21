@@ -18,15 +18,14 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
     x: targetPos.x + col * size.width * OVERLAP_RATIO,
     y: targetPos.y + row * size.height * OVERLAP_RATIO,
   };
-  
-  const styles = {
-    opacity: isMouseOver ? 1 : 0.5,
-  };
 
   const motionStyle = {
     position: 'absolute',
-    transition: 'all 2s linear',
-    transform: `translate(${newTargetPos.x}px, ${newTargetPos.y}px)`,
+    transition: isMouseOver ? 'all 1s linear' : 'all 2s linear',
+    // transform: `translate(${newTargetPos.x}px, ${newTargetPos.y}px)`,
+    transform: isMouseOver ? `translate(${newTargetPos.x}px, ${newTargetPos.y}px) scale(1.5)` : `translate(${newTargetPos.x}px, ${newTargetPos.y}px)`,
+    zIndex: isMouseOver ? 4 : 3,
+    opacity: isMouseOver ? 1 : 0.5,
   }
 
   return (
@@ -36,7 +35,6 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
           src={artist.sampleVideoSrc}
           width={size.width}
           height={size.height}
-          style={styles}
           preload="auto" loop muted autoPlay playsInline
           onLoadedData={response => {
             const { videoWidth, videoHeight } = response.target;      
