@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState, useRef, useCallback } from 'react';
 // import SampleVideoContainer from './SampleVideoContainer';
-import SampleVideoFrameV1 from './SampleVideoFrameV1';
 import PhotoPage from './PhotoPage';
+import FilmPage from './FilmPage';
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
 import { getInitSampleArtistsInfo, clientCompanyList, clientArtistList } from '../resource';
@@ -112,24 +112,7 @@ const Home = ({category}) => {
                 : "Move your mouse around."}
             </h1> */}
 
-           
-            
 
-            {/* {isCategoryFilmDisplay &&*/ 
-                <div
-                    style={{width: width, height: height, position: 'absolute', top: `0px`, left: `0px`, backgroundColor: 'black', zIndex: `${zIndex.film}`}}
-                >
-                    {artists.current.map((artist) => (
-                        <SampleVideoFrameV1
-                            key={artist.title}
-                            artist = {artist}
-                            screenSize={{height, width}}
-                            targetPos={artist.group === 'group1' ? targetPos1.current : targetPos2.current}
-                            onMouseOver={onMouseOver}
-                        />
-                    ))}
-            </div>
-            }
             {/* {isCategoryFilmDisplay && 
                 <SampleVideoContainer
                     artists = {artistGroup1}
@@ -147,6 +130,13 @@ const Home = ({category}) => {
                     onMouseOver={onMouseOver}
                 />
             } */}
+            
+            <FilmPage
+                screenSize={{height, width}}
+                targetPos={[targetPos1.current, targetPos2.current]}
+                zIndex={zIndex.film}
+                onMouseOver={onMouseOver}
+            ></FilmPage>
 
             <PhotoPage
                 screenSize={{height, width}}
