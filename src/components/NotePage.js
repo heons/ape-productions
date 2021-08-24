@@ -1,8 +1,10 @@
 import React from 'react'
+import { Container } from 'react-bootstrap';
+import { noteList } from '../resources/noteList'
+import NoteItem from './NoteItem'
 
 
 const NotePage = ({ screenSize, zIndex }) => {
-    // TODO : Re-arrange with screen resize.
 
     const pageStyle = {
         width: screenSize.width,
@@ -10,19 +12,23 @@ const NotePage = ({ screenSize, zIndex }) => {
         position: 'absolute',
         top: `0px`,
         left: `0px`,
+        paddingTop: `80px`,
         backgroundColor: 'black',
+        overflowY: 'auto',
+        textAlign: 'left',
         zIndex: zIndex,
     };
     
     return (
         <div
             style={pageStyle}
-        >
-            <div
-                style={{position: 'absolute', top: `80px`, left: `30px`, color: 'white', 'textAlign': 'left'}}
-            >
-                <h1>Note.</h1>
-            </div>
+        >  
+            <Container>
+                {noteList.map(note => {
+                    return (
+                        <NoteItem note={note} key={note.id}/>
+                )})}
+            </Container>
         </div>
     )
 }
