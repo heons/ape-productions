@@ -32,8 +32,7 @@ const Menu = ({ category }) => {
                                         className={'Menu-sub-item'}
                                         to={`/${artist.id}`}
                                     >
-                                        {artist.title}
-                                        
+                                        {artist.title}  
                                     </Link>
                                 </h3>
                             </div>
@@ -59,7 +58,6 @@ const Menu = ({ category }) => {
                                         to={`/photo/${i}`}
                                     >
                                         {photo.title}
-                                        
                                     </Link>
                                 </h3>
                             </div>
@@ -80,20 +78,24 @@ const Menu = ({ category }) => {
                     APE.
                 </Link>
             </h1>
-            <h1>
-                {'/ '}
+            <div style={{display: 'flex'}}>
                 {items.current.map((item) => {
                     return (
-                        <Link 
-                            to={category === item ? `/` : `/?category=${item}`}
-                            key={item}
-                            className={category === item ? 'Menu-item-selected' : 'Menu-item'}
-                        >
-                            {item.charAt(0).toUpperCase() + item.slice(1) + ' / '}
-                        </Link>
+                        <div style={{display: 'flex'}}>
+                            <h1>
+                                <Link 
+                                    to={category === item ? `/` : `/?category=${item}`}
+                                    key={item}
+                                    className={category === item ? 'Menu-item-selected' : 'Menu-item'}
+                                >
+                                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                                </Link>
+                            </h1>
+                            <h1>&nbsp;/&nbsp;</h1>
+                        </div>
                     )
                 })}
-            </h1>
+            </div>
             <ArtistList />
             <PhotoList />
         </div>
