@@ -12,7 +12,7 @@ const NotePage = ({ screenSize, zIndex }) => {
         position: 'absolute',
         top: `0px`,
         left: `0px`,
-        paddingTop: `80px`,
+        paddingTop: `100px`,
         backgroundColor: 'black',
         overflowY: 'auto',
         textAlign: 'left',

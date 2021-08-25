@@ -23,7 +23,7 @@ const ClientPage = ({ screenSize, zIndex }) => {
             style={pageStyle}
         >
             <div
-                style={{position: 'absolute', top: `60px`, left: `10px`, color: 'white'}}
+                style={{position: 'absolute', top: `100px`, left: `30px`, color: 'white'}}
             >
                 <h1>Company</h1>
                 <TextList textList={clientCompanyList} width='300px' height='300px'/>

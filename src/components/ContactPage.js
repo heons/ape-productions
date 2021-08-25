@@ -10,6 +10,8 @@ const ContactPage = ({ screenSize, zIndex }) => {
         position: 'absolute',
         top: `0px`,
         left: `0px`,
+        paddingTop: `100px`,
+        paddingLeft: `30px`,
         // backgroundColor: 'black',
         zIndex: zIndex,
     };
@@ -19,7 +21,7 @@ const ContactPage = ({ screenSize, zIndex }) => {
             style={pageStyle}
         >
             <div
-                style={{position: 'absolute', top: `80px`, left: `30px`, color: 'white', 'textAlign': 'left'}}
+                style={{color: 'white', textAlign: 'left'}}
             >
                 <h1>APE.</h1>
                 <h2>서울특별시 마포구 양화진길 6, 6층</h2>
