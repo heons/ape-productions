@@ -421,7 +421,6 @@ export const getArtistListInCategory = (category) => {
         return artistInfos;
         // return [];
     } else {
-        console.log(category.toUpperCase());
         return artistInfos.filter((artist) => artist.category === category.toUpperCase());
     }
 }

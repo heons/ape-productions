@@ -10,7 +10,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App({location, history}) {
     const query = qs.parse(location.search, { ignoreQueryPrefix: true });
-    console.log(query.category);
 
     return (
         <div className="App">
