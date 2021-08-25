@@ -18,7 +18,7 @@ const PhotoList = ({ match }) =>{
                                 key={`${workName}-${idx}`}
                                 style={{'height': '100vh', 'border': '0', 'textAlign': 'center'}}
                             >
-                                <img height='100%' style={{'padding': '0'}} src={`../${url}`} alt={`${workName}-${idx}`}></img>
+                                <img height='100%' style={{'padding': '0'}} src={`${url}`} alt={`${workName}-${idx}`}></img>
                             </ListGroup.Item>
                     )})
                 }

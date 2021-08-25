@@ -30,7 +30,7 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
 
   return (
     <div style={motionStyle}>
-      <Link to={`/${artist.id}?idx=0`}>
+      <Link to={`${process.env.PUBLIC_URL}/${artist.id}?idx=0`}>
         <video
           src={`${process.env.PUBLIC_URL}/${artist.sampleVideoSrc}`}
           width={size.width}
