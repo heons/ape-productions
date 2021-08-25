@@ -31,9 +31,9 @@ const ArtistDetail = ({ match }) =>{
 
     return (
         <div className="ArtistDetail">
-            <h1>{artist.title}</h1>
+            <h1>{artist && artist.title}</h1>
             <Carousel interval={null} onSelect={handleSelect}>
-                {artist.subItems.map((item, i) => {
+                {artist && artist.subItems.map((item, i) => {
                     return (
                         <Carousel.Item key={`${artist.title}-${i}`}>
                             {
