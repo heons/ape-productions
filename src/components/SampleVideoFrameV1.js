@@ -32,7 +32,7 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
     <div style={motionStyle}>
       <Link to={`/${artist.id}?idx=0`}>
         <video
-          src={artist.sampleVideoSrc}
+          src={`${process.env.PUBLIC_URL}/${artist.sampleVideoSrc}`}
           width={size.width}
           height={size.height}
           preload="auto" loop muted autoPlay playsInline
