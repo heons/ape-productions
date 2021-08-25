@@ -1,3 +1,11 @@
+.ArtistDetail {
+  text-align: center;
+}
+
+.ArtistDetail-Carousel {
+  margin-top: 50px;
+}
+
 .ArtistDetail h1 {
   margin-top: 0;
 }

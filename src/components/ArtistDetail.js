@@ -19,23 +19,20 @@ const ArtistDetail = ({ match }) =>{
         setIndex(selectedIndex);
     };
 
-    // Compute and set the hight of iframe with width.
     // TODO: We have magic numbers here.
-    let ratio = Math.max((56.25 / (width / 800)), 50);
-    ratio = Math.min(ratio, 80);
-    // console.log(ratio)
     const styleIframe = {
-        'width': '70vw',
-        'height': `${ratio}vw`
+        'width': '100%',
+        'height': `70vh`
     }
 
     return (
         <div className="ArtistDetail">
             <h1>{artist && artist.title}</h1>
-            <Carousel interval={null} onSelect={handleSelect}>
+            <Carousel className="ArtistDetail-Carousel" interval={null} onSelect={handleSelect}>
                 {artist && artist.subItems.map((item, i) => {
                     return (
                         <Carousel.Item key={`${artist.title}-${i}`}>
+                            <h3 style={{marginBottom: '10px'}}>{item.title}</h3>
                             {
                                 index === i ? 
                                 <iframe
@@ -49,9 +46,7 @@ const ArtistDetail = ({ match }) =>{
                                 </iframe>
                                 : <div></div>
                             }                            
-                            <Carousel.Caption>
-                                <h3>{item.title}</h3>
-                            </Carousel.Caption>
+                            
                         </Carousel.Item>
                     )
                 })}
