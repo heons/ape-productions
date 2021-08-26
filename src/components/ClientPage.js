@@ -19,9 +19,10 @@ const ClientPage = ({ width, height, zIndex }) => {
         overflowY: 'auto',
     };
 
+    const centerScreenX = width / 2;
     const textListWidth = width > 500 ? 400 : 300;
 
-    const companyPosLeft = width > 850 ? 30 : (width-textListWidth) / 2;
+    const companyPosLeft = width > 850 ? (centerScreenX - textListWidth) : (width-textListWidth) / 2;
     const companyStyle = {
         position: 'absolute',
         top: `100px`,
@@ -30,7 +31,7 @@ const ClientPage = ({ width, height, zIndex }) => {
     };
 
     const artistPosTop = width > 850 ? height-400 : 450;
-    const artistPosLeft = width > 850 ? width-410 : (width-textListWidth) / 2;
+    const artistPosLeft = width > 850 ? (centerScreenX) : (width-textListWidth) / 2;
     const artistStyle = {
         position: 'absolute',
         top: `${artistPosTop}px`,
