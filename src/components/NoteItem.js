@@ -12,6 +12,7 @@ const NoteItem = ({ note }) => {
         top: 0,
         left: 0,
         frameborder: '0',
+        marginTop: '0.8em'
     }
 
     const styleText = {
