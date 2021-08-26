@@ -5,9 +5,9 @@ import { Row, Col } from 'react-bootstrap';
 const NoteItem = ({ note }) => {
 
     const styleIframe = {
-        display: 'block',
+        position: 'absolute',
         width: '100%',
-        height: '50vw',
+        height: '100%',
         border: 'none',
         top: 0,
         left: 0,
@@ -21,6 +21,11 @@ const NoteItem = ({ note }) => {
         padding: '0',
         margin: '0',
     }
+
+    const videoWrapper = {
+        position: 'relative',
+        paddingBottom: '56.25%' /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
+    };
     
     // Summary, Needs and Solution is not being used. - No Contents.
     return (
@@ -37,14 +42,18 @@ const NoteItem = ({ note }) => {
                 note.urls.length > 0 &&
                 note.urls.map((url) => {
                     return <Col xs={12} key={url}>
-                        <iframe
-                            style={styleIframe}
-                            title={note.title}
-                            src={url}
-                            frameBorder="0"
-                            allow="fullscreen; picture-in-picture"
-                            allowFullScreen>
-                        </iframe>
+                        <div style={videoWrapper}>
+                            <iframe
+                                style={styleIframe}
+                                title={note.title}
+                                src={url}
+                                width="100%"
+                                height="100%"
+                                frameBorder="0"
+                                allow="fullscreen; picture-in-picture"
+                                allowFullScreen>
+                            </iframe>
+                        </div>
                     </Col>
                 })
             }
