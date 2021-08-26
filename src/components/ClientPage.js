@@ -5,12 +5,12 @@ import TextList from './TextList'
 import { clientCompanyList, clientArtistList } from '../resource';
 
 
-const ClientPage = ({ screenSize, zIndex }) => {
+const ClientPage = ({ width, height, zIndex }) => {
     // TODO : Re-arrange with screen resize.
 
     const pageStyle = {
-        width: screenSize.width,
-        height: screenSize.height,
+        width: width,
+        height: height,
         position: 'absolute',
         top: `0px`,
         left: `0px`,
@@ -19,9 +19,9 @@ const ClientPage = ({ screenSize, zIndex }) => {
         overflowY: 'auto',
     };
 
-    const textListWidth = screenSize.width > 500 ? 400 : 300;
+    const textListWidth = width > 500 ? 400 : 300;
 
-    const companyPosLeft = screenSize.width > 850 ? 30 : (screenSize.width-textListWidth) / 2;
+    const companyPosLeft = width > 850 ? 30 : (width-textListWidth) / 2;
     const companyStyle = {
         position: 'absolute',
         top: `100px`,
@@ -29,8 +29,8 @@ const ClientPage = ({ screenSize, zIndex }) => {
         color: 'white',
     };
 
-    const artistPosTop = screenSize.width > 850 ? screenSize.height-400 : 450;
-    const artistPosLeft = screenSize.width > 850 ? screenSize.width-410 : (screenSize.width-textListWidth) / 2;
+    const artistPosTop = width > 850 ? height-400 : 450;
+    const artistPosLeft = width > 850 ? width-410 : (width-textListWidth) / 2;
     const artistStyle = {
         position: 'absolute',
         top: `${artistPosTop}px`,
@@ -60,5 +60,5 @@ const ClientPage = ({ screenSize, zIndex }) => {
     )
 }
         
-export default ClientPage
+export default React.memo(ClientPage);
         

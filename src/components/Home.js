@@ -148,7 +148,8 @@ const Home = ({category}) => {
 
             {category === 'client' && 
                 <ClientPage 
-                    screenSize={{height, width}}
+                    width={width}
+                    height={height}
                     zIndex={zIndex.client}
                 />
             }
