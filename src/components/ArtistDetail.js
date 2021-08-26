@@ -22,7 +22,8 @@ const ArtistDetail = ({ match }) =>{
     // TODO: We have magic numbers here.
     const styleIframe = {
         'width': '100%',
-        'height': `70vh`
+        'height': `70vh`,
+        marginBottom: '30px'
     }
 
     return (
