@@ -34,6 +34,8 @@ const ClientPage = ({ screenSize, zIndex }) => {
         left:`${artistPosLeft}px`,
         color: 'white',
     };
+
+    const textListWidth = screenSize.width > 500 ? 400 : 300;
     
     return (
         <div
@@ -43,14 +45,14 @@ const ClientPage = ({ screenSize, zIndex }) => {
                 style={companyStyle}
             >
                 <h1>Company</h1>
-                <TextList textList={clientCompanyList} width='400px' height='300px'/>
+                <TextList textList={clientCompanyList} width={`${textListWidth}px`} height='300px'/>
             </div>
             
             <div
                 style={artistStyle}
             >
                 <h1>Artist</h1>
-                <TextList textList={clientArtistList} width='400px' height='300px'/>
+                <TextList textList={clientArtistList} width={`${textListWidth}px`} height='300px'/>
             </div>
         </div>
     )
