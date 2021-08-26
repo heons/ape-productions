@@ -22,6 +22,7 @@ const NoteItem = ({ note }) => {
         margin: '0',
     }
     
+    // Summary, Needs and Solution is not being used. - No Contents.
     return (
         <Row>
             <Col xs={12}>
@@ -32,16 +33,21 @@ const NoteItem = ({ note }) => {
                     return <p style={styleText} key={note.title + 'content' + i}>{line}</p>
                 })}
             </Col>
-            <Col xs={12}>
-                <iframe
-                    style={styleIframe}
-                    title={'tmp'}
-                    src={note.url}
-                    frameBorder="0"
-                    allow="fullscreen; picture-in-picture"
-                    allowFullScreen>
-                </iframe>
-            </Col>
+            {
+                note.urls.length > 0 &&
+                note.urls.map((url) => {
+                    return <Col xs={12} key={url}>
+                        <iframe
+                            style={styleIframe}
+                            title={note.title}
+                            src={url}
+                            frameBorder="0"
+                            allow="fullscreen; picture-in-picture"
+                            allowFullScreen>
+                        </iframe>
+                    </Col>
+                })
+            }
             {
                 note.summary.length > 0 &&      
                 <Col xs={12} md={4}>
