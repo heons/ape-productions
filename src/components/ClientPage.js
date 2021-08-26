@@ -19,15 +19,18 @@ const ClientPage = ({ screenSize, zIndex }) => {
         overflowY: 'auto',
     };
 
+    const textListWidth = screenSize.width > 500 ? 400 : 300;
+
+    const companyPosLeft = screenSize.width > 850 ? 30 : (screenSize.width-textListWidth) / 2;
     const companyStyle = {
         position: 'absolute',
         top: `100px`,
-        left: `30px`,
+        left: `${companyPosLeft}px`,
         color: 'white',
     };
 
     const artistPosTop = screenSize.width > 850 ? screenSize.height-400 : 450;
-    const artistPosLeft = screenSize.width > 850 ? screenSize.width-410 : 30;
+    const artistPosLeft = screenSize.width > 850 ? screenSize.width-410 : (screenSize.width-textListWidth) / 2;
     const artistStyle = {
         position: 'absolute',
         top: `${artistPosTop}px`,
@@ -35,7 +38,6 @@ const ClientPage = ({ screenSize, zIndex }) => {
         color: 'white',
     };
 
-    const textListWidth = screenSize.width > 500 ? 400 : 300;
     
     return (
         <div
