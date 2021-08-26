@@ -21,7 +21,6 @@ const ContactPage = ({ width, height, zIndex }) => {
             <div
                 style={{color: 'white', textAlign: 'left'}}
             >
-                <h1>APE.</h1>
                 <h2>서울특별시 마포구 양화진길 6, 6층</h2>
                 <h2>+82-10-8487-2110</h2>
                 <h2>+82-10-4642-8321</h2>
