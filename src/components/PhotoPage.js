@@ -7,7 +7,7 @@ import { getPhotoUrlsByIndex } from '../resource';
 
 const PhotoPage = ({ screenSize, targetPos, zIndex }) => {
     // Photo
-    const photoList = [...getPhotoUrlsByIndex(0), ...getPhotoUrlsByIndex(1)];
+    const photoList = [...getPhotoUrlsByIndex(0, true), ...getPhotoUrlsByIndex(1, true)];
 
     const pageStyle = {
         width: screenSize.width,
