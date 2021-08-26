@@ -26,7 +26,7 @@ const Menu = ({ category }) => {
                 {
                     artistByCategory.map((artist) => {
                         return (    
-                            <div key={artist.title}>
+                            <div key={'film' + artist.title}>
                                 <h3>
                                     <Link
                                         className={'Menu-sub-item'}
@@ -51,7 +51,7 @@ const Menu = ({ category }) => {
                 {
                     photoWorkList.map((photo, i) => {
                         return (    
-                            <div key={photo.title}>
+                            <div key={'photo' + photo.title}>
                                 <h3>
                                     <Link
                                         className={'Menu-sub-item'}
@@ -79,9 +79,9 @@ const Menu = ({ category }) => {
                 </Link>
             </h1>
             <div style={{display: 'flex'}}>
-                {items.current.map((item) => {
+                {items.current.map((item, i) => {
                     return (
-                        <div style={{display: 'flex'}}>
+                        <div style={{display: 'flex'}} key={'submenu' + i}>
                             <h1>
                                 <Link 
                                     to={category === item ? `${process.env.PUBLIC_URL}/` : `${process.env.PUBLIC_URL}/?category=${item}`}

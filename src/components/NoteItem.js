@@ -27,8 +27,8 @@ const NoteItem = ({ note }) => {
                 <h1 style={{paddingBottom: '0.8em',}}>{note.title}</h1>
             </Col>
             <Col xs={12}>
-                {note.content.map((line) => {
-                    return <p style={styleText}>{line}</p>
+                {note.content.map((line, i) => {
+                    return <p style={styleText} key={note.title + 'content' + i}>{line}</p>
                 })}
             </Col>
             <Col xs={12}>
@@ -46,8 +46,8 @@ const NoteItem = ({ note }) => {
                 <Col xs={12} md={4}>
                     <h1>Summary</h1>
                     <div>
-                        {note.summary.map((line) => {
-                            return <p style={styleText}>{line}</p>
+                        {note.summary.map((line, i) => {
+                            return <p style={styleText} key={note.title + 'summary' + i}>{line}</p>
                         })}
                     </div>
                 </Col>
@@ -57,8 +57,8 @@ const NoteItem = ({ note }) => {
                 <Col xs={12} md={4}>
                     <h1>Needs</h1>
                     <ul>
-                        {note.needs.map((line) => {
-                            return <li style={styleText}>{line}</li>
+                        {note.needs.map((line, i) => {
+                            return <li style={styleText} key={note.title + 'needs' + i}>{line}</li>
                         })}
                     </ul>
                 </Col>
@@ -68,8 +68,8 @@ const NoteItem = ({ note }) => {
                 <Col xs={12} md={4}>
                     <h1>Solution</h1>
                     <div>
-                        {note.solution.map((line) => {
-                            return <p style={styleText}>{line}</p>
+                        {note.solution.map((line, i) => {
+                            return <p style={styleText} key={note.title + 'solution' + i}>{line}</p>
                         })}
                     </div>
                 </Col>
