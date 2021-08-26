@@ -4,11 +4,11 @@ import { noteList } from '../resources/noteList'
 import NoteItem from './NoteItem'
 
 
-const NotePage = ({ screenSize, zIndex }) => {
+const NotePage = ({ width, height, zIndex }) => {
 
     const pageStyle = {
-        width: screenSize.width,
-        height: screenSize.height,
+        width: width,
+        height: height,
         position: 'absolute',
         top: `0px`,
         left: `0px`,
@@ -33,5 +33,4 @@ const NotePage = ({ screenSize, zIndex }) => {
     )
 }
         
-export default NotePage
-        
+export default React.memo(NotePage)

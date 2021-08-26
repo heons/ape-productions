@@ -88,5 +88,5 @@ const NoteItem = ({ note }) => {
     )
 }
         
-export default NoteItem
+export default React.memo(NoteItem)
         

@@ -155,7 +155,8 @@ const Home = ({category}) => {
 
             {category === 'note' && 
                 <NotePage 
-                    screenSize={{height, width}}
+                    width={width}
+                    height={height}
                     zIndex={zIndex.note}
                 />
             }
