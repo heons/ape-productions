@@ -163,7 +163,8 @@ const Home = ({category}) => {
 
             {category === 'contact' &&     
                 <ContactPage 
-                    screenSize={{height, width}}
+                    width={width}
+                    height={height}
                     zIndex={zIndex.contact}
                 />
             }

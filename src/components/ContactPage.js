@@ -1,12 +1,10 @@
 import React from 'react'
 
 
-const ContactPage = ({ screenSize, zIndex }) => {
-    // TODO : Re-arrange with screen resize.
-
+const ContactPage = ({ width, height, zIndex }) => {
     const pageStyle = {
-        width: screenSize.width,
-        height: screenSize.height,
+        width: width,
+        height: height,
         position: 'absolute',
         top: `0px`,
         left: `0px`,
@@ -33,5 +31,5 @@ const ContactPage = ({ screenSize, zIndex }) => {
     )
 }
         
-export default ContactPage
+export default React.memo(ContactPage);
         
