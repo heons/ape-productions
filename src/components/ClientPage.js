@@ -16,6 +16,23 @@ const ClientPage = ({ screenSize, zIndex }) => {
         left: `0px`,
         // backgroundColor: 'black',
         zIndex: zIndex,
+        overflowY: 'auto',
+    };
+
+    const companyStyle = {
+        position: 'absolute',
+        top: `100px`,
+        left: `30px`,
+        color: 'white',
+    };
+
+    const artistPosTop = screenSize.width > 850 ? screenSize.height-400 : 450;
+    const artistPosLeft = screenSize.width > 850 ? screenSize.width-410 : 30;
+    const artistStyle = {
+        position: 'absolute',
+        top: `${artistPosTop}px`,
+        left:`${artistPosLeft}px`,
+        color: 'white',
     };
     
     return (
@@ -23,14 +40,14 @@ const ClientPage = ({ screenSize, zIndex }) => {
             style={pageStyle}
         >
             <div
-                style={{position: 'absolute', top: `100px`, left: `30px`, color: 'white'}}
+                style={companyStyle}
             >
                 <h1>Company</h1>
-                <TextList textList={clientCompanyList} width='300px' height='300px'/>
+                <TextList textList={clientCompanyList} width='400px' height='300px'/>
             </div>
             
             <div
-                style={{position: 'absolute', top: `${screenSize.height-400}px`, left:`${screenSize.width-410}px`, color: 'white'}}
+                style={artistStyle}
             >
                 <h1>Artist</h1>
                 <TextList textList={clientArtistList} width='400px' height='300px'/>
