@@ -15,13 +15,13 @@ const NotePage = ({ zIndex }) => {
 
     const pageStyle = {
         ...getBasePageStyle(width, height, zIndex),
-        paddingTop: `12.0em`,
         backgroundColor: 'black',
         overflowY: 'auto',
     };
     
     return (
         <div
+            className='PagePaddingTop'
             style={pageStyle}
         >  
             <Container>

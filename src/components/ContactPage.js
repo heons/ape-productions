@@ -10,17 +10,15 @@ const ContactPage = ({ zIndex }) => {
 
     const pageStyle = {
         ...getBasePageStyle(width, height, zIndex),
-        paddingTop: `12.0em`,
         paddingLeft: `30px`,
     };
     
     return (
         <div
+            className='PagePaddingTop'
             style={pageStyle}
         >
-            <div
-                style={{color: 'white', textAlign: 'left'}}
-            >
+            <div>
                 <h1>서울특별시 마포구 양화진길 6, 6층</h1>
                 <h1>+82-10-8487-2110</h1>
                 <h1>+82-10-4642-8321</h1>

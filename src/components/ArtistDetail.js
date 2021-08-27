@@ -22,14 +22,14 @@ const ArtistDetail = ({ match }) =>{
     // TODO: We have magic numbers here.
     const styleIframe = {
         'width': '100%',
-        'height': `70vh`,
+        'height': `59vh`,
         marginBottom: '30px'
     }
 
     return (
-        <div className="ArtistDetail">
+        <div className="ArtistDetail PagePaddingTop">
             <h1>{artist && artist.title}</h1>
-            <Carousel className="ArtistDetail-Carousel" interval={null} onSelect={handleSelect}>
+            <Carousel  interval={null} onSelect={handleSelect}>
                 {artist && artist.subItems.map((item, i) => {
                     return (
                         <Carousel.Item key={`${artist.title}-${i}`}>

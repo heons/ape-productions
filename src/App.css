@@ -37,18 +37,32 @@
   font-weight: bold;
 }
 
+.PagePaddingTop {
+  padding-top: 12.0em;
+}
+
 @media (max-width: 1440px) {
   .App h3 {
     font-size: 1.4em;
+  }
+  .PagePaddingTop {
+    padding-top: 10.0em;
   }
 }
 @media (max-width: 1280px) {
   .App h3 {
     font-size: 1.2em;
   }
+  .PagePaddingTop {
+    padding-top: 9.0em;
+  }
 }
 @media (max-width: 900px) {
   .App h3 {
     font-size: 1.0em;
   }
+  .PagePaddingTop {
+    padding-top: 7.0em;
+  }
 }
+
