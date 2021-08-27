@@ -309,7 +309,7 @@ const artistInfos = [
     },
     {
         id: '13',
-        title: `ミニアルバム『#GirlsSpkOut』収録曲「Sorrow」のStudio Live Ver.を公開`,
+        title: `Teayeon ‘Sorrow’ Studio Live`,
         category: 'FILM',
         subItems: [
             {

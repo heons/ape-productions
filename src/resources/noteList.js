@@ -88,7 +88,7 @@ export const noteList = [
     },
     {
         id: 7,
-        title: `TAEYEON テヨン 'Sorrow' Studio Live Ver.`,
+        title: `Teayeon ‘Sorrow’ Studio Live.`,
         urls: [`https://player.vimeo.com/video/485249062`,],
         content: [
             `어떤 가수가 가장 빛날까?`,
