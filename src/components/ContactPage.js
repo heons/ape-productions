@@ -8,7 +8,7 @@ const ContactPage = ({ width, height, zIndex }) => {
         position: 'absolute',
         top: `0px`,
         left: `0px`,
-        paddingTop: `120px`,
+        paddingTop: `12.0em`,
         paddingLeft: `30px`,
         // backgroundColor: 'black',
         zIndex: zIndex,

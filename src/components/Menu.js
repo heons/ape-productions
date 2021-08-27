@@ -73,7 +73,7 @@ const Menu = ({ category }) => {
 
     return (
         <div className='Menu'>
-            <h1>
+            <h1 style={{  paddingBottom: `1.0em` }}>
                 <Link to={`${process.env.PUBLIC_URL}/`} className='Menu-item'>
                     APE.
                 </Link>

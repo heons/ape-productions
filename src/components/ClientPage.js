@@ -25,6 +25,7 @@ const ClientPage = ({ width, height, zIndex }) => {
     const companyPosLeft = width > 850 ? (centerScreenX - textListWidth) : (width-textListWidth) / 2;
     const companyStyle = {
         position: 'absolute',
+        paddingTop: `4.0em`,
         top: `100px`,
         left: `${companyPosLeft}px`,
         color: 'white',
@@ -34,6 +35,7 @@ const ClientPage = ({ width, height, zIndex }) => {
     const artistPosLeft = width > 850 ? (centerScreenX) : (width-textListWidth) / 2;
     const artistStyle = {
         position: 'absolute',
+        paddingTop: `4.0em`,
         top: `${artistPosTop}px`,
         left:`${artistPosLeft}px`,
         color: 'white',
