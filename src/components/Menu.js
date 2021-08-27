@@ -1,8 +1,8 @@
 import './Menu.css';
 import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { getArtistListInCategory } from '../resources/film'
-import { photoWorkList } from '../resources/film'
+import { getArtistListInCategory } from '../resources/films'
+import { photoWorkList } from '../resources/photos'
 
 
 const Menu = ({ category }) => {

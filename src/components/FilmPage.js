@@ -2,7 +2,7 @@
 
 import React from 'react'
 import SampleVideoFrameV1 from './SampleVideoFrameV1';
-import { getInitSampleArtistsInfo } from '../resources/film';
+import { getInitSampleArtistsInfo } from '../resources/films';
 // import {
 //     isBrowser,
 //     isMobile

@@ -1,4 +1,3 @@
-
 export const noteList = [
     {
         id: 1,

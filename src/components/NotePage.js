@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from 'react-bootstrap';
-import { noteList } from '../resources/noteList'
+import { noteList } from '../resources/notes'
 import NoteItem from './NoteItem'
 
 

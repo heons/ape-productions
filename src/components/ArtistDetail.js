@@ -1,6 +1,6 @@
 import './ArtistDetail.css';
 import React, { useState } from 'react';
-import { getArtistDetailById } from '../resources/film';
+import { getArtistDetailById } from '../resources/films';
 import { Carousel } from 'react-bootstrap';
 import useWindowDimensions from '../hooks/useWindowDimensions'
 
