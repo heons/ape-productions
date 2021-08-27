@@ -1,6 +1,6 @@
 import React from 'react';
 import { ListGroup } from 'react-bootstrap';
-import { photoWorkList, getPhotoUrlsByIndex } from '../resource'
+import { photoWorkList, getPhotoUrlsByIndex } from '../resources/film'
 
 
 const PhotoList = ({ match }) =>{

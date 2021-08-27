@@ -2,10 +2,16 @@
 
 import React from 'react'
 import SampleVideoFrameV1 from './SampleVideoFrameV1';
-import { getInitSampleArtistsInfo } from '../resource';
+import { getInitSampleArtistsInfo } from '../resources/film';
+// import {
+//     isBrowser,
+//     isMobile
+//   } from "react-device-detect";
 
 
 const FilmPage = ({ screenSize, targetPos, zIndex, onMouseOver }) => {
+    // console.log(isBrowser);
+    // console.log(isBrowser, isMobile);
 
     const artistList = getInitSampleArtistsInfo();
 

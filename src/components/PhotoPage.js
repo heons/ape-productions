@@ -2,7 +2,7 @@
 
 import React from 'react'
 import SamplePhotoFrameV1 from './SamplePhotoFrameV1';
-import { getPhotoUrlsByIndex } from '../resource';
+import { getPhotoUrlsByIndex } from '../resources/film';
 
 
 const PhotoPage = ({ screenSize, targetPos, zIndex }) => {

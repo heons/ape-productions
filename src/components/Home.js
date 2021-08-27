@@ -8,7 +8,7 @@ import NotePage from './NotePage';
 import ContactPage from './ContactPage';
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
-import { getInitSampleArtistsInfo } from '../resource';
+import { getInitSampleArtistsInfo } from '../resources/film';
 
 
 const Home = ({category}) => {

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import TextList from './TextList'
-import { clientCompanyList, clientArtistList } from '../resource';
+import { clientCompanyList, clientArtistList } from '../resources/film';
 
 
 const ClientPage = ({ width, height, zIndex }) => {
