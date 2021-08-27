@@ -2,6 +2,9 @@
 
 import React from 'react'
 import SamplePhotoFrameV1 from './SamplePhotoFrameV1';
+import { getBasePageStyle } from '../utils'
+
+// Resources
 import { getPhotoUrlsByIndex } from '../resources/photos';
 
 
@@ -10,15 +13,10 @@ const PhotoPage = ({ screenSize, targetPos, zIndex }) => {
     const photoList = [...getPhotoUrlsByIndex(0, true), ...getPhotoUrlsByIndex(1, true)];
 
     const pageStyle = {
-        width: screenSize.width,
-        height: screenSize.height,
-        position: 'absolute',
-        top: `0px`,
-        left: `0px`,
+        ...getBasePageStyle(screenSize.width, screenSize.height, zIndex),
         backgroundColor: 'black',
-        zIndex: zIndex,
     };
-    
+
     return (
         <div
             style={pageStyle}

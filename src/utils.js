@@ -16,3 +16,15 @@ export const paddingBottomByRatio = {
     '3:2': '66.66%',
     '8:5': '62.5%',
 };
+
+export const getBasePageStyle = (width, height, zIndex) => {
+    return {
+        position: 'absolute',
+        top: '0px',
+        left: '0px',
+        textAlign: 'left',
+        width: width,
+        height: height,
+        zIndex: zIndex,
+    };
+}

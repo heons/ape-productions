@@ -2,6 +2,7 @@
 
 import React from 'react'
 import TextList from './TextList'
+import { getBasePageStyle } from '../utils'
 
 // Resources
 import { clientCompanyList, clientArtistList } from '../resources/clients';
@@ -15,14 +16,9 @@ const ClientPage = ({ zIndex }) => {
     const { height, width } = useWindowDimensions();
 
     const pageStyle = {
-        width: width,
-        height: height,
-        position: 'absolute',
-        top: `0px`,
-        left: `0px`,
-        // backgroundColor: 'black',
-        zIndex: zIndex,
+        ...getBasePageStyle(width, height, zIndex),
         overflowY: 'auto',
+        textAlign: 'center',
     };
 
     const centerScreenX = width / 2;

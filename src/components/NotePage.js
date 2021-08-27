@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap';
 import NoteItem from './NoteItem'
+import { getBasePageStyle } from '../utils'
 
 // Resources
 import { noteList } from '../resources/notes'
@@ -13,16 +14,10 @@ const NotePage = ({ zIndex }) => {
     const { height, width } = useWindowDimensions();
 
     const pageStyle = {
-        width: width,
-        height: height,
-        position: 'absolute',
-        top: `0px`,
-        left: `0px`,
+        ...getBasePageStyle(width, height, zIndex),
         paddingTop: `12.0em`,
         backgroundColor: 'black',
         overflowY: 'auto',
-        textAlign: 'left',
-        zIndex: zIndex,
     };
     
     return (

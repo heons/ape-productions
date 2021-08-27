@@ -1,3 +1,5 @@
+// Ref: https://faq.dailymotion.com/hc/en-us/articles/360022841393-How-to-preserve-the-player-aspect-ratio-on-a-responsive-page
+
 import React from 'react'
 import { Row, Col } from 'react-bootstrap';
 import { paddingBottomByRatio } from '../utils'

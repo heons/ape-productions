@@ -2,6 +2,9 @@
 
 import React from 'react'
 import SampleVideoFrameV1 from './SampleVideoFrameV1';
+import { getBasePageStyle } from '../utils'
+
+// Resource
 import { getInitSampleArtistsInfo } from '../resources/films';
 // import {
 //     isBrowser,
@@ -16,13 +19,8 @@ const FilmPage = ({ screenSize, targetPos, zIndex, onMouseOver }) => {
     const artistList = getInitSampleArtistsInfo();
 
     const pageStyle = {
-        width: screenSize.width,
-        height: screenSize.height,
-        position: 'absolute',
-        top: `0px`,
-        left: `0px`,
+        ...getBasePageStyle(screenSize.width, screenSize.height, zIndex),
         backgroundColor: 'black',
-        zIndex: zIndex,
     };
     
     return (

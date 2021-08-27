@@ -1,4 +1,5 @@
 import React from 'react'
+import { getBasePageStyle } from '../utils'
 
 // Hooks
 import useWindowDimensions from '../hooks/useWindowDimensions'
@@ -8,15 +9,9 @@ const ContactPage = ({ zIndex }) => {
     const { height, width } = useWindowDimensions();
 
     const pageStyle = {
-        width: width,
-        height: height,
-        position: 'absolute',
-        top: `0px`,
-        left: `0px`,
+        ...getBasePageStyle(width, height, zIndex),
         paddingTop: `12.0em`,
         paddingLeft: `30px`,
-        // backgroundColor: 'black',
-        zIndex: zIndex,
     };
     
     return (
