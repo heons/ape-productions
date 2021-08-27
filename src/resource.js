@@ -4,33 +4,66 @@ const lineOffstX = 50
 
 const artistInfos = [
     {
-        id: '1',
-        title: 'A PICTURES BOOK MAKERS',
+        id: '13',
+        title: `SM ENTERTAINMENT`,
         category: 'FILM',
         subItems: [
             {
-                title: 'LEE HEE EUN',
-                url: 'https://player.vimeo.com/video/493065854',
+                title: `Teayeon ‘Sorrow’ Studio Live`,
+                url: 'https://player.vimeo.com/video/485249062',
             },
             {
-                title: 'KIM SEUNG YEON',
-                url: 'https://player.vimeo.com/video/493066261'
-            },
-            {
-                title: 'KIM JI ANN',
-                url: 'https://player.vimeo.com/video/493064042'
+                title: `MAX CHANGMIN 최강창민 | 바람이 분다 (이소라) `,
+                url: 'https://www.youtube.com/embed/oRq5rY-1TPg',
             },
         ],
-        sampleVideoSrc: 'video/APE_A_pictures_book_makers.webm',
+        sampleVideoSrc: 'video/APE_TAEYEON_LIVE.webm',
         initPos: {
-            x: 0,
-            y: 0
+            x: lineOffstX,
+            y: distY * 3
         },
         seedPos: {
             x: 0,
             y: 0
         },
-        group: 'group1'
+        group: 'group2'
+    },
+    {
+        id: '7',
+        title: 'KOZ ENTERTAINMENT',
+        category: 'FILM',
+        subItems: [
+            {
+                title: `Dvwn [it's not your fault] Official Visualizer`,
+                url: 'https://player.vimeo.com/video/536747837',
+            },
+            {
+                title: `DVWN ‘BAD KID!!!’ Official Live`,
+                url: 'https://player.vimeo.com/video/546375592',
+            },
+            {
+                title: `DVWN  ‘Norman Fucking Rockwell’ A Cover Live`,
+                url: 'https://player.vimeo.com/video/496160223',
+            },
+            {
+                title: `DVWN ‘free flight’ Official Live`,
+                url: 'https://player.vimeo.com/video/512347574',
+            },
+            {
+                title: `DVWN ‘HOME’ Official Live`,
+                url: 'https://www.youtube.com/embed/G-uMzkrpELE',
+            },
+        ],
+        sampleVideoSrc: 'video/APE_DVWN_BAD_KID_Official_Live.webm',
+        initPos: {
+            x: lineOffstX + distX * 2,
+            y: distY
+        },
+        seedPos: {
+            x: 0,
+            y: 0
+        },
+        group: 'group2'
     },
     {
         id: '2',
@@ -75,6 +108,48 @@ const artistInfos = [
         group: 'group1'
     },
     {
+        id: '12',
+        title: `PUMA CELL ENDURA`,
+        category: 'FILM',
+        subItems: [
+            {
+                title: ``,
+                url: 'https://player.vimeo.com/video/379467708',
+            },
+        ],
+        sampleVideoSrc: 'video/APE_PUMA_CELL_ENDURA.webm',
+        initPos: {
+            x: distX * 3,
+            y: distY * 2
+        },
+        seedPos: {
+            x: 0,
+            y: 0
+        },
+        group: 'group1'
+    },
+    {
+        id: '16',
+        title: `ZOO YORK 20FS`,
+        category: 'FILM',
+        subItems: [
+            {
+                title: ``,
+                url: 'https://player.vimeo.com/video/466787052',
+            },
+        ],
+        sampleVideoSrc: 'video/APE_ZOO_YORK_20FS.webm',
+        initPos: {
+            x: lineOffstX + distX * 3,
+            y: distY * 3
+        },
+        seedPos: {
+            x: 0,
+            y: 0
+        },
+        group: 'group1'
+    },
+    {
         id: '4',
         title: 'DEMI FASHION FILM',
         category: 'FILM',
@@ -96,29 +171,46 @@ const artistInfos = [
         group: 'group2'
     },
     {
-        id: '5',
-        title: 'JINBO THE SUPERFREAK',
+        id: '8',
+        title: 'Luc Belaire',
         category: 'FILM',
         subItems: [
             {
-                title: 'JINBO THE SUPERFREAK DOCUMENTARY',
-                url: 'https://player.vimeo.com/video/418429463',
-            },
-            {
-                title: `JINBO ‘비싸’ VISUAL FILM`,
-                url: 'https://player.vimeo.com/video/394382257',
+                title: ``,
+                url: 'https://player.vimeo.com/video/443832322',
             },
         ],
-        sampleVideoSrc: 'video/APE_JINBOTHESUPERFREAK.webm',
+        sampleVideoSrc: 'video/APE_Luc_Belaire.webm',
         initPos: {
-            x: lineOffstX,
+            x: lineOffstX + distX * 3,
             y: distY
         },
         seedPos: {
             x: 0,
             y: 0
         },
-        group: 'group2'
+        group: 'group1'
+    },
+    {
+        id: '14',
+        title: `VARPOLLFANCLUB Fashion FIlm`,
+        category: 'FILM',
+        subItems: [
+            {
+                title: ``,
+                url: 'https://player.vimeo.com/video/379467402',
+            },
+        ],
+        sampleVideoSrc: 'video/APE_VARPOLLFANCLUB_Fashion_FIlm.webm',
+        initPos: {
+            x: lineOffstX + distX * 1,
+            y: distY * 3
+        },
+        seedPos: {
+            x: 0,
+            y: 0
+        },
+        group: 'group1'
     },
     {
         id: '6',
@@ -166,85 +258,6 @@ const artistInfos = [
         group: 'group1'
     },
     {
-        id: '7',
-        title: 'KOZ ENTERTAINMENT',
-        category: 'FILM',
-        subItems: [
-            {
-                title: `Dvwn [it's not your fault] Official Visualizer`,
-                url: 'https://player.vimeo.com/video/536747837',
-            },
-            {
-                title: `DVWN ‘BAD KID!!!’ Official Live`,
-                url: 'https://player.vimeo.com/video/546375592',
-            },
-            {
-                title: `DVWN  ‘Norman Fucking Rockwell’ A Cover Live`,
-                url: 'https://player.vimeo.com/video/496160223',
-            },
-            {
-                title: `DVWN ‘free flight’ Official Live`,
-                url: 'https://player.vimeo.com/video/512347574',
-            },
-            {
-                title: `DVWN ‘HOME’ Official Live`,
-                url: 'https://www.youtube.com/embed/G-uMzkrpELE',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_DVWN_BAD_KID_Official_Live.webm',
-        initPos: {
-            x: lineOffstX + distX * 2,
-            y: distY
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
-        group: 'group2'
-    },
-    {
-        id: '8',
-        title: 'Luc Belaire',
-        category: 'FILM',
-        subItems: [
-            {
-                title: ``,
-                url: 'https://player.vimeo.com/video/443832322',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_Luc_Belaire.webm',
-        initPos: {
-            x: lineOffstX + distX * 3,
-            y: distY
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
-        group: 'group1'
-    },
-    {
-        id: '9',
-        title: `MOONSUN 'Mon Coeur' Official M/V`,
-        category: 'FILM',
-        subItems: [
-            {
-                title: ``,
-                url: 'https://www.youtube.com/embed/oyvVMVWXIvc',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_MOOSUN_Mon_Coeur_Official.webm',
-        initPos: {
-            x: 0,
-            y: distY * 2
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
-        group: 'group2'
-    },
-    {
         id: '10',
         title: `OWEN OVADOZ - MKIT RAIN ART FILM 2`,
         category: 'FILM',
@@ -287,69 +300,6 @@ const artistInfos = [
         group: 'group2'
     },
     {
-        id: '12',
-        title: `PUMA CELL ENDURA`,
-        category: 'FILM',
-        subItems: [
-            {
-                title: ``,
-                url: 'https://player.vimeo.com/video/379467708',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_PUMA_CELL_ENDURA.webm',
-        initPos: {
-            x: distX * 3,
-            y: distY * 2
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
-        group: 'group1'
-    },
-    {
-        id: '13',
-        title: `Teayeon ‘Sorrow’ Studio Live`,
-        category: 'FILM',
-        subItems: [
-            {
-                title: ``,
-                url: 'https://player.vimeo.com/video/485249062',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_TAEYEON_LIVE.webm',
-        initPos: {
-            x: lineOffstX,
-            y: distY * 3
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
-        group: 'group2'
-    },
-    {
-        id: '14',
-        title: `VARPOLLFANCLUB Fashion FIlm`,
-        category: 'FILM',
-        subItems: [
-            {
-                title: ``,
-                url: 'https://player.vimeo.com/video/379467402',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_VARPOLLFANCLUB_Fashion_FIlm.webm',
-        initPos: {
-            x: lineOffstX + distX * 1,
-            y: distY * 3
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
-        group: 'group1'
-    },
-    {
         id: '15',
         title: `Who Is June One? | Documentary`,
         category: 'FILM',
@@ -371,26 +321,80 @@ const artistInfos = [
         group: 'group2'
     },
     {
-        id: '16',
-        title: `ZOO YORK 20FS`,
+        id: '5',
+        title: 'JINBO THE SUPERFREAK',
+        category: 'FILM',
+        subItems: [
+            {
+                title: 'JINBO THE SUPERFREAK DOCUMENTARY',
+                url: 'https://player.vimeo.com/video/418429463',
+            },
+            {
+                title: `JINBO ‘비싸’ VISUAL FILM`,
+                url: 'https://player.vimeo.com/video/394382257',
+            },
+        ],
+        sampleVideoSrc: 'video/APE_JINBOTHESUPERFREAK.webm',
+        initPos: {
+            x: lineOffstX,
+            y: distY
+        },
+        seedPos: {
+            x: 0,
+            y: 0
+        },
+        group: 'group2'
+    }, 
+    {
+        id: '9',
+        title: `MOONSUN 'Mon Coeur' Official M/V`,
         category: 'FILM',
         subItems: [
             {
                 title: ``,
-                url: 'https://player.vimeo.com/video/466787052',
+                url: 'https://www.youtube.com/embed/oyvVMVWXIvc',
             },
         ],
-        sampleVideoSrc: 'video/APE_ZOO_YORK_20FS.webm',
+        sampleVideoSrc: 'video/APE_MOOSUN_Mon_Coeur_Official.webm',
         initPos: {
-            x: lineOffstX + distX * 3,
-            y: distY * 3
+            x: 0,
+            y: distY * 2
+        },
+        seedPos: {
+            x: 0,
+            y: 0
+        },
+        group: 'group2'
+    },
+    {
+        id: '1',
+        title: 'A PICTURES BOOK MAKERS',
+        category: 'FILM',
+        subItems: [
+            {
+                title: 'LEE HEE EUN',
+                url: 'https://player.vimeo.com/video/493065854',
+            },
+            {
+                title: 'KIM SEUNG YEON',
+                url: 'https://player.vimeo.com/video/493066261'
+            },
+            {
+                title: 'KIM JI ANN',
+                url: 'https://player.vimeo.com/video/493064042'
+            },
+        ],
+        sampleVideoSrc: 'video/APE_A_pictures_book_makers.webm',
+        initPos: {
+            x: 0,
+            y: 0
         },
         seedPos: {
             x: 0,
             y: 0
         },
         group: 'group1'
-    }
+    },
 ];
 
 
