@@ -2,11 +2,17 @@
 
 import React from 'react'
 import TextList from './TextList'
+
+// Resources
 import { clientCompanyList, clientArtistList } from '../resources/clients';
 
+// Hooks
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
-const ClientPage = ({ width, height, zIndex }) => {
+
+const ClientPage = ({ zIndex }) => {
     // TODO : Re-arrange with screen resize.
+    const { height, width } = useWindowDimensions();
 
     const pageStyle = {
         width: width,

@@ -147,11 +147,7 @@ const Home = ({category}) => {
             ></PhotoPage>
 
             {category === 'client' && 
-                <ClientPage 
-                    width={width}
-                    height={height}
-                    zIndex={zIndex.client}
-                />
+                <ClientPage zIndex={zIndex.client} />
             }
 
             {category === 'note' && 
