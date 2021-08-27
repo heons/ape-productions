@@ -1,12 +1,12 @@
 import './ArtistDetail.css';
 import React, { useState } from 'react';
-import { getArtistDetailById } from '../resources/films';
 import { Carousel } from 'react-bootstrap';
-import useWindowDimensions from '../hooks/useWindowDimensions'
+
+// Resources
+import { getArtistDetailById } from '../resources/films';
 
 
 const ArtistDetail = ({ match }) =>{
-    const { width } = useWindowDimensions();
     const artist = getArtistDetailById(match.params.id);
 
     // TODO: Break down the video to a list when the width is less than xx.
@@ -27,9 +27,9 @@ const ArtistDetail = ({ match }) =>{
     }
 
     return (
-        <div className="ArtistDetail PagePaddingTop">
+        <div className="ArtistDetail" style={{paddingTop:'1.5em'}}>
             <h1>{artist && artist.title}</h1>
-            <Carousel  interval={null} onSelect={handleSelect}>
+            <Carousel  interval={null} onSelect={handleSelect} className="ArtistDetail-Carousel">
                 {artist && artist.subItems.map((item, i) => {
                     return (
                         <Carousel.Item key={`${artist.title}-${i}`}>

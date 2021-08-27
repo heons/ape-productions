@@ -23,3 +23,22 @@
   color: white;
   text-decoration: underline;
 }
+
+.ArtistDetail-Carousel {
+  padding-top: 4.0em;
+}
+@media (max-width: 1440px) {
+  .ArtistDetail-Carousel {
+    padding-top: 3.0em;
+  }
+}
+@media (max-width: 1280px) {
+  .ArtistDetail-Carousel  {
+    padding-top: 2.5em;
+  }
+}
+@media (max-width: 900px) {
+  .ArtistDetail-Carousel  {
+    padding-top: 1.5em;
+  }
+}
