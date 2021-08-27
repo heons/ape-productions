@@ -155,11 +155,7 @@ const Home = ({category}) => {
             }
 
             {category === 'contact' &&     
-                <ContactPage 
-                    width={width}
-                    height={height}
-                    zIndex={zIndex.contact}
-                />
+                <ContactPage zIndex={zIndex.contact} />
             }
 
             <h1 style={stylesTitle}>

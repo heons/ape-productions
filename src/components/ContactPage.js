@@ -1,7 +1,12 @@
 import React from 'react'
 
+// Hooks
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
-const ContactPage = ({ width, height, zIndex }) => {
+
+const ContactPage = ({ zIndex }) => {
+    const { height, width } = useWindowDimensions();
+
     const pageStyle = {
         width: width,
         height: height,
