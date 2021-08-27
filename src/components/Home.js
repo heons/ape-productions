@@ -10,6 +10,12 @@ import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
 import { getInitSampleArtistsInfo } from '../resources/films';
 
+import PhotoPageM from './PhotoPageM';
+import {
+    isBrowser,
+    isMobile
+} from "react-device-detect";
+
 
 const Home = ({category}) => {
     // console.log(category);
@@ -20,6 +26,8 @@ const Home = ({category}) => {
     const artists = useRef(getInitSampleArtistsInfo());
     const targetPos1 = useRef({x: 100, y: 100});
     const targetPos2 = useRef({x: 0, y: 0});
+
+    // console.log(mousePosition);
   
     // const hasMovedCursor = typeof mousePosition.x === "number" && typeof mousePosition.y === "number";
   
@@ -92,6 +100,7 @@ const Home = ({category}) => {
     // const artistGroup2 = artists.current.filter(artist => artist.group === 'group2')
 
     
+    
 
     const zIndex = {
         film: (category !== 'photo' || category !== 'note') ? 3 : 1,
@@ -140,11 +149,14 @@ const Home = ({category}) => {
                 onMouseOver={onMouseOver}
             ></FilmPage>
 
-            <PhotoPage
+            {isBrowser && <PhotoPage
                 screenSize={{height, width}}
                 targetPos={[targetPos1.current, targetPos2.current]}
                 zIndex={zIndex.photo}
-            ></PhotoPage>
+            ></PhotoPage>}
+            {
+                isMobile && <PhotoPageM zIndex={zIndex.photo}></PhotoPageM>
+            }
 
             {category === 'client' && 
                 <ClientPage zIndex={zIndex.client} />
