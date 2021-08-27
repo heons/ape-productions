@@ -51,7 +51,7 @@ const artistInfos = [
             },
             {
                 title: `DVWN ‘HOME’ Official Live`,
-                url: 'https://www.youtube.com/embed/G-uMzkrpELE',
+                url: 'https://player.vimeo.com/video/593056163',
             },
         ],
         sampleVideoSrc: 'video/APE_DVWN_BAD_KID_Official_Live.webm',
@@ -306,7 +306,7 @@ const artistInfos = [
         subItems: [
             {
                 title: ``,
-                url: 'https://www.youtube.com/embed/wabRZtH7CZo',
+                url: 'https://player.vimeo.com/video/580135709',
             },
         ],
         sampleVideoSrc: 'video/APE_Who_Is_June_One_Documentary.webm',

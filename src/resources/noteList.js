@@ -237,7 +237,7 @@ export const noteList = [
         title: `6개월간의 대장정 DOCUMENTARY 'WHO IS JUNEONE?' 제작기.`,
         subItems: [
             {
-                url: `https://www.youtube.com/embed/wabRZtH7CZo`,
+                url: `https://player.vimeo.com/video/580135709`,
                 ratio: `16:9`,
             },
         ],
