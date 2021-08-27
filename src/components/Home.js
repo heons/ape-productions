@@ -151,11 +151,7 @@ const Home = ({category}) => {
             }
 
             {category === 'note' && 
-                <NotePage 
-                    width={width}
-                    height={height}
-                    zIndex={zIndex.note}
-                />
+                <NotePage zIndex={zIndex.note} />
             }
 
             {category === 'contact' &&     

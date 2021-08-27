@@ -1,10 +1,16 @@
 import React from 'react'
 import { Container } from 'react-bootstrap';
-import { noteList } from '../resources/notes'
 import NoteItem from './NoteItem'
 
+// Resources
+import { noteList } from '../resources/notes'
 
-const NotePage = ({ width, height, zIndex }) => {
+// Hooks
+import useWindowDimensions from '../hooks/useWindowDimensions'
+
+
+const NotePage = ({ zIndex }) => {
+    const { height, width } = useWindowDimensions();
 
     const pageStyle = {
         width: width,
