@@ -44,9 +44,6 @@ const NoteItem = ({ note }) => {
                                 style={styleIframe}
                                 title={note.title}
                                 src={item.url}
-                                width="100%"
-                                height="100%"
-                                frameBorder="0"
                                 allow="fullscreen; picture-in-picture"
                                 allowFullScreen>
                             </iframe>
