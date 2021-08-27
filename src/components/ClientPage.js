@@ -31,7 +31,7 @@ const ClientPage = ({ width, height, zIndex }) => {
         color: 'white',
     };
 
-    const artistPosTop = width > 850 ? height-400 : 450;
+    const artistPosTop = width > 850 ? 100 : 450;
     const artistPosLeft = width > 850 ? (centerScreenX) : (width-textListWidth) / 2;
     const artistStyle = {
         position: 'absolute',
