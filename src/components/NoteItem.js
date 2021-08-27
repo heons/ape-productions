@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap';
-
+import { paddingBottomByRatio } from '../utils'
 
 const NoteItem = ({ note }) => {
 
@@ -21,11 +21,6 @@ const NoteItem = ({ note }) => {
         padding: '0',
         margin: '0',
     }
-
-    const videoWrapper = {
-        position: 'relative',
-        paddingBottom: '56.25%' /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
-    };
     
     // Summary, Needs and Solution is not being used. - No Contents.
     return (
@@ -39,14 +34,14 @@ const NoteItem = ({ note }) => {
                 })}
             </Col>
             {
-                note.urls.length > 0 &&
-                note.urls.map((url) => {
-                    return <Col xs={12} key={url}>
-                        <div style={videoWrapper}>
+                note.subItems.length > 0 &&
+                note.subItems.map((item) => {
+                    return <Col xs={12} key={item.url}>
+                        <div style={{position: 'relative', paddingBottom: paddingBottomByRatio[item.ratio]}}>
                             <iframe
                                 style={styleIframe}
                                 title={note.title}
-                                src={url}
+                                src={item.url}
                                 width="100%"
                                 height="100%"
                                 frameBorder="0"

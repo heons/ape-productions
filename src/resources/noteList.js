@@ -3,7 +3,12 @@ export const noteList = [
     {
         id: 1,
         title: `DVWN 'it's not your fault' Visualizer.`,
-        urls: [`https://www.youtube.com/embed/vHAOZlRsmz8`,],
+        subItems: [
+            {
+                url: `https://www.youtube.com/embed/vHAOZlRsmz8`,
+                ratio: `16:9`,
+            },
+        ],
         content: [
             `“누군가를 완전히 이해할려고 하는 것도 그 사람에게 해를 입힐 수 있다.”`,
             `라는 이야기를 들었다. 사람들은 각자가 겪어온 세상과 주변 인물들이 다르다.`,
@@ -24,9 +29,14 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 3,
+        id: 2,
         title: `Yves Saint Laurant x W Korea.`,
-        urls: [`https://player.vimeo.com/video/525647340`,],
+        subItems: [
+            {
+                url: `https://player.vimeo.com/video/525647340`,
+                ratio: `1:1`,
+            },
+        ],
         content: [
             `작년에 날씨가 한창 따뜻해질 무렵, 촬영장에서 만난 사진작가 친구가 있다. 누구보다 부드럽고 온화한 기운을 가진 그는, 항상 느긋하고 여유롭게 삶을 즐길줄 아는 사람처럼 보였다.`,
             `그렇게 우연하게 만난 그와 그 어느때 보다 활기차고 즐거운 촬영을 끝낸 후 언젠간 꼭 그와 다시 작업을 해보고 싶다고 생각했었다.`,
@@ -45,9 +55,14 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 4,
+        id: 3,
         title: `Dvwn '자유비행' 마음의 풍요를 찾아서. `,
-        urls: [`https://player.vimeo.com/video/512347574`,],
+        subItems: [
+            {
+                url: `https://player.vimeo.com/video/512347574`,
+                ratio: `16:9`,
+            },
+        ],
         content: [
             `디지털화의 발전이 거듭되어가고 점점 더 심해지는 개인주의 속에서 격동의 시기를 겪고 있는 우리들.`,
             `우리는 점점 더 성공과 실패란 궤도 안에서 자신을 갈구하고 남들을 시기, 질투하며 자신의 사리사욕을 채운다.`,
@@ -60,9 +75,14 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 5,
+        id: 4,
         title: `뮤지션 Dvwn '서쪽 끝자리에 서서’.`,
-        urls: [`https://player.vimeo.com/video/496160223`,],
+        subItems: [
+            {
+                url: `https://player.vimeo.com/video/496160223`,
+                ratio: `16:9`,
+            },
+        ],
         content: [
             `1년에 밝은 햇살을 맞아본 순간이 몇 번이나 있을까?`,
             `예술가들도 회사에서 부장님에게 잔소리를 들으며 아등바등 사는 회사원도 삶과 죽음의 문턱에서 
@@ -74,9 +94,14 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 6,
+        id: 5,
         title: `Donny Hathaway ‘This Christmas’ A Cover Live by Dvwn & SOLE.`,
-        urls: [`https://player.vimeo.com/video/493617230`,],
+        subItems: [
+            {
+                url: `https://player.vimeo.com/video/493617230`,
+                ratio: `16:9`,
+            },
+        ],
         content: [
             `무한 경쟁 시대와 코로나라는 병이 세상을 위협하여 감성이 없어진지 오래되어가는 것 같다.`,
             `유년 시절 기대감에 부풀었던 크리스마스와는 사뭇 다른 2020년에 크리스마스를 보낼 것만 같았다.`,
@@ -87,9 +112,14 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 7,
+        id: 6,
         title: `Teayeon ‘Sorrow’ Studio Live.`,
-        urls: [`https://player.vimeo.com/video/485249062`,],
+        subItems: [
+            {
+                url: `https://player.vimeo.com/video/485249062`,
+                ratio: `16:9`,
+            },
+        ],
         content: [
             `어떤 가수가 가장 빛날까?`,
             `군대 시절 작은 TV안에 ‘소녀시대’부터 지금까지 봐온 매력적인 가수 ‘태연’의 라이브 컨텐츠 제작 문의가 들어왔다.`,
@@ -101,9 +131,14 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 8,
+        id: 7,
         title: `'NEW LOVE' ONEHUNNNIT 20FW FILM.`,
-        urls: [`https://player.vimeo.com/video/460090338`,],
+        subItems: [
+            {
+                url: `https://player.vimeo.com/video/460090338`,
+                ratio: `16:9`,
+            },
+        ],
         content: [
             `우리를 살아있게 하고 숨쉬게 하는 것들은 어떤 것이 있을까?`,
             `제일 먼저 생각나는 건 '사랑'이다.`,
@@ -117,9 +152,14 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 9,
+        id: 8,
         title: `뮤지션 BLOO(본명 김현웅)와 함께한 아이즈매거진 촬영기.`,
-        urls: [`https://player.vimeo.com/video/443831300`,],
+        subItems: [
+            {
+                url: `https://player.vimeo.com/video/443831300`,
+                ratio: `16:9`,
+            },
+        ],
         content: [
             `‘놀면 뭐하니' 이효리의 선곡으로 2년만에 음원차트 역주행에 성공한 ‘Downtown baby’의 주인공 ‘BLOO’의 촬영을 요청하는 연락이 왔다.`,
             `뮤직비디오나 SNS를 통해서 본 그의 몸짓과 연기는 수준급이라는 생각에 촬영전부터 기대가 되었다.`,
@@ -132,9 +172,14 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 10,
+        id: 9,
         title: `A journey with 'LUC BELAIRE' : 주류회사 ‘아영FBC’ 와 함께한 프랑스 스파클링 와인 ‘LUC BELAIRE’ 의 광고영상제작기.`,
-        urls: [`https://player.vimeo.com/video/443832322`,],
+        subItems: [
+            {
+                url: `https://player.vimeo.com/video/443832322`,
+                ratio: `1:1`,
+            },
+        ],
         content: [
             `프랑스 스파클링 와인 ‘LUC BELAIRE’가 지향하는 올카인드 컬쳐문화 도약의 의지를 담아 대중들이 
             흥미를 가지고 볼 수 있는 패션필름적 재해석을 통한 광고를 기획 제작.`,
@@ -144,9 +189,14 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 11,
+        id: 10,
         title: `PUMA ‘CELL ENDURA’ EXHIBITION FILM.`,
-        urls: [`https://player.vimeo.com/video/379467708`,],
+        subItems: [
+            {
+                url: `https://player.vimeo.com/video/379467708`,
+                ratio: `16:9`,
+            },
+        ],
         content: [
             `스포츠 웨어 브랜드 푸마(PUMA)는 ‘CELL ENDURA’ 런닝화 출시를 기념해 서울을 대표하는 
             인플루언서 100명을 선출하여 그들을 대상으로 전시 이벤트를 기획하였다.`,
@@ -159,11 +209,17 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 12,
+        id: 11,
         title: `MKIT RAIN 'OWEN OVADOZ ART FILM' SERIES.`,
-        urls: [
-            `https://player.vimeo.com/video/379467620`,
-            `https://player.vimeo.com/video/379467655`,
+        subItems: [
+            {
+                url: `https://player.vimeo.com/video/379467620`,
+                ratio: `16:9`,
+            },
+            {
+                url: `https://player.vimeo.com/video/379467655`,
+                ratio: `16:9`,
+            },
         ],
         content: [
             `힙합 아티스트 오웬 오바도즈의 아트 필름 시리즈는 그의 새 앨범 [P.O.E.M2]를 
@@ -177,9 +233,14 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 13,
+        id: 12,
         title: `6개월간의 대장정 DOCUMENTARY 'WHO IS JUNEONE?' 제작기.`,
-        urls: [`https://www.youtube.com/embed/wabRZtH7CZo`,],
+        subItems: [
+            {
+                url: `https://www.youtube.com/embed/wabRZtH7CZo`,
+                ratio: `16:9`,
+            },
+        ],
         content: [
             `밴드 *글렌체크(Glen Check)의 리더 '김준원'이라는 아티스트는 제가 만나본 예술가 중 가장 민감하고도 강박이 있는 사람이었다.`,
             `하지만 사람으로는 그 누구보다 헌신적이고 남을 위할 줄 아는 성격의 소유자였으며 우리는 
@@ -197,9 +258,14 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 14,
+        id: 13,
         title: `뮤지션 진보(JINBO·본명 한주현) 과 함께한 ‘비싸' 뮤직비디오 제작기.`,
-        urls: [`https://player.vimeo.com/video/394382257`,],
+        subItems: [
+            {
+                url: `https://player.vimeo.com/video/394382257`,
+                ratio: `16:9`,
+            },
+        ],
         content: [
             `뮤지션 진보(JINBO·본명 한주현) 많은 R&B·힙합 팬들에겐 '믿고 듣는' 이름으로 자리 잡은 지 오래다. 
             메이저와 언더그라운드를 오가며 견고한 존재감을 쌓아 올린 그가 다소 긴 공백 끝에 최근 자기 이름을 내걸고 
@@ -214,9 +280,14 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 15,
+        id: 14,
         title: `뮤지션 진보(JINBO·본명 한주현) 과 함께한 전시회 필름제작.`,
-        urls: [`https://player.vimeo.com/video/418429463`,],
+        subItems: [
+            {
+                url: `https://player.vimeo.com/video/418429463`,
+                ratio: `16:9`,
+            },
+        ],
         content: [
             `진보는 자신에게 할말이 많아 보였다.`,
             `그는 자신을 갈구하고 자신을 미워하기도 하며 자신이 가진 재능보다는 
