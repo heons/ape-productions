@@ -8,10 +8,6 @@ import { getArtistDetailById } from '../resources/films';
 
 const ArtistDetail = ({ match }) =>{
     const artist = getArtistDetailById(match.params.id);
-
-    // TODO: Break down the video to a list when the width is less than xx.
-    // const numItems = artist.subItems.length;
-    // console.log(numItems);
     
     const [ index, setIndex ] = useState(0);
 
@@ -42,8 +38,7 @@ const ArtistDetail = ({ match }) =>{
                                     title={artist.title}
                                     src={item.url+'?autoplay=1'}
                                     frameBorder="0"
-                                    allow="autoplay; fullscreen; picture-in-picture"
-                                    allowFullScreen>
+                                    allow="autoplay; fullscreen; picture-in-picture">
                                 </iframe>
                                 : <div></div>
                             }                            
