@@ -1,7 +1,7 @@
 import React from 'react';
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, Suspense } from 'react';
 // import SampleVideoContainer from './SampleVideoContainer';
-import PhotoPage from './PhotoPage';
+// import PhotoPage from './PhotoPage';
 import FilmPage from './FilmPage';
 import ClientPage from './ClientPage';
 import NotePage from './NotePage';
@@ -10,12 +10,14 @@ import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
 import { getInitSampleArtistsInfo } from '../resources/films';
 
-import PhotoPageM from './PhotoPageM';
 import {
     isBrowser,
     isMobile
 } from "react-device-detect";
 
+
+const PhotoPageM = React.lazy(() => import('./PhotoPageM'));
+const PhotoPage = React.lazy(() => import('./PhotoPage'));
 
 const Home = ({category}) => {
     // console.log(category);
@@ -149,13 +151,21 @@ const Home = ({category}) => {
                 onMouseOver={onMouseOver}
             ></FilmPage>
 
-            {isBrowser && <PhotoPage
-                screenSize={{height, width}}
-                targetPos={[targetPos1.current, targetPos2.current]}
-                zIndex={zIndex.photo}
-            ></PhotoPage>}
             {
-                isMobile && <PhotoPageM zIndex={zIndex.photo}></PhotoPageM>
+                isBrowser &&
+                <Suspense fallback={<div>Loading...</div>}>
+                    <PhotoPage
+                    screenSize={{height, width}}
+                    targetPos={[targetPos1.current, targetPos2.current]}
+                    zIndex={zIndex.photo}
+                    ></PhotoPage>
+                </Suspense>
+            }
+            {
+                isMobile && 
+                <Suspense fallback={<div>Loading...</div>}>
+                    <PhotoPageM zIndex={zIndex.photo}></PhotoPageM>
+                </Suspense>
             }
 
             {category === 'client' && 
