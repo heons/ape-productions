@@ -321,52 +321,6 @@ const artistInfos = [
         group: 'group2'
     },
     {
-        id: '5',
-        title: 'JINBO THE SUPERFREAK',
-        category: 'FILM',
-        subItems: [
-            {
-                title: 'JINBO THE SUPERFREAK DOCUMENTARY',
-                url: 'https://player.vimeo.com/video/418429463',
-            },
-            {
-                title: `JINBO ‘비싸’ VISUAL FILM`,
-                url: 'https://player.vimeo.com/video/394382257',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_JINBOTHESUPERFREAK.webm',
-        initPos: {
-            x: lineOffstX,
-            y: distY
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
-        group: 'group2'
-    }, 
-    {
-        id: '9',
-        title: `MOONSUN 'Mon Coeur' Official M/V`,
-        category: 'FILM',
-        subItems: [
-            {
-                title: ``,
-                url: 'https://www.youtube.com/embed/oyvVMVWXIvc',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_MOOSUN_Mon_Coeur_Official.webm',
-        initPos: {
-            x: 0,
-            y: distY * 2
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
-        group: 'group2'
-    },
-    {
         id: '1',
         title: 'A PICTURES BOOK MAKERS',
         category: 'FILM',
@@ -394,6 +348,31 @@ const artistInfos = [
             y: 0
         },
         group: 'group1'
+    },
+    {
+        id: '5',
+        title: 'JINBO THE SUPERFREAK',
+        category: 'FILM',
+        subItems: [
+            {
+                title: 'JINBO THE SUPERFREAK DOCUMENTARY',
+                url: 'https://player.vimeo.com/video/418429463',
+            },
+            {
+                title: `JINBO ‘비싸’ VISUAL FILM`,
+                url: 'https://player.vimeo.com/video/394382257',
+            },
+        ],
+        sampleVideoSrc: 'video/APE_JINBOTHESUPERFREAK.webm',
+        initPos: {
+            x: lineOffstX,
+            y: distY
+        },
+        seedPos: {
+            x: 0,
+            y: 0
+        },
+        group: 'group2'
     },
 ];
 
