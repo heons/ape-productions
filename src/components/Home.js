@@ -1,8 +1,6 @@
 import React from 'react';
 import { useState, useRef, useCallback, Suspense } from 'react';
 // import SampleVideoContainer from './SampleVideoContainer';
-// import PhotoPage from './PhotoPage';
-import FilmPage from './FilmPage';
 import ClientPage from './ClientPage';
 import NotePage from './NotePage';
 import ContactPage from './ContactPage';
@@ -18,6 +16,9 @@ import {
 
 const PhotoPageM = React.lazy(() => import('./PhotoPageM'));
 const PhotoPage = React.lazy(() => import('./PhotoPage'));
+const FilmPageM = React.lazy(() => import('./FilmPageM'));
+const FilmPage = React.lazy(() => import('./FilmPage'));
+
 
 const Home = ({category}) => {
     // console.log(category);
@@ -144,12 +145,23 @@ const Home = ({category}) => {
                 />
             } */}
             
-            <FilmPage
-                screenSize={{height, width}}
-                targetPos={[targetPos1.current, targetPos2.current]}
-                zIndex={zIndex.film}
-                onMouseOver={onMouseOver}
-            ></FilmPage>
+            {
+                isBrowser &&
+                <Suspense fallback={<div>Loading...</div>}>
+                    <FilmPage
+                        screenSize={{height, width}}
+                        targetPos={[targetPos1.current, targetPos2.current]}
+                        zIndex={zIndex.film}
+                        onMouseOver={onMouseOver}
+                    ></FilmPage>
+                </Suspense>
+            }
+            {
+                isMobile && 
+                <Suspense fallback={<div>Loading...</div>}>
+                    <FilmPageM zIndex={zIndex.film}></FilmPageM>
+                </Suspense>
+            }
 
             {
                 isBrowser &&
