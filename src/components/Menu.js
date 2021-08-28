@@ -1,11 +1,18 @@
 import './Menu.css';
 import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
+
+// Resources
 import { getArtistListInCategory } from '../resources/films'
 import { photoWorkList } from '../resources/photos'
 
+// Hooks
+import useWindowDimensions from '../hooks/useWindowDimensions'
+
 
 const Menu = ({ category }) => {
+
+    const { height } = useWindowDimensions();
 
     const items = useRef(
         [
@@ -22,7 +29,7 @@ const Menu = ({ category }) => {
 
     const ArtistList = () => {
         if (category === 'film') {
-            return <div>
+            return <div style={{overflowY: 'scroll', height: height < 400 ? `${height/3*2}px` : null }}>
                 {
                     artistByCategory.map((artist) => {
                         return (    

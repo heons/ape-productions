@@ -20,7 +20,7 @@ const FilmPageM = React.lazy(() => import('./FilmPageM'));
 const FilmPage = React.lazy(() => import('./FilmPage'));
 
 
-const Home = ({category}) => {
+const Home = ({ category }) => {
     // console.log(category);
     const { height, width } = useWindowDimensions();
     const { mousePosition } = useMousePosition();
