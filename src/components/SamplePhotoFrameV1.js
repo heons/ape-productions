@@ -31,6 +31,7 @@ const SamplePhotoFrameV1 = ({ photo, screenSize, targetPos, onMouseOver }) => {
     return (
         <div style={motionStyle}>
             <img
+                className={isMouseOver ? "FilterAdditionalBrightness" : null}
                 src={photo.url}
                 alt=""
                 width={size.width}

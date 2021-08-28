@@ -26,12 +26,14 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
     transform: isMouseOver ? `translate(${newTargetPos.x}px, ${newTargetPos.y}px) scale(1.5)` : `translate(${newTargetPos.x}px, ${newTargetPos.y}px)`,
     zIndex: isMouseOver ? 4 : 3,
     opacity: isMouseOver ? 1 : 0.5,
+    
   }
 
   return (
     <div style={motionStyle}>
       <Link to={`${process.env.PUBLIC_URL}/${artist.id}?idx=0`}>
         <video
+          className={isMouseOver ? "FilterAdditionalBrightness" : null}
           src={`${process.env.PUBLIC_URL}/${artist.sampleVideoSrc}`}
           width={size.width}
           height={size.height}
