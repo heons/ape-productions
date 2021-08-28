@@ -12,7 +12,7 @@ import useWindowDimensions from '../hooks/useWindowDimensions'
 
 
 const ClientPage = ({ zIndex }) => {
-    // TODO : Re-arrange with screen resize.
+
     const { height, width } = useWindowDimensions();
 
     const pageStyle = {

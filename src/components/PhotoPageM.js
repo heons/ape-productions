@@ -16,7 +16,7 @@ const PhotoPageM = ({ zIndex }) =>{
     const pageStyle = {
         ...getBasePageStyle(width, height, zIndex),
         backgroundColor: 'black',
-        'overflowY': 'scroll',
+        overflowY: 'scroll',
         paddingLeft: '10px',
         paddingRight: '10px',
     };
