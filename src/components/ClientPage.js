@@ -23,18 +23,22 @@ const ClientPage = ({ zIndex }) => {
 
     const centerScreenX = width / 2;
     const textListWidth = width > 500 ? 400 : 300;
+    const widthBreakPoint = 850;
+    const verticalCenterTop = Math.max(100, height / 2 - 200);
+    const horizontalMarginBetween = 10;
 
-    const companyPosLeft = width > 850 ? (centerScreenX - textListWidth) : (width-textListWidth) / 2;
+    const companyPosTop = width > widthBreakPoint ? verticalCenterTop : 100;
+    const companyPosLeft = width > widthBreakPoint ? (centerScreenX - textListWidth) - horizontalMarginBetween : (width-textListWidth) / 2;
     const companyStyle = {
         position: 'absolute',
         paddingTop: `4.0em`,
-        top: `100px`,
+        top: `${companyPosTop}px`,
         left: `${companyPosLeft}px`,
         color: 'white',
     };
 
-    const artistPosTop = width > 850 ? 100 : 450;
-    const artistPosLeft = width > 850 ? (centerScreenX) : (width-textListWidth) / 2;
+    const artistPosTop = width > widthBreakPoint ? verticalCenterTop : 450;
+    const artistPosLeft = width > widthBreakPoint ? (centerScreenX) + horizontalMarginBetween : (width-textListWidth) / 2;
     const artistStyle = {
         position: 'absolute',
         paddingTop: `4.0em`,
