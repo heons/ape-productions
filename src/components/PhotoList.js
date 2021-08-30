@@ -1,5 +1,6 @@
 import React from 'react';
 import { ListGroup } from 'react-bootstrap';
+import { Helmet } from 'react-helmet'
 import { getBasePageStyle } from '../utils'
 
 // Resources
@@ -12,7 +13,7 @@ import useWindowDimensions from '../hooks/useWindowDimensions'
 const PhotoList = ({ match }) =>{
     const { height, width } = useWindowDimensions();
 
-    const workName = photoWorkList[match.params.id].name;
+    const workTitle = photoWorkList[match.params.id].title;
     const photoUrls = getPhotoUrlsByIndex(match.params.id);
 
     const isHorizontal = (width > height);
@@ -33,17 +34,20 @@ const PhotoList = ({ match }) =>{
 
     return (
         <div style={pageStyle}>
+            <Helmet>
+                <title>{ `APE. - ${workTitle}` }</title>
+            </Helmet>
             <ListGroup horizontal={isHorizontal ? true : null}>
                 {
                     photoUrls.map((url, idx) => {
                         return (
                             <ListGroup.Item
-                                key={`${workName}-${idx}`}
+                                key={`${workTitle}-${idx}`}
                                 style={itemStyle}
                             >
                                 <img 
                                     src={`${url}`}
-                                    alt={`${workName}-${idx}`}
+                                    alt={`${workTitle}-${idx}`}
                                     style={{'padding': '0'}}
                                     height={isHorizontal ? '100%': null}
                                     width={!isHorizontal ? '100%': null}

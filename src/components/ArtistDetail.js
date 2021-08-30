@@ -1,6 +1,7 @@
 import './ArtistDetail.css';
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import { Helmet } from 'react-helmet'
 
 // Resources
 import { getArtistDetailById } from '../resources/films';
@@ -24,6 +25,9 @@ const ArtistDetail = ({ match }) =>{
 
     return (
         <div className="ArtistDetail" style={{paddingTop:'1.5em'}}>
+            <Helmet>
+                <title>{ `APE. - ${artist.title}` }</title>
+            </Helmet>
             <h1>{artist && artist.title}</h1>
             <Carousel  interval={null} onSelect={handleSelect} className="ArtistDetail-Carousel">
                 {artist && artist.subItems.map((item, i) => {
