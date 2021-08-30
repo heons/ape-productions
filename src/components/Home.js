@@ -4,16 +4,19 @@ import { useState, useRef, useCallback, Suspense } from 'react';
 import ClientPage from './ClientPage';
 import NotePage from './NotePage';
 import ContactPage from './ContactPage';
-import useWindowDimensions from '../hooks/useWindowDimensions'
-import useMousePosition from '../hooks/useMousePosition';
+
+// 3rd party library
+import { Helmet } from 'react-helmet'
+import { isBrowser, isMobile } from "react-device-detect";
+
+// Resources
 import { getInitSampleArtistsInfo } from '../resources/films';
 
-import {
-    isBrowser,
-    isMobile
-} from "react-device-detect";
+// Hooks
+import useWindowDimensions from '../hooks/useWindowDimensions'
+import useMousePosition from '../hooks/useMousePosition';
 
-
+// Lazy loading components
 const PhotoPageM = React.lazy(() => import('./PhotoPageM'));
 const PhotoPage = React.lazy(() => import('./PhotoPage'));
 const FilmPageM = React.lazy(() => import('./FilmPageM'));
@@ -113,9 +116,16 @@ const Home = ({ category }) => {
         contact: category === 'contact' ? 3 : 1,
     }
 
+    let pageTitle = 'APE.';
+    if (category) {
+        pageTitle += ` - ${category.toUpperCase()}`;
+    }
 
     return (
         <div>
+            <Helmet>
+                <title>{ pageTitle }</title>
+            </Helmet>
             {/* <canvas id="canvas_test" width = {width} height = {height}
             style = {{position: 'absolute', left:'0px', right:'0px', "border": "1px solid black"}}>
                 {}
