@@ -37,7 +37,7 @@ const Menu = ({ category }) => {
                                 <h3>
                                     <Link
                                         className={'Menu-sub-item'}
-                                        to={`${process.env.PUBLIC_URL}/${artist.id}`}
+                                        to={`/${artist.id}`}
                                     >
                                         {artist.title}  
                                     </Link>
@@ -62,7 +62,7 @@ const Menu = ({ category }) => {
                                 <h3>
                                     <Link
                                         className={'Menu-sub-item'}
-                                        to={`${process.env.PUBLIC_URL}/photo/${i}`}
+                                        to={`/photo/${i}`}
                                     >
                                         {photo.title}
                                     </Link>
@@ -81,7 +81,7 @@ const Menu = ({ category }) => {
     return (
         <div className='Menu'>
             <h1 style={{  paddingBottom: `1.0em` }}>
-                <Link to={`${process.env.PUBLIC_URL}/`} className='Menu-item'>
+                <Link to={`/`} className='Menu-item'>
                     APE.
                 </Link>
             </h1>
@@ -91,7 +91,7 @@ const Menu = ({ category }) => {
                         <div style={{display: 'flex'}} key={'submenu' + i}>
                             <h1>
                                 <Link 
-                                    to={category === item ? `${process.env.PUBLIC_URL}/` : `${process.env.PUBLIC_URL}/?category=${item}`}
+                                    to={category === item ? `/` : `/?category=${item}`}
                                     key={item}
                                     className={category === item ? 'Menu-item-selected' : 'Menu-item'}
                                 >

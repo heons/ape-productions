@@ -31,7 +31,7 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
 
   return (
     <div style={motionStyle}>
-      <Link to={`${process.env.PUBLIC_URL}/${artist.id}?idx=0`}>
+      <Link to={`/${artist.id}`}>
         <video
           className={isMouseOver ? "FilterAdditionalBrightness" : null}
           src={`${process.env.PUBLIC_URL}/${artist.sampleVideoSrc}`}

@@ -25,7 +25,7 @@ const SampleVideoFrame = ({ artist, screenSize, onMouseOver }) => {
     };
 
     return (
-        <Link to={`${process.env.PUBLIC_URL}/${artist.id}?idx=0`}>
+        <Link to={`/${artist.id}`}>
             <video
                 id={'video'+artist.id}
                 src={artist.sampleVideoSrc}

@@ -38,7 +38,7 @@ const FilmPageM = ({ zIndex }) => {
                                 key={`film-page-m-${idx}`}
                                 style={{'padding': '5px', 'textAlign': 'center'}}
                             >
-                                <Link to={`${process.env.PUBLIC_URL}/${artist.id}?idx=0`}>
+                                <Link to={`/${artist.id}`}>
                                     <video
                                         src={`${process.env.PUBLIC_URL}/${artist.sampleVideoSrc}`}
                                         preload="auto" loop muted autoPlay playsInline

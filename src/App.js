@@ -20,14 +20,14 @@ function App({location, history}) {
             {/* <Menu category={category ? category : categoryFromUrl} onSelect={onSelectCategory}/> */}
             <Menu category={query.category} />    
             <Route
-                path={`${process.env.PUBLIC_URL}/`}
+                path={`/`}
                 exact={true}
                 render={(props) => (
                     <Home {...props} category={query.category}/>
                 )}
             />
-            <Route path={`${process.env.PUBLIC_URL}/:id`} component={ArtistDetail} exact={true}/>
-            <Route path={`${process.env.PUBLIC_URL}/photo/:id`} component={PhotoList}/>
+            <Route path={`/:id`} component={ArtistDetail} exact={true}/>
+            <Route path={`/photo/:id`} component={PhotoList}/>
         </div>
     );
 }
