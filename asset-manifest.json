@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ape-productions/static/css/main.7d04dc50.chunk.css",
-    "main.js": "/ape-productions/static/js/main.f45c418a.chunk.js",
-    "main.js.map": "/ape-productions/static/js/main.f45c418a.chunk.js.map",
+    "main.js": "/ape-productions/static/js/main.be327a77.chunk.js",
+    "main.js.map": "/ape-productions/static/js/main.be327a77.chunk.js.map",
     "runtime-main.js": "/ape-productions/static/js/runtime-main.01400a91.js",
     "runtime-main.js.map": "/ape-productions/static/js/runtime-main.01400a91.js.map",
     "static/css/2.9082872e.chunk.css": "/ape-productions/static/css/2.9082872e.chunk.css",
@@ -28,6 +28,6 @@
     "static/css/2.9082872e.chunk.css",
     "static/js/2.2fe6e3ba.chunk.js",
     "static/css/main.7d04dc50.chunk.css",
-    "static/js/main.f45c418a.chunk.js"
+    "static/js/main.be327a77.chunk.js"
   ]
 }
