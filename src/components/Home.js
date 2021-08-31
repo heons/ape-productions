@@ -7,7 +7,7 @@ import ContactPage from './ContactPage';
 
 // 3rd party library
 import { Helmet } from 'react-helmet'
-import { isBrowser, isMobile } from "react-device-detect";
+import { isDesktop, isMobile } from "react-device-detect";
 
 // Resources
 import { getInitSampleArtistsInfo } from '../resources/films';
@@ -156,7 +156,7 @@ const Home = ({ category }) => {
             } */}
             
             {
-                isBrowser &&
+                isDesktop &&
                 <Suspense fallback={<div>Loading...</div>}>
                     <FilmPage
                         screenSize={{height, width}}
@@ -174,7 +174,7 @@ const Home = ({ category }) => {
             }
 
             {
-                isBrowser &&
+                isDesktop &&
                 <Suspense fallback={<div>Loading...</div>}>
                     <PhotoPage
                     screenSize={{height, width}}

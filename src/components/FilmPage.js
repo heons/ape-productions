@@ -6,15 +6,9 @@ import { getBasePageStyle } from '../utils'
 
 // Resource
 import { getInitSampleArtistsInfo } from '../resources/films';
-// import {
-//     isBrowser,
-//     isMobile
-//   } from "react-device-detect";
 
 
 const FilmPage = ({ screenSize, targetPos, zIndex, onMouseOver }) => {
-    // console.log(isBrowser);
-    // console.log(isBrowser, isMobile);
 
     const artistList = getInitSampleArtistsInfo();
 
