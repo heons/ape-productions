@@ -37,7 +37,11 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
           src={`${process.env.PUBLIC_URL}/${artist.sampleVideoSrc}`}
           width={size.width}
           height={size.height}
-          preload="auto" loop muted autoPlay playsInline
+          preload="auto"
+          loop
+          muted
+          autoPlay
+          playsInline
           onLoadedData={response => {
             const { videoWidth, videoHeight } = response.target;      
             setNaturalSize({width: videoWidth, height: videoHeight});

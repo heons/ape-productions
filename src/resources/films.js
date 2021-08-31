@@ -17,7 +17,7 @@ const artistInfos = [
                 url: 'https://www.youtube.com/embed/oRq5rY-1TPg',
             },
         ],
-        sampleVideoSrc: 'video/APE_TAEYEON_LIVE.webm',
+        sampleVideoSrc: 'video/APE_TAEYEON_LIVE.mp4',
         initPos: {
             x: lineOffstX,
             y: distY * 3
@@ -54,7 +54,7 @@ const artistInfos = [
                 url: 'https://player.vimeo.com/video/593056163',
             },
         ],
-        sampleVideoSrc: 'video/APE_DVWN_BAD_KID_Official_Live.webm',
+        sampleVideoSrc: 'video/APE_DVWN_BAD_KID_Official_Live.mp4',
         initPos: {
             x: lineOffstX + distX * 2,
             y: distY
@@ -75,7 +75,7 @@ const artistInfos = [
                 url: 'https://player.vimeo.com/video/379467383',
             },
         ],
-        sampleVideoSrc: 'video/APE_ADIDAS_x_EYESMAG.webm',
+        sampleVideoSrc: 'video/APE_ADIDAS_x_EYESMAG.mp4',
         initPos: {
             x: distX * 1,
             y: 0
@@ -96,7 +96,7 @@ const artistInfos = [
                 url: 'https://player.vimeo.com/video/406102148',
             },
         ],
-        sampleVideoSrc: 'video/APE_musinsa adidas_ape.webm',
+        sampleVideoSrc: 'video/APE_musinsa adidas_ape.mp4',
         initPos: {
             x: distX * 2,
             y: 0
@@ -117,7 +117,7 @@ const artistInfos = [
                 url: 'https://player.vimeo.com/video/379467708',
             },
         ],
-        sampleVideoSrc: 'video/APE_PUMA_CELL_ENDURA.webm',
+        sampleVideoSrc: 'video/APE_PUMA_CELL_ENDURA.mp4',
         initPos: {
             x: distX * 3,
             y: distY * 2
@@ -138,7 +138,7 @@ const artistInfos = [
                 url: 'https://player.vimeo.com/video/466787052',
             },
         ],
-        sampleVideoSrc: 'video/APE_ZOO_YORK_20FS.webm',
+        sampleVideoSrc: 'video/APE_ZOO_YORK_20FS.mp4',
         initPos: {
             x: lineOffstX + distX * 3,
             y: distY * 3
@@ -159,7 +159,7 @@ const artistInfos = [
                 url: 'https://player.vimeo.com/video/379467842',
             },
         ],
-        sampleVideoSrc: 'video/APE_DEMI_FASHION_FILM.webm',
+        sampleVideoSrc: 'video/APE_DEMI_FASHION_FILM.mp4',
         initPos: {
             x: distX * 3,
             y: 0
@@ -180,7 +180,7 @@ const artistInfos = [
                 url: 'https://player.vimeo.com/video/443832322',
             },
         ],
-        sampleVideoSrc: 'video/APE_Luc_Belaire.webm',
+        sampleVideoSrc: 'video/APE_Luc_Belaire.mp4',
         initPos: {
             x: lineOffstX + distX * 3,
             y: distY
@@ -201,7 +201,7 @@ const artistInfos = [
                 url: 'https://player.vimeo.com/video/379467402',
             },
         ],
-        sampleVideoSrc: 'video/APE_VARPOLLFANCLUB_Fashion_FIlm.webm',
+        sampleVideoSrc: 'video/APE_VARPOLLFANCLUB_Fashion_FIlm.mp4',
         initPos: {
             x: lineOffstX + distX * 1,
             y: distY * 3
@@ -246,7 +246,7 @@ const artistInfos = [
                 url: 'https://player.vimeo.com/video/381097915',
             },
         ],
-        sampleVideoSrc: 'video/APE_KOREAN_PARTYS.webm',
+        sampleVideoSrc: 'video/APE_KOREAN_PARTYS.mp4',
         initPos: {
             x: lineOffstX + distX,
             y: distY
@@ -267,7 +267,7 @@ const artistInfos = [
                 url: 'https://player.vimeo.com/video/379467620',
             },
         ],
-        sampleVideoSrc: 'video/APE_OWEN_EPISODE_2.webm',
+        sampleVideoSrc: 'video/APE_OWEN_EPISODE_2.mp4',
         initPos: {
             x: distX * 1,
             y: distY * 2
@@ -288,7 +288,7 @@ const artistInfos = [
                 url: 'https://player.vimeo.com/video/379467655',
             },
         ],
-        sampleVideoSrc: 'video/APE_OWEN_EPISODE_3_FINAL.webm',
+        sampleVideoSrc: 'video/APE_OWEN_EPISODE_3_FINAL.mp4',
         initPos: {
             x: distX * 2,
             y: distY * 2
@@ -309,7 +309,7 @@ const artistInfos = [
                 url: 'https://player.vimeo.com/video/580135709',
             },
         ],
-        sampleVideoSrc: 'video/APE_Who_Is_June_One_Documentary.webm',
+        sampleVideoSrc: 'video/APE_Who_Is_June_One_Documentary.mp4',
         initPos: {
             x: lineOffstX + distX * 2,
             y: distY * 3
@@ -338,7 +338,7 @@ const artistInfos = [
                 url: 'https://player.vimeo.com/video/493064042'
             },
         ],
-        sampleVideoSrc: 'video/APE_A_pictures_book_makers.webm',
+        sampleVideoSrc: 'video/APE_A_pictures_book_makers.mp4',
         initPos: {
             x: 0,
             y: 0
@@ -363,7 +363,7 @@ const artistInfos = [
                 url: 'https://player.vimeo.com/video/394382257',
             },
         ],
-        sampleVideoSrc: 'video/APE_JINBOTHESUPERFREAK.webm',
+        sampleVideoSrc: 'video/APE_JINBOTHESUPERFREAK.mp4',
         initPos: {
             x: lineOffstX,
             y: distY
