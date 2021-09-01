@@ -1,0 +1,12 @@
+.TextList {
+  overflow-y: scroll;
+}
+
+.TextList::-webkit-scrollbar {
+  display: none;
+}
+
+.TextList {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

@@ -1,3 +1,4 @@
+import './TextList.css';
 import React, { useState }from 'react'
 
 const TextList = ({ textList, width, height }) =>{
@@ -21,7 +22,11 @@ const TextList = ({ textList, width, height }) =>{
     return (
         <div>
             <div
-                style={{width: width, height: height, 'overflowY': 'scroll'}}
+                className='TextList'
+                style={{
+                    width: width,
+                    height: height,
+                }}
             >
                 {textList.map((company, idx) => (
                     <h4
