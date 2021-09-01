@@ -41,7 +41,10 @@ const FilmPageM = ({ zIndex }) => {
                                 <Link to={`/${artist.id}`}>
                                     <video
                                         src={`${process.env.PUBLIC_URL}/${artist.sampleVideoSrc}`}
-                                        preload="auto" loop muted autoPlay playsInline
+                                        loop
+                                        muted
+                                        autoPlay
+                                        playsInline
                                     >
                                         Your browser does not support the HTML5 Video element.
                                     </video>
