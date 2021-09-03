@@ -22,6 +22,7 @@ export const clientCompanyList = [
     'NONDEFINE',
     'LUC BELAIRE',
     'THE QOOS',
+    'STONESHIP ENTERTAINMENT',
 ];
 
 export const clientArtistList = [
@@ -45,4 +46,8 @@ export const clientArtistList = [
     'MBA EK',
     'BIG ONE',
     'YOUNG COCO',
+    'KIMMINERALWATER',
+    'QUEEN WASABI',
+    'YAWWA',
+    'PIEBOY',
 ];
