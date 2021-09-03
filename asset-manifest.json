@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ape-productions/static/css/main.ddf1c01d.chunk.css",
-    "main.js": "/ape-productions/static/js/main.53baab88.chunk.js",
-    "main.js.map": "/ape-productions/static/js/main.53baab88.chunk.js.map",
+    "main.css": "/ape-productions/static/css/main.8fcfb370.chunk.css",
+    "main.js": "/ape-productions/static/js/main.629cb482.chunk.js",
+    "main.js.map": "/ape-productions/static/js/main.629cb482.chunk.js.map",
     "runtime-main.js": "/ape-productions/static/js/runtime-main.1d6b2432.js",
     "runtime-main.js.map": "/ape-productions/static/js/runtime-main.1d6b2432.js.map",
     "static/css/2.9082872e.chunk.css": "/ape-productions/static/css/2.9082872e.chunk.css",
@@ -20,14 +20,15 @@
     "static/js/7.df6cc4d1.chunk.js.map": "/ape-productions/static/js/7.df6cc4d1.chunk.js.map",
     "index.html": "/ape-productions/index.html",
     "static/css/2.9082872e.chunk.css.map": "/ape-productions/static/css/2.9082872e.chunk.css.map",
-    "static/css/main.ddf1c01d.chunk.css.map": "/ape-productions/static/css/main.ddf1c01d.chunk.css.map",
-    "static/js/2.a7dc0ba3.chunk.js.LICENSE.txt": "/ape-productions/static/js/2.a7dc0ba3.chunk.js.LICENSE.txt"
+    "static/css/main.8fcfb370.chunk.css.map": "/ape-productions/static/css/main.8fcfb370.chunk.css.map",
+    "static/js/2.a7dc0ba3.chunk.js.LICENSE.txt": "/ape-productions/static/js/2.a7dc0ba3.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/ape-productions/static/media/Gamepixies-8MO6n.137bba1d.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.1d6b2432.js",
     "static/css/2.9082872e.chunk.css",
     "static/js/2.a7dc0ba3.chunk.js",
-    "static/css/main.ddf1c01d.chunk.css",
-    "static/js/main.53baab88.chunk.js"
+    "static/css/main.8fcfb370.chunk.css",
+    "static/js/main.629cb482.chunk.js"
   ]
 }
