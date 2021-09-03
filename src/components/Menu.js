@@ -44,7 +44,7 @@ const Menu = ({ category }) => {
                                 {item.charAt(0).toUpperCase() + item.slice(1)}
                             </Link>
                         </h1>
-                        <h1>&nbsp;/&nbsp;</h1>
+                        {i !== items.current.length-1 ? <h1>&nbsp;/&nbsp;</h1> : null}
                     </div>
                 )
             })}
