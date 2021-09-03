@@ -96,7 +96,7 @@ const artistInfos = [
                 url: 'https://player.vimeo.com/video/406102148',
             },
         ],
-        sampleVideoSrc: 'video/APE_musinsa adidas_ape.mp4',
+        sampleVideoSrc: 'video/APE_musinsa_adidas_ape.mp4',
         initPos: {
             x: distX * 2,
             y: 0
