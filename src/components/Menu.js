@@ -1,6 +1,7 @@
 import './Menu.css';
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { isDesktop, isMobile } from "react-device-detect";
 
 // Resources
 import { getArtistListInCategory } from '../resources/films'
@@ -24,8 +25,31 @@ const Menu = ({ category }) => {
         ]
     );
 
+    const [toggleTitle, setToggleTitle] = useState(false);
+
 
     const artistByCategory = getArtistListInCategory(category);
+
+    const SubMenu = () => {
+        return <div style={{display: 'flex'}}>
+            {items.current.map((item, i) => {
+                return (
+                    <div style={{display: 'flex'}} key={'submenu' + i}>
+                        <h1>
+                            <Link 
+                                to={category === item ? `/` : `/?category=${item}`}
+                                key={item}
+                                className={category === item ? 'Menu-item-selected' : 'Menu-item'}
+                            >
+                                {item.charAt(0).toUpperCase() + item.slice(1)}
+                            </Link>
+                        </h1>
+                        <h1>&nbsp;/&nbsp;</h1>
+                    </div>
+                )
+            })}
+        </div>
+    }
 
     const ArtistList = () => {
         if (category === 'film') {
@@ -80,29 +104,23 @@ const Menu = ({ category }) => {
 
     return (
         <div className='Menu'>
-            <h1 style={{  paddingBottom: `1.0em` }}>
+            <h1
+                style={{  paddingBottom: `1.0em` }}
+                onClick={() => setToggleTitle(!toggleTitle)}
+            >
                 <Link to={`/`} className='Menu-item'>
                     APE.
                 </Link>
             </h1>
-            <div style={{display: 'flex'}}>
-                {items.current.map((item, i) => {
-                    return (
-                        <div style={{display: 'flex'}} key={'submenu' + i}>
-                            <h1>
-                                <Link 
-                                    to={category === item ? `/` : `/?category=${item}`}
-                                    key={item}
-                                    className={category === item ? 'Menu-item-selected' : 'Menu-item'}
-                                >
-                                    {item.charAt(0).toUpperCase() + item.slice(1)}
-                                </Link>
-                            </h1>
-                            <h1>&nbsp;/&nbsp;</h1>
-                        </div>
-                    )
-                })}
-            </div>
+            {
+                isMobile && toggleTitle &&
+                <SubMenu />
+            }
+            {
+                isDesktop &&
+                <SubMenu />
+            }
+            
             <ArtistList />
             <PhotoList />
         </div>
