@@ -88,7 +88,7 @@ const artistInfos = [
     },
     {
         id: '3',
-        title: 'ADIDAS X MUSINSA (EK, BIG ONE)',
+        title: 'ADIDAS x MUSINSA (EK, BIG ONE)',
         category: 'FILM',
         subItems: [
             {
