@@ -24,7 +24,7 @@ const ArtistDetail = ({ match }) =>{
     }
 
     return (
-        <div className="ArtistDetail" style={{paddingTop:'1.5em'}}>
+        <div className="ArtistDetail">
             <Helmet>
                 <title>{ `APE. - ${artist.title}` }</title>
             </Helmet>
