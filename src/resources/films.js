@@ -2,7 +2,7 @@ const distX = 320
 const distY = 280
 const lineOffstX = 50
 
-const artistInfos = [
+export const artistInfos = [
     {
         id: '13',
         title: `SM ENTERTAINMENT`,
