@@ -1,7 +1,8 @@
 import './App.css';
 import { Route, withRouter } from 'react-router-dom'
 import Home from './components/Home'
-import Menu from './components/Menu'
+// import Menu from './components/Menu'
+import MenuM from './components/MenuM'
 import ArtistDetail from './components/ArtistDetail'
 import PhotoList from './components/PhotoList'
 import qs from 'qs'
@@ -18,7 +19,8 @@ function App({location, history}) {
                 {}
             </canvas> */}
             {/* <Menu category={category ? category : categoryFromUrl} onSelect={onSelectCategory}/> */}
-            <Menu category={query.category} />    
+            <MenuM category={query.category}></MenuM>
+            {/* <Menu category={query.category} /> */}
             <Route
                 path={`/`}
                 exact={true}
