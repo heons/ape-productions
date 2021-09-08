@@ -1,10 +1,19 @@
+.MenuM {
+  z-index: 5;
+  position: absolute; /* Reposition logo from the natural layout */
+  width: 100%;
+  color: white;
+
+  text-align: left;
+}
+
 .Menu {
   position: absolute; /* Reposition logo from the natural layout */
   left: 25px;
   top: 0px;
   z-index: 5;
   color: white;
-
+  
   text-align: left;
 }
 
@@ -21,4 +30,68 @@
 .Menu-sub-item {
   color: white;
   text-decoration: none;
+}
+
+.Menu-dropdown-item {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+.MenuM a {
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: bold;
+}
+
+.navbar{
+  color: white;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .navbar {
+    background-color: black;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    height: 100vh;
+    overflow-y: scroll !important;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .navbar-collapse::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.dropdown-film .dropdown-menu {
+  height: 70vh;
+  background-color: black !important;
+  overflow-y: scroll !important;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.dropdown-film .dropdown-menu::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 768px) {
+  .dropdown-film .dropdown-menu {
+    height: 100%;
+  }
+}
+
+.dropdown-photo .dropdown-menu {
+  background-color: black !important;
+}
+
+.dropdown-item {
+  color: white !important;
+  background-color: black !important;
+}
+.dropdown-item:hover {
+  color: black !important;
+  background-color: white !important;
 }
