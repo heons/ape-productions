@@ -7,6 +7,31 @@
   text-align: left;
 }
 
+@media (max-width: 1440px) {
+  .MenuM{
+    font-size: 2.0em;
+  }
+  .MenuM .navbar-brand{
+    font-size: 2.0em;
+  }
+}
+@media (max-width: 1280px) {
+  .MenuM{
+    font-size: 1.7em;
+  }
+  .MenuM .navbar-brand{
+    font-size: 1.7em;
+  }
+}
+@media (max-width: 900px) {
+  .MenuM{
+    font-size: 1.3em;
+  }
+  .MenuM .navbar-brand{
+    font-size: 1.3em;
+  }
+}
+
 .Menu {
   position: absolute; /* Reposition logo from the natural layout */
   left: 25px;
