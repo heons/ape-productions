@@ -4,7 +4,7 @@ const lineOffstX = 50
 
 export const artistInfos = [
     {
-        id: '13',
+        id: '1',
         title: `SM ENTERTAINMENT`,
         category: 'FILM',
         subItems: [
@@ -26,10 +26,10 @@ export const artistInfos = [
             x: 0,
             y: 0
         },
-        group: 'group2'
+        group: 'group1'
     },
     {
-        id: '7',
+        id: '2',
         title: 'KOZ ENTERTAINMENT',
         category: 'FILM',
         subItems: [
@@ -66,7 +66,28 @@ export const artistInfos = [
         group: 'group2'
     },
     {
-        id: '2',
+        id: '3',
+        title: `Yves Saint Laurant x W Korea`,
+        category: 'FILM',
+        subItems: [
+            {
+                title: ``,
+                url: 'https://player.vimeo.com/video/525647340',
+            },
+        ],
+        sampleVideoSrc: 'video/APE_Yves_Saint_Laurant_x_W_Korea.mp4',
+        initPos: {
+            x: distX * 3,
+            y: distY * 2
+        },
+        seedPos: {
+            x: 0,
+            y: 0
+        },
+        group: 'group1'
+    },
+    {
+        id: '4',
         title: 'ADIDAS x EYESMAG',
         category: 'FILM',
         subItems: [
@@ -87,7 +108,7 @@ export const artistInfos = [
         group: 'group2'
     },
     {
-        id: '3',
+        id: '5',
         title: 'ADIDAS x MUSINSA (EK, BIG ONE)',
         category: 'FILM',
         subItems: [
@@ -108,7 +129,7 @@ export const artistInfos = [
         group: 'group1'
     },
     {
-        id: '12',
+        id: '6',
         title: `PUMA CELL ENDURA`,
         category: 'FILM',
         subItems: [
@@ -126,10 +147,10 @@ export const artistInfos = [
             x: 0,
             y: 0
         },
-        group: 'group1'
+        group: 'group2'
     },
     {
-        id: '16',
+        id: '7',
         title: `ZOO YORK 20FS`,
         category: 'FILM',
         subItems: [
@@ -150,7 +171,7 @@ export const artistInfos = [
         group: 'group1'
     },
     {
-        id: '4',
+        id: '8',
         title: 'DEMI FASHION FILM',
         category: 'FILM',
         subItems: [
@@ -171,7 +192,7 @@ export const artistInfos = [
         group: 'group2'
     },
     {
-        id: '8',
+        id: '9',
         title: 'Luc Belaire',
         category: 'FILM',
         subItems: [
@@ -192,7 +213,7 @@ export const artistInfos = [
         group: 'group1'
     },
     {
-        id: '14',
+        id: '10',
         title: `VARPOLLFANCLUB Fashion FIlm`,
         category: 'FILM',
         subItems: [
@@ -210,10 +231,10 @@ export const artistInfos = [
             x: 0,
             y: 0
         },
-        group: 'group1'
+        group: 'group2'
     },
     {
-        id: '6',
+        id: '11',
         title: 'KOREAN PARTYS',
         category: 'FILM',
         subItems: [
@@ -258,7 +279,7 @@ export const artistInfos = [
         group: 'group1'
     },
     {
-        id: '10',
+        id: '12',
         title: `OWEN OVADOZ - MKIT RAIN ART FILM 2`,
         category: 'FILM',
         subItems: [
@@ -276,10 +297,10 @@ export const artistInfos = [
             x: 0,
             y: 0
         },
-        group: 'group1'
+        group: 'group2'
     },
     {
-        id: '11',
+        id: '13',
         title: `OWEN OVADOZ - MKIT RAIN ART FILM 3`,
         category: 'FILM',
         subItems: [
@@ -297,10 +318,10 @@ export const artistInfos = [
             x: 0,
             y: 0
         },
-        group: 'group2'
+        group: 'group1'
     },
     {
-        id: '15',
+        id: '14',
         title: `Who Is June One? | Documentary`,
         category: 'FILM',
         subItems: [
@@ -321,17 +342,13 @@ export const artistInfos = [
         group: 'group2'
     },
     {
-        id: '1',
+        id: '15',
         title: 'A PICTURES BOOK MAKERS',
         category: 'FILM',
         subItems: [
             {
                 title: 'LEE HEE EUN',
                 url: 'https://player.vimeo.com/video/493065854',
-            },
-            {
-                title: 'KIM SEUNG YEON',
-                url: 'https://player.vimeo.com/video/493066261'
             },
             {
                 title: 'KIM JI ANN',
@@ -350,7 +367,7 @@ export const artistInfos = [
         group: 'group1'
     },
     {
-        id: '5',
+        id: '16',
         title: 'JINBO THE SUPERFREAK',
         category: 'FILM',
         subItems: [
