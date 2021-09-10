@@ -9,6 +9,12 @@ const ContactPage = ({ zIndex }) => {
         left: '0px',
         zIndex: zIndex,
     };
+
+    const imgStyle = {
+        width: '30px',
+        height: '30px',
+        margin: '20px'
+    };
     
     return (
         <div
@@ -27,6 +33,29 @@ const ContactPage = ({ zIndex }) => {
                 </Col>
                 <Col xs={12}>
                     <h1>apeproductionskr@gmail.com</h1>
+                </Col>
+                <Col xs={12}>
+                    <a href="https://vimeo.com/user106335411" target="_blank" rel="noreferrer">
+                        <img
+                            src={`${process.env.PUBLIC_URL}/icon_vimeo.png`}
+                            alt="vimeo"
+                            style={imgStyle}
+                        ></img>
+                    </a>
+                    <a href="https://www.instagram.com/ape.kr/" target="_blank" rel="noreferrer">
+                        <img
+                            src={`${process.env.PUBLIC_URL}/icon_instagram.png`}
+                            alt="instagram"
+                            style={imgStyle}
+                        ></img>
+                    </a>
+                    <a href="https://open.kakao.com/o/snmiM4yd" target="_blank" rel="noreferrer">
+                        <img
+                            src={`${process.env.PUBLIC_URL}/icon_kakao.png`}
+                            alt="kakao"
+                            style={imgStyle}
+                        ></img>
+                    </a>
                 </Col>
             </Row>
         </div>
