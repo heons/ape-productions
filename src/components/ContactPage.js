@@ -13,7 +13,9 @@ const ContactPage = ({ zIndex }) => {
     const imgStyle = {
         width: '30px',
         height: '30px',
-        margin: '20px'
+        margin: '20px',
+        border: '2px solid white',
+        borderRadius: '25%',
     };
     
     return (
