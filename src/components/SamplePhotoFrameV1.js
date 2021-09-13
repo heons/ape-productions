@@ -5,10 +5,10 @@ import { computeSizeFromWidth } from '../utils'
 
 
 const SamplePhotoFrameV1 = ({ photo, screenSize, targetPos, onMouseOver }) => {
-    const [naturalSize, setNaturalSize] = useState({width: 100, height: 140});
+    const fixedImageSize = {width: 100, height: 140};
     const [isMouseOver, setIsMouseOver] = useState(false);
 
-    const size = computeSizeFromWidth(naturalSize, screenSize.width);
+    const size = computeSizeFromWidth(fixedImageSize, screenSize.width);
 
     const row = Math.floor((parseInt(photo.id) - 1) / 11);
     const col = (parseInt(photo.id) - 1) % 11;
