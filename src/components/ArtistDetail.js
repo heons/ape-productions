@@ -1,7 +1,7 @@
 import './ArtistDetail.css';
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async';
 
 // Resources
 import { getArtistDetailById } from '../resources/films';

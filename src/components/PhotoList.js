@@ -1,6 +1,6 @@
 import React from 'react';
 import { ListGroup } from 'react-bootstrap';
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async';
 import { getBasePageStyle } from '../utils'
 
 // Resources

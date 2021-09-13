@@ -6,7 +6,7 @@ import NotePage from './NotePage';
 import ContactPage from './ContactPage';
 
 // 3rd party library
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async';
 import { isDesktop, isMobile } from "react-device-detect";
 
 // Resources
