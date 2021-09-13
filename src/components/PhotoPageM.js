@@ -31,7 +31,7 @@ const PhotoPageM = ({ zIndex }) =>{
                                 key={`photo-page-m-${idx}`}
                                 style={{'padding': '5px', 'textAlign': 'center'}}
                             >
-                                <img width='100%' style={{'padding': '0', 'border': '0',}} src={`${photo}`} alt={`photo-page-m-${idx}`}></img>
+                                <img width='100%' style={{'padding': '0', 'border': '0',}} src={`${photo}`} alt={`m-${idx}`}></img>
                             </Col>
                     )})
                 }
