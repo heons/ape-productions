@@ -70,13 +70,13 @@
   color: white;
   font-weight: bold;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar {
     background-color: black;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar-collapse {
     height: 100vh;
     overflow-y: scroll !important;
@@ -99,7 +99,7 @@
 .dropdown-film .dropdown-menu::-webkit-scrollbar {
   display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .dropdown-film .dropdown-menu {
     height: 100%;
   }
