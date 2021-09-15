@@ -13,8 +13,12 @@ export const artistInfos = [
                 url: 'https://player.vimeo.com/video/485249062',
             },
             {
-                title: `MAX CHANGMIN 최강창민 | 바람이 분다 (이소라) `,
+                title: `MAX CHANGMIN 최강창민 | 바람이 분다 (이소라)`,
                 url: 'https://www.youtube.com/embed/oRq5rY-1TPg',
+            },
+            {
+                title: `MAX CHANMIN - TIME WALKING ON MEMORES(Official Live Video)`,
+                url: 'https://player.vimeo.com/video/605380106',
             },
         ],
         sampleVideoSrc: 'video/APE_TAEYEON_LIVE.mp4',
@@ -54,7 +58,7 @@ export const artistInfos = [
                 url: 'https://player.vimeo.com/video/593056163',
             },
         ],
-        sampleVideoSrc: 'video/APE_DVWN_BAD_KID_Official_Live.mp4',
+        sampleVideoSrc: 'video/APE_DVWN_its_not_your_fault.mp4',
         initPos: {
             x: lineOffstX + distX * 2,
             y: distY
