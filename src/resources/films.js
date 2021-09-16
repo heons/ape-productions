@@ -58,7 +58,7 @@ export const artistInfos = [
                 url: 'https://player.vimeo.com/video/593056163',
             },
         ],
-        sampleVideoSrc: 'video/APE_DVWN_its_not_your_fault.mp4',
+        sampleVideoSrc: 'video/APE_DVWN_BAD_KID_Official_Live.mp4',
         initPos: {
             x: lineOffstX + distX * 2,
             y: distY
