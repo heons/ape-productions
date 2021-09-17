@@ -40,6 +40,7 @@ const FilmPageM = ({ zIndex }) => {
                             >
                                 <Link to={`/${artist.id}`}>
                                     <video
+                                        poster={`${process.env.PUBLIC_URL}/APE_film_effect.gif`}
                                         src={`${process.env.PUBLIC_URL}/${artist.sampleVideoSrc}`}
                                         loop
                                         muted
