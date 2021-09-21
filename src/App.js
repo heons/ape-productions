@@ -1,4 +1,5 @@
 import './App.css';
+import { useEffect } from 'react';
 import { Route, withRouter } from 'react-router-dom'
 import Home from './components/Home'
 // import Menu from './components/Menu'
@@ -7,10 +8,16 @@ import ArtistDetail from './components/ArtistDetail'
 import PhotoList from './components/PhotoList'
 import qs from 'qs'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ReactGA from 'react-ga';
 
 
 function App({location, history}) {
     const query = qs.parse(location.search, { ignoreQueryPrefix: true });
+
+    useEffect(() => {
+        ReactGA.initialize('UA-208149030-1');
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }, []);
 
     return (
         <div className="App">
