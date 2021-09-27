@@ -50,7 +50,7 @@ const Home = ({ category }) => {
         }
     });
 
-    const offsetRatio = -100;
+    const offsetRatio = -10;
     const diifRatioGroup = 200;
     const ACT_RESOLUTION = 10;
 
