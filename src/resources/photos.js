@@ -7,6 +7,10 @@ export const photoWorkList = [
         title: 'ZOOYORK20FW',
         numItems: 20,
     },
+    {
+        title: 'ASPARAGUS21SS',
+        numItems: 28,
+    },
 ];
 
 export const getPhotoUrlsByIndex = (idx, isSmall=false) => {
