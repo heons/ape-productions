@@ -30,6 +30,7 @@ const PhotoList = ({ match }) =>{
         width: !isHorizontal ? '100vw' : null,
         border: '0',
         textAlign: 'center',
+        padding: '0',
     }
 
     return (
