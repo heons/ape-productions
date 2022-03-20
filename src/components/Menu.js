@@ -20,7 +20,7 @@ const Menu = ({ category }) => {
                 <Container>
                     <LinkContainer to='/' onClick={() => { setExpanded(false) }}>
                         <Navbar.Brand>
-                            APE.
+                            Dir. Oh Eun Ho
                         </Navbar.Brand>
                     </LinkContainer>
                     <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} />

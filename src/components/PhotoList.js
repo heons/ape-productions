@@ -36,7 +36,7 @@ const PhotoList = ({ match }) =>{
     return (
         <div style={pageStyle}>
             <Helmet>
-                <title>{ `APE. - ${workTitle}` }</title>
+                <title>{ `Dir. Oh Eun Ho - ${workTitle}` }</title>
             </Helmet>
             <ListGroup horizontal={isHorizontal ? true : null}>
                 {
