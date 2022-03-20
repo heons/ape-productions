@@ -71,48 +71,6 @@ export const artistInfos = [
     },
     {
         id: '3',
-        title: `Yves Saint Laurant x W Korea`,
-        category: 'FILM',
-        subItems: [
-            {
-                title: ``,
-                url: 'https://player.vimeo.com/video/525647340',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_Yves_Saint_Laurant_x_W_Korea.mp4',
-        initPos: {
-            x: distX * 3,
-            y: distY * 2
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
-        group: 'group1'
-    },
-    {
-        id: '4',
-        title: 'ADIDAS x EYESMAG',
-        category: 'FILM',
-        subItems: [
-            {
-                title: '',
-                url: 'https://player.vimeo.com/video/379467383',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_ADIDAS_x_EYESMAG.mp4',
-        initPos: {
-            x: distX * 1,
-            y: 0
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
-        group: 'group2'
-    },
-    {
-        id: '5',
         title: 'ADIDAS x MUSINSA (EK, BIG ONE)',
         category: 'FILM',
         subItems: [
@@ -133,70 +91,7 @@ export const artistInfos = [
         group: 'group1'
     },
     {
-        id: '6',
-        title: `PUMA CELL ENDURA`,
-        category: 'FILM',
-        subItems: [
-            {
-                title: ``,
-                url: 'https://player.vimeo.com/video/379467708',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_PUMA_CELL_ENDURA.mp4',
-        initPos: {
-            x: distX * 3,
-            y: distY * 2
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
-        group: 'group2'
-    },
-    {
-        id: '7',
-        title: `ZOO YORK 20FS`,
-        category: 'FILM',
-        subItems: [
-            {
-                title: ``,
-                url: 'https://player.vimeo.com/video/466787052',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_ZOO_YORK_20FS.mp4',
-        initPos: {
-            x: lineOffstX + distX * 3,
-            y: distY * 3
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
-        group: 'group1'
-    },
-    {
-        id: '8',
-        title: 'DEMI FASHION FILM',
-        category: 'FILM',
-        subItems: [
-            {
-                title: '',
-                url: 'https://player.vimeo.com/video/379467842',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_DEMI_FASHION_FILM.mp4',
-        initPos: {
-            x: distX * 3,
-            y: 0
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
-        group: 'group2'
-    },
-    {
-        id: '9',
+        id: '4',
         title: 'Luc Belaire',
         category: 'FILM',
         subItems: [
@@ -214,31 +109,10 @@ export const artistInfos = [
             x: 0,
             y: 0
         },
-        group: 'group1'
-    },
-    {
-        id: '10',
-        title: `VARPOLLFANCLUB Fashion FIlm`,
-        category: 'FILM',
-        subItems: [
-            {
-                title: ``,
-                url: 'https://player.vimeo.com/video/379467402',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_VARPOLLFANCLUB_Fashion_FIlm.mp4',
-        initPos: {
-            x: lineOffstX + distX * 1,
-            y: distY * 3
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
         group: 'group2'
     },
     {
-        id: '11',
+        id: '5',
         title: 'KOREAN PARTYS',
         category: 'FILM',
         subItems: [
@@ -283,49 +157,7 @@ export const artistInfos = [
         group: 'group1'
     },
     {
-        id: '12',
-        title: `OWEN OVADOZ - MKIT RAIN ART FILM 2`,
-        category: 'FILM',
-        subItems: [
-            {
-                title: ``,
-                url: 'https://player.vimeo.com/video/379467620',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_OWEN_EPISODE_2.mp4',
-        initPos: {
-            x: distX * 1,
-            y: distY * 2
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
-        group: 'group2'
-    },
-    {
-        id: '13',
-        title: `OWEN OVADOZ - MKIT RAIN ART FILM 3`,
-        category: 'FILM',
-        subItems: [
-            {
-                title: ``,
-                url: 'https://player.vimeo.com/video/379467655',
-            },
-        ],
-        sampleVideoSrc: 'video/APE_OWEN_EPISODE_3_FINAL.mp4',
-        initPos: {
-            x: distX * 2,
-            y: distY * 2
-        },
-        seedPos: {
-            x: 0,
-            y: 0
-        },
-        group: 'group1'
-    },
-    {
-        id: '14',
+        id: '6',
         title: `Who Is June One? | Documentary`,
         category: 'FILM',
         subItems: [
@@ -346,7 +178,7 @@ export const artistInfos = [
         group: 'group2'
     },
     {
-        id: '15',
+        id: '7',
         title: 'A PICTURES BOOK MAKERS',
         category: 'FILM',
         subItems: [
@@ -371,7 +203,7 @@ export const artistInfos = [
         group: 'group1'
     },
     {
-        id: '16',
+        id: '8',
         title: 'JINBO THE SUPERFREAK',
         category: 'FILM',
         subItems: [

@@ -11,8 +11,8 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
 
   const size = computeSizeFromWidth(naturalSize, screenSize.width);
 
-  const row = Math.floor((parseInt(artist.id) - 1) / 4);
-  const col = (parseInt(artist.id) - 1) % 4;
+  const row = Math.floor((parseInt(artist.id) - 1) / 3);
+  const col = (parseInt(artist.id) - 1) % 3;
   const OVERLAP_RATIO = 1.3;
   const newTargetPos = {
     x: targetPos.x + col * size.width * OVERLAP_RATIO,
