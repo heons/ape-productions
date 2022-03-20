@@ -19,10 +19,7 @@ const ContactPage = ({ zIndex }) => {
     };
     
     return (
-        <div
-            className='PagePaddingTop'
-            style={pageStyle}
-        >
+        <div className="PagePaddingTop" style={pageStyle}>
             <Row>
                 <Col xs={12}>
                     <h1>서울특별시 마포구 양화진길 6, 6층</h1>
@@ -31,20 +28,25 @@ const ContactPage = ({ zIndex }) => {
                     <h1>+82-10-8487-2110</h1>
                 </Col>
                 <Col xs={12}>
-                    <h1>+82-10-4642-8321</h1>
+                    <h1>oldboyung@gmail.com</h1>
                 </Col>
                 <Col xs={12}>
-                    <h1>apeproductionskr@gmail.com</h1>
-                </Col>
-                <Col xs={12}>
-                    <a href="https://www.instagram.com/ape.kr/" target="_blank" rel="noreferrer">
+                    <a
+                        href="https://www.instagram.com/oldboyung/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         <img
                             src={`${process.env.PUBLIC_URL}/icon_instagram.png`}
                             alt="instagram"
                             style={imgStyle}
                         ></img>
                     </a>
-                    <a href="https://open.kakao.com/o/snmiM4yd" target="_blank" rel="noreferrer">
+                    <a
+                        href="https://open.kakao.com/o/snmiM4yd"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         <img
                             src={`${process.env.PUBLIC_URL}/icon_kakao.png`}
                             alt="kakao"
@@ -54,7 +56,7 @@ const ContactPage = ({ zIndex }) => {
                 </Col>
             </Row>
         </div>
-    )
+    );
 }
         
 export default React.memo(ContactPage);
