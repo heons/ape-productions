@@ -37,13 +37,6 @@ const ContactPage = ({ zIndex }) => {
                     <h1>apeproductionskr@gmail.com</h1>
                 </Col>
                 <Col xs={12}>
-                    <a href="https://vimeo.com/user106335411" target="_blank" rel="noreferrer">
-                        <img
-                            src={`${process.env.PUBLIC_URL}/icon_vimeo.png`}
-                            alt="vimeo"
-                            style={imgStyle}
-                        ></img>
-                    </a>
                     <a href="https://www.instagram.com/ape.kr/" target="_blank" rel="noreferrer">
                         <img
                             src={`${process.env.PUBLIC_URL}/icon_instagram.png`}
