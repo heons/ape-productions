@@ -29,32 +29,6 @@ export const noteList = [
     },
     {
         id: 2,
-        title: `Yves Saint Laurant x W Korea.`,
-        subItems: [
-            {
-                url: `https://player.vimeo.com/video/525647340`,
-                ratio: `1:1`,
-            },
-        ],
-        content: [
-            `작년에 날씨가 한창 따뜻해질 무렵, 촬영장에서 만난 사진작가 친구가 있다. 누구보다 부드럽고 온화한 기운을 가진 그는, 항상 느긋하고 여유롭게 삶을 즐길줄 아는 사람처럼 보였다.`,
-            `그렇게 우연하게 만난 그와 그 어느때 보다 활기차고 즐거운 촬영을 끝낸 후 언젠간 꼭 그와 다시 작업을 해보고 싶다고 생각했었다.`,
-            `그로부터 거의 반년이 지나고, 어느 날 갑자기 그에게서 연락이 왔다.`,
-            `그가 정말 고맙게도 이번 이브 생로랑 프로젝트에서 나와 같이 해보고 싶다고 한 것이다.`,
-            `나는 당연히 기쁘게 프로젝트에 참여하겠다고 했다.`,
-            `‘이브 생로랑’과 ‘더블류 코리아’ — 영상을 시작한 후 언제쯤은 꼭 한번 작업해보고 싶었던 이름들이다.
-              그래서 그런지 이번 작업에서는 힘든 점이 딱히 없었고, 또 작업을 진행하면서 정말 많은 영감을 받았다.`,
-            `시작부터 끝까지 매 순간 즐거움을 놓치지 않고 일할 수 있었던 것 같다.`,
-            `하지만 제일 좋았던 점을 꼽으라면, 작년에 우연하게 만난 친구와 다시 작업을 할 수 있었던 것, 
-             그리고 일을 진행하면서 새로운 사람들과 교류할 수 있었던 점 같다.`,
-            `만약 누가 나에게 영상일을 하면서 제일 좋은점이 무엇이냐 묻는다면, 나는 일하면서 생기는 여러 사람들과의 인연이라 말하고 싶다.`,
-        ],
-        summary: [],
-        needs: [],
-        solution: [],
-    },
-    {
-        id: 3,
         title: `Dvwn '자유비행' 마음의 풍요를 찾아서. `,
         subItems: [
             {
@@ -74,7 +48,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 4,
+        id: 3,
         title: `뮤지션 Dvwn '서쪽 끝자리에 서서’.`,
         subItems: [
             {
@@ -93,7 +67,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 5,
+        id: 4,
         title: `Donny Hathaway ‘This Christmas’ A Cover Live by Dvwn & SOLE.`,
         subItems: [
             {
@@ -111,7 +85,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 6,
+        id: 5,
         title: `Teayeon ‘Sorrow’ Studio Live.`,
         subItems: [
             {
@@ -130,7 +104,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 7,
+        id: 6,
         title: `'NEW LOVE' ONEHUNNNIT 20FW FILM.`,
         subItems: [
             {
@@ -151,7 +125,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 8,
+        id: 7,
         title: `뮤지션 BLOO(본명 김현웅)와 함께한 아이즈매거진 촬영기.`,
         subItems: [
             {
@@ -171,7 +145,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 9,
+        id: 8,
         title: `A journey with 'LUC BELAIRE' : 주류회사 ‘아영FBC’ 와 함께한 프랑스 스파클링 와인 ‘LUC BELAIRE’ 의 광고영상제작기.`,
         subItems: [
             {
@@ -188,51 +162,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 10,
-        title: `PUMA ‘CELL ENDURA’ EXHIBITION FILM.`,
-        subItems: [
-            {
-                url: `https://player.vimeo.com/video/379467708`,
-                ratio: `16:9`,
-            },
-        ],
-        content: [
-            `스포츠 웨어 브랜드 푸마(PUMA)는 ‘CELL ENDURA’ 런닝화 출시를 기념해 서울을 대표하는 
-            인플루언서 100명을 선출하여 그들을 대상으로 전시 이벤트를 기획하였다.`,
-            `이번 프로젝트에서 푸마와 APE. 팀은 전시장 메인이벤트 룸의 디자인과 그 공간에서 전시될 
-            비주얼 영상을 준비하여 전시의 관람객에게 색다른 경험을 선사했다.`,
-            
-        ],
-        summary: [],
-        needs: [],
-        solution: [],
-    },
-    {
-        id: 11,
-        title: `MKIT RAIN 'OWEN OVADOZ ART FILM' SERIES.`,
-        subItems: [
-            {
-                url: `https://player.vimeo.com/video/379467620`,
-                ratio: `16:9`,
-            },
-            {
-                url: `https://player.vimeo.com/video/379467655`,
-                ratio: `16:9`,
-            },
-        ],
-        content: [
-            `힙합 아티스트 오웬 오바도즈의 아트 필름 시리즈는 그의 새 앨범 [P.O.E.M2]를 
-            총 4개의 파트로 나누어 각 파트의 의미와 내용을 함축시켜 추상적으로 표현한 영상물 시리즈이다.`,
-            `오웬의 사상과 목표점에 대해서 토론하고 세계관을 표현하는 비주얼라이저를 통해 팬들과 관객들에게 
-            한발 더 다가갈 수 있는 의미 있는 영상이다.`,
-            
-        ],
-        summary: [],
-        needs: [],
-        solution: [],
-    },
-    {
-        id: 12,
+        id: 9,
         title: `6개월간의 대장정 DOCUMENTARY 'WHO IS JUNEONE?' 제작기.`,
         subItems: [
             {
@@ -257,7 +187,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 13,
+        id: 10,
         title: `뮤지션 진보(JINBO·본명 한주현) 과 함께한 ‘비싸' 뮤직비디오 제작기.`,
         subItems: [
             {
@@ -279,7 +209,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 14,
+        id: 11,
         title: `뮤지션 진보(JINBO·본명 한주현) 과 함께한 전시회 필름제작.`,
         subItems: [
             {
