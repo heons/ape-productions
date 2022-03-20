@@ -41,7 +41,7 @@ const Menu = ({ category }) => {
                                 )
                             })}
                         </NavDropdown>
-                        <NavDropdown title="Photo" id="collasible-nav-dropdown" className="dropdown-photo">
+                        {/* <NavDropdown title="Photo" id="collasible-nav-dropdown" className="dropdown-photo">
                             {photoWorkList.map((photoWork, index) => {
                                 return (
                                     <LinkContainer
@@ -55,7 +55,7 @@ const Menu = ({ category }) => {
                                     </LinkContainer>
                                 )
                             })}
-                        </NavDropdown>
+                        </NavDropdown> */}
                         <Nav.Link eventKey="note-1" >
                             <Link 
                                 to={category === 'note' ? `/` : `/?category=${'note'}`}
