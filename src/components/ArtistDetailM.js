@@ -41,7 +41,7 @@ const ArtistDetail = ({ match }) =>{
         // <div className="ArtistDetail">
         <div style={pageStyle} className="PagePaddingTop">
             <Helmet>
-                <title>{ `Dir. Oh Eun Ho - ${artist.title}` }</title>
+                <title>{ `Oh Eun Ho - ${artist.title}` }</title>
             </Helmet>
             <h1>{artist && artist.title}</h1>
                 

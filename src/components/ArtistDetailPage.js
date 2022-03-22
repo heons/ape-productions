@@ -14,7 +14,7 @@ const ArtistDetailPage = ({ match }) =>{
     return (
         <div className="ArtistDetail">
             <Helmet>
-                <title>{ `Dir. Oh Eun Ho - ${artist.title}` }</title>
+                <title>{ `Oh Eun Ho - ${artist.title}` }</title>
             </Helmet>
             <h1>{artist && artist.title}</h1>
             <ArtistDetail artist={artist} />

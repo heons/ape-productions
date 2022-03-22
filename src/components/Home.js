@@ -116,7 +116,7 @@ const Home = ({ category }) => {
         contact: category === 'contact' ? 3 : 1,
     }
 
-    let pageTitle = 'Dir. Oh Eun Ho';
+    let pageTitle = 'Oh Eun Ho';
     if (category) {
         pageTitle += ` - ${category.toUpperCase()}`;
     }

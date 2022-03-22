@@ -26,7 +26,7 @@ const ArtistDetail = ({ match }) =>{
     return (
         <div className="ArtistDetail">
             <Helmet>
-                <title>{ `Dir. Oh Eun Ho - ${artist.title}` }</title>
+                <title>{ `Oh Eun Ho - ${artist.title}` }</title>
             </Helmet>
             <h1>{artist && artist.title}</h1>
             <Carousel  interval={null} onSelect={handleSelect} className="ArtistDetail-Carousel">
