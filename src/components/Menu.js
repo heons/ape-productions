@@ -77,7 +77,7 @@ const Menu = ({ category }) => {
                                 to={category === 'contact' ? `/` : `/?category=${'contact'}`}
                                 onClick={() => { setExpanded(false) }}
                             >
-                                Contact
+                                Info
                             </Link>
                         </Nav.Link>
                     </Nav>
