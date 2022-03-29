@@ -11,18 +11,32 @@ import { photoWorkList } from '../resources/photos'
 
 const Menu = ({ category }) => {
     const [expanded, setExpanded] = useState(false);
+    const nameStyle = {
+        marginLeft: '5px',
+        padding: '0px'
+    };
 
     return (
         <div className='MenuM'>
+            <Container>
+                <Link 
+                    to={category === 'note' ? `/` : `/?category=${'note'}`}
+                    onClick={() => { setExpanded(false) }}
+                    style={nameStyle}
+                >
+                    Oh Eun Ho
+                </Link>
+            </Container>
+            
             <Navbar variant="dark" expand="md"
              expanded={expanded}
             >
                 <Container>
-                    <LinkContainer to='/' onClick={() => { setExpanded(false) }}>
+                    {/* <LinkContainer to='/' onClick={() => { setExpanded(false) }}>
                         <Navbar.Brand>
                             Oh Eun Ho
                         </Navbar.Brand>
-                    </LinkContainer>
+                    </LinkContainer> */}
                     <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} />
                     <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
