@@ -4,9 +4,8 @@ import { Row, Col } from 'react-bootstrap';
 
 const ContactPage = ({ zIndex }) => {
     const pageStyle = {
-        position: 'absolute',
-        top: '0px',
-        left: '0px',
+        position: 'relative',
+        textAlign: 'center',
         zIndex: zIndex,
     };
 
