@@ -17,8 +17,6 @@ import useWindowDimensions from '../hooks/useWindowDimensions'
 import useMousePosition from '../hooks/useMousePosition';
 
 // Lazy loading components
-const PhotoPageM = React.lazy(() => import('./PhotoPageM'));
-const PhotoPage = React.lazy(() => import('./PhotoPage'));
 const FilmPageM = React.lazy(() => import('./FilmPageM'));
 const FilmPage = React.lazy(() => import('./FilmPage'));
 
@@ -172,24 +170,6 @@ const Home = ({ category }) => {
                     <FilmPageM zIndex={zIndex.film}></FilmPageM>
                 </Suspense>
             }
-
-            {
-                isDesktop &&
-                <Suspense fallback={<div>Loading...</div>}>
-                    <PhotoPage
-                    screenSize={{height, width}}
-                    targetPos={[targetPos1.current, targetPos2.current]}
-                    zIndex={zIndex.photo}
-                    ></PhotoPage>
-                </Suspense>
-            }
-            {
-                isMobile && 
-                <Suspense fallback={<div>Loading...</div>}>
-                    <PhotoPageM zIndex={zIndex.photo}></PhotoPageM>
-                </Suspense>
-            }
-
             {category === 'client' && 
                 <ClientPage zIndex={zIndex.client} />
             }
