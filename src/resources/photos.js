@@ -3,18 +3,6 @@ export const photoWorkList = [
         title: 'THE_MOMENTS_by_OH_EUN_HO',
         numItems: 16,
     },
-    {
-        title: 'ONEHUNNNIT20SS',
-        numItems: 28,
-    },
-    {
-        title: 'ZOOYORK20FW',
-        numItems: 20,
-    },
-    {
-        title: 'ASPARAGUS21SS',
-        numItems: 28,
-    },
 ];
 
 export const getPhotoUrlsByIndex = (idx, isSmall=false) => {
