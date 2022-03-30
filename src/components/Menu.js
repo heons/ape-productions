@@ -8,35 +8,43 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { artistInfos } from '../resources/films'
 import { photoWorkList } from '../resources/photos'
 
+// Hooks
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
 const Menu = ({ category }) => {
+    const { width } = useWindowDimensions();
     const [expanded, setExpanded] = useState(false);
     const nameStyle = {
         marginLeft: '5px',
         padding: '0px'
     };
 
+    const titleOnTop = width >= 767 && 
+        <Container>
+            <Link 
+                to='/'
+                onClick={() => { setExpanded(false) }}
+                style={nameStyle}
+            >
+                Oh Eun Ho
+            </Link>
+        </Container>
+
+    const titleInNavBar = width < 767 &&
+        <LinkContainer to='/' onClick={() => { setExpanded(false) }}>
+            <Navbar.Brand>
+                Oh Eun Ho
+            </Navbar.Brand>
+        </LinkContainer>
+
     return (
         <div className='MenuM'>
-            <Container>
-                <Link 
-                    to={category === 'note' ? `/` : `/?category=${'note'}`}
-                    onClick={() => { setExpanded(false) }}
-                    style={nameStyle}
-                >
-                    Oh Eun Ho
-                </Link>
-            </Container>
-            
+            { titleOnTop }
             <Navbar variant="dark" expand="md"
              expanded={expanded}
             >
                 <Container>
-                    {/* <LinkContainer to='/' onClick={() => { setExpanded(false) }}>
-                        <Navbar.Brand>
-                            Oh Eun Ho
-                        </Navbar.Brand>
-                    </LinkContainer> */}
+                    { titleInNavBar }
                     <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} />
                     <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
