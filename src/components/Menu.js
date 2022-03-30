@@ -6,12 +6,11 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 // Resources
 import { artistInfos } from '../resources/films'
-import { photoWorkList } from '../resources/photos'
 
 // Hooks
 import useWindowDimensions from '../hooks/useWindowDimensions'
 
-const Menu = ({ category }) => {
+const Menu = ({ category, pathname }) => {
     const { width } = useWindowDimensions();
     const [expanded, setExpanded] = useState(false);
     const nameStyle = {
@@ -63,21 +62,14 @@ const Menu = ({ category }) => {
                                 )
                             })}
                         </NavDropdown>
-                        {/* <NavDropdown title="Photo" id="collasible-nav-dropdown" className="dropdown-photo">
-                            {photoWorkList.map((photoWork, index) => {
-                                return (
-                                    <LinkContainer
-                                        key={`photo-${index}`}
-                                        to={`/photo/${index}`}
-                                        onClick={() => { setExpanded(false) }}
-                                    >
-                                        <NavDropdown.Item eventKey={`photo-${index}`}>
-                                            {photoWork.title}
-                                        </NavDropdown.Item>
-                                    </LinkContainer>
-                                )
-                            })}
-                        </NavDropdown> */}
+                        <Nav.Link eventKey="photo-1" >
+                            <Link 
+                                to={pathname === '/photo/0' ? `/` : `/photo/0`}
+                                onClick={() => { setExpanded(false) }}
+                            >
+                                Photo
+                            </Link>
+                        </Nav.Link>
                         <Nav.Link eventKey="note-1" >
                             <Link 
                                 to={category === 'note' ? `/` : `/?category=${'note'}`}

@@ -27,7 +27,7 @@ function App({ location }) {
             style = {{"border": "1px solid black"}}>
                 {}
             </canvas> */}
-            <Menu category={query.category} />
+            <Menu category={query.category} pathname={location.pathname}/>
             <Route
                 path={`/`}
                 exact={true}
