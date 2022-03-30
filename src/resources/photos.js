@@ -1,5 +1,9 @@
 export const photoWorkList = [
     {
+        title: 'THE_MOMENTS_by_OH_EUN_HO',
+        numItems: 16,
+    },
+    {
         title: 'ONEHUNNNIT20SS',
         numItems: 28,
     },
