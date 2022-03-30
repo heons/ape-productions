@@ -26,7 +26,7 @@ const FilmPage = ({ screenSize, targetPos, zIndex, onMouseOver }) => {
                     key={artist.title}
                     artist = {artist}
                     screenSize={screenSize}
-                    targetPos={artist.group === 'group1' ? targetPos[0] : targetPos[1]}
+                    targetPos={artist.id % 2 === 1 ? targetPos[0] : targetPos[1]}
                     onMouseOver={onMouseOver}
                 />
             ))}

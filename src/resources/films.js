@@ -6,7 +6,6 @@ export const artistInfos = [
     {
         id: '1',
         title: `SM ENTERTAINMENT`,
-        category: 'FILM',
         subItems: [
             {
                 title: `Teayeon ‘Sorrow’ Studio Live`,
@@ -30,12 +29,10 @@ export const artistInfos = [
             x: 0,
             y: 0
         },
-        group: 'group1'
     },
     {
         id: '2',
         title: 'KOZ ENTERTAINMENT',
-        category: 'FILM',
         subItems: [
             {
                 title: `Dvwn [it's not your fault] Official Visualizer`,
@@ -67,12 +64,10 @@ export const artistInfos = [
             x: 0,
             y: 0
         },
-        group: 'group2'
     },
     {
         id: '3',
         title: 'ADIDAS x MUSINSA (EK, BIG ONE)',
-        category: 'FILM',
         subItems: [
             {
                 title: '',
@@ -88,12 +83,10 @@ export const artistInfos = [
             x: 0,
             y: 0
         },
-        group: 'group1'
     },
     {
         id: '4',
         title: 'Luc Belaire',
-        category: 'FILM',
         subItems: [
             {
                 title: ``,
@@ -109,12 +102,10 @@ export const artistInfos = [
             x: 0,
             y: 0
         },
-        group: 'group2'
     },
     {
         id: '5',
         title: 'KOREAN PARTYS',
-        category: 'FILM',
         subItems: [
             {
                 title: 'GQ NIGHT 2019',
@@ -154,12 +145,10 @@ export const artistInfos = [
             x: 0,
             y: 0
         },
-        group: 'group1'
     },
     {
         id: '6',
         title: `Who Is June One? | Documentary`,
-        category: 'FILM',
         subItems: [
             {
                 title: ``,
@@ -175,12 +164,10 @@ export const artistInfos = [
             x: 0,
             y: 0
         },
-        group: 'group2'
     },
     {
         id: '7',
         title: 'A PICTURES BOOK MAKERS',
-        category: 'FILM',
         subItems: [
             {
                 title: 'LEE HEE EUN',
@@ -200,12 +187,10 @@ export const artistInfos = [
             x: 0,
             y: 0
         },
-        group: 'group1'
     },
     {
         id: '8',
         title: 'JINBO THE SUPERFREAK',
-        category: 'FILM',
         subItems: [
             {
                 title: 'JINBO THE SUPERFREAK DOCUMENTARY',
@@ -225,21 +210,22 @@ export const artistInfos = [
             x: 0,
             y: 0
         },
-        group: 'group2'
     },
 ];
 
 
 export const getInitSampleArtistsInfo = () => {
-    return artistInfos.map((artist) => {
+    const artistsWithSampleVideo = artistInfos.filter((artist) => artist.sampleVideoSrc)
+    let sampleId = 1;
+    return artistsWithSampleVideo.map((artist) => {
         return {
             id: artist.id,
+            sampleId: sampleId++,
             title: artist.title,
             category: artist.category,
             sampleVideoSrc: artist.sampleVideoSrc,
             initPos: { ...artist.initPos },
             seedPos: { ...artist.seedPos },
-            group: artist.group
         }
     });
 }
@@ -248,10 +234,12 @@ export const getArtistDetailById = (id) => {
     return artistInfos.find((artist) => artist.id === id);
 }
 
+// No use
 export const getArtistDetail = (title) => {
     return artistInfos.find((artist) => artist.title === title);
 }
 
+// No use
 export const getArtistListInCategory = (category) => {
     if (category === undefined) {
         return artistInfos;
