@@ -5,6 +5,20 @@ const lineOffstX = 50
 export const artistInfos = [
     {
         id: '1',
+        title: `Glen Check`,
+        subItems: [
+            {
+                title: `Sins`,
+                url: 'https://www.youtube.com/embed/6pFG-VYxr9Q',
+            },
+            {
+                title: `4ever`,
+                url: 'https://www.youtube.com/embed/GeTz0DkHZvo',
+            },
+        ],
+    },
+    {
+        id: '2',
         title: `SM ENTERTAINMENT`,
         subItems: [
             {
@@ -31,7 +45,7 @@ export const artistInfos = [
         },
     },
     {
-        id: '2',
+        id: '3',
         title: 'KOZ ENTERTAINMENT',
         subItems: [
             {
@@ -66,7 +80,7 @@ export const artistInfos = [
         },
     },
     {
-        id: '3',
+        id: '4',
         title: 'ADIDAS x MUSINSA (EK, BIG ONE)',
         subItems: [
             {
@@ -85,7 +99,7 @@ export const artistInfos = [
         },
     },
     {
-        id: '4',
+        id: '5',
         title: 'Luc Belaire',
         subItems: [
             {
@@ -104,7 +118,7 @@ export const artistInfos = [
         },
     },
     {
-        id: '5',
+        id: '6',
         title: 'KOREAN PARTYS',
         subItems: [
             {
@@ -147,7 +161,7 @@ export const artistInfos = [
         },
     },
     {
-        id: '6',
+        id: '7',
         title: `Who Is June One? | Documentary`,
         subItems: [
             {
@@ -166,7 +180,7 @@ export const artistInfos = [
         },
     },
     {
-        id: '7',
+        id: '8',
         title: 'A PICTURES BOOK MAKERS',
         subItems: [
             {
@@ -189,7 +203,7 @@ export const artistInfos = [
         },
     },
     {
-        id: '8',
+        id: '9',
         title: 'JINBO THE SUPERFREAK',
         subItems: [
             {
