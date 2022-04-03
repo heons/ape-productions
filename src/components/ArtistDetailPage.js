@@ -8,13 +8,13 @@ import { Helmet } from 'react-helmet-async';
 import { getArtistDetailById } from '../resources/films';
 
 
-const ArtistDetailPage = ({ match }) =>{
+const ArtistDetailPage = ({ match }) => {
     const artist = getArtistDetailById(match.params.id);
 
     return (
         <div className="ArtistDetail">
             <Helmet>
-                <title>{ `Oh Eun Ho - ${artist.title}` }</title>
+                <title>{`Oh Eun Ho - ${artist.title}`}</title>
             </Helmet>
             <h1>{artist && artist.title}</h1>
             <ArtistDetail artist={artist} />

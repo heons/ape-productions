@@ -10,7 +10,7 @@ import { photoWorkList, getPhotoUrlsByIndex } from '../resources/photos'
 import useWindowDimensions from '../hooks/useWindowDimensions'
 
 
-const PhotoList = ({ match }) =>{
+const PhotoList = ({ match }) => {
     const { height, width } = useWindowDimensions();
 
     const workTitle = photoWorkList[match.params.id].title;
@@ -36,7 +36,7 @@ const PhotoList = ({ match }) =>{
     return (
         <div style={pageStyle}>
             <Helmet>
-                <title>{ `Oh Eun Ho - ${workTitle}` }</title>
+                <title>{`Oh Eun Ho - ${workTitle}`}</title>
             </Helmet>
             <ListGroup horizontal={isHorizontal ? true : null}>
                 {
@@ -46,15 +46,16 @@ const PhotoList = ({ match }) =>{
                                 key={`${workTitle}-${idx}`}
                                 style={itemStyle}
                             >
-                                <img 
+                                <img
                                     src={`${url}`}
                                     alt={`${workTitle}-${idx}`}
-                                    style={{'padding': '0'}}
-                                    height={isHorizontal ? '100%': null}
-                                    width={!isHorizontal ? '100%': null}
+                                    style={{ 'padding': '0' }}
+                                    height={isHorizontal ? '100%' : null}
+                                    width={!isHorizontal ? '100%' : null}
                                 ></img>
                             </ListGroup.Item>
-                    )})
+                        )
+                    })
                 }
             </ListGroup>
         </div>

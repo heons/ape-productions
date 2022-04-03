@@ -16,7 +16,7 @@ const FilmPage = ({ screenSize, targetPos, zIndex, onMouseOver }) => {
         ...getBasePageStyle(screenSize.width, screenSize.height, zIndex),
         backgroundColor: 'black',
     };
-    
+
     return (
         <div
             style={pageStyle}
@@ -24,7 +24,7 @@ const FilmPage = ({ screenSize, targetPos, zIndex, onMouseOver }) => {
             {artistList.map((artist, i) => (
                 <SampleVideoFrameV1
                     key={artist.title}
-                    artist = {artist}
+                    artist={artist}
                     screenSize={screenSize}
                     targetPos={artist.id % 2 === 1 ? targetPos[0] : targetPos[1]}
                     onMouseOver={onMouseOver}
@@ -33,6 +33,5 @@ const FilmPage = ({ screenSize, targetPos, zIndex, onMouseOver }) => {
         </div>
     )
 }
-        
+
 export default FilmPage
-        

@@ -8,11 +8,11 @@ import { getArtistDetailById } from '../resources/films';
 // Hooks
 import useWindowDimensions from '../hooks/useWindowDimensions'
 
-const ArtistDetail = ({ match }) =>{
+const ArtistDetail = ({ match }) => {
     const artist = getArtistDetailById(match.params.id);
     const { height, width } = useWindowDimensions();
-    
-    const [ index, setIndex ] = useState(0);
+
+    const [index, setIndex] = useState(0);
 
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);
@@ -41,30 +41,30 @@ const ArtistDetail = ({ match }) =>{
         // <div className="ArtistDetail">
         <div style={pageStyle} className="PagePaddingTop">
             <Helmet>
-                <title>{ `Oh Eun Ho - ${artist.title}` }</title>
+                <title>{`Oh Eun Ho - ${artist.title}`}</title>
             </Helmet>
             <h1>{artist && artist.title}</h1>
-                
-                {artist && artist.subItems.map((item, i) => {
-                    return (
-                        <Row key={`${artist.title}-${i}`}>
+
+            {artist && artist.subItems.map((item, i) => {
+                return (
+                    <Row key={`${artist.title}-${i}`}>
                         <Col xs={12} >
-                            <h3 style={{marginBottom: '10px'}}>{item.title}</h3>
-                            </Col>
+                            <h3 style={{ marginBottom: '10px' }}>{item.title}</h3>
+                        </Col>
                         <Col xs={12}>
                             <iframe
                                 style={styleIframe}
                                 id={`${artist.id}-${i}`}
                                 title={artist.title}
-                                src={item.url+'?autoplay=0'}
+                                src={item.url + '?autoplay=0'}
                                 frameBorder="0"
                                 allow="autoplay; fullscreen; picture-in-picture">
                             </iframe>
                             : <div></div>
                         </Col>
-            </Row>
-                    )
-                })}
+                    </Row>
+                )
+            })}
         </div>
     )
 }

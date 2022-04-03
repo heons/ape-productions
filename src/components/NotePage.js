@@ -18,20 +18,21 @@ const NotePage = ({ zIndex }) => {
         backgroundColor: 'black',
         overflowY: 'auto',
     };
-    
+
     return (
         <div
             className='PagePaddingTop'
             style={pageStyle}
-        >  
+        >
             <Container>
                 {noteList.map(note => {
                     return (
-                        <NoteItem note={note} key={note.id}/>
-                )})}
+                        <NoteItem note={note} key={note.id} />
+                    )
+                })}
             </Container>
         </div>
     )
 }
-        
+
 export default React.memo(NotePage)

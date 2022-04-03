@@ -26,15 +26,15 @@ const Home = ({ category }) => {
     const { height, width } = useWindowDimensions();
     const { mousePosition } = useMousePosition();
     // const [artists, setArtists] = useState(getInitSampleArtistsInfo);
-  
+
     const artists = useRef(getInitSampleArtistsInfo());
-    const targetPos1 = useRef({x: 100, y: 100});
-    const targetPos2 = useRef({x: 0, y: 0});
+    const targetPos1 = useRef({ x: 100, y: 100 });
+    const targetPos2 = useRef({ x: 0, y: 0 });
 
     // console.log(mousePosition);
-  
+
     // const hasMovedCursor = typeof mousePosition.x === "number" && typeof mousePosition.y === "number";
-  
+
     artists.current = artists.current.map((artist) => {
         return {
             ...artist,
@@ -42,8 +42,8 @@ const Home = ({ category }) => {
                 ...artist.initPos
             },
             seedPos: {
-                x: artist.initPos.x * width / 1024 - width/3,
-                y: artist.initPos.y * height / 768 - height/3
+                x: artist.initPos.x * width / 1024 - width / 3,
+                y: artist.initPos.y * height / 768 - height / 3
             }
         }
     });
@@ -52,16 +52,16 @@ const Home = ({ category }) => {
     const diifRatioGroup = 200;
     const ACT_RESOLUTION = 10;
 
-    if(mousePosition.x && Math.round(mousePosition.x) % ACT_RESOLUTION === 0) {
+    if (mousePosition.x && Math.round(mousePosition.x) % ACT_RESOLUTION === 0) {
         targetPos1.current = {
-            x: -(mousePosition.x - width/2) + width/offsetRatio,
-            y: -(mousePosition.y - height/2) + height/offsetRatio
+            x: -(mousePosition.x - width / 2) + width / offsetRatio,
+            y: -(mousePosition.y - height / 2) + height / offsetRatio
         };
     }
-    if(mousePosition.x && Math.round(mousePosition.x + 5) % ACT_RESOLUTION === 0) {
+    if (mousePosition.x && Math.round(mousePosition.x + 5) % ACT_RESOLUTION === 0) {
         targetPos2.current = {
-            x: -(mousePosition.x - width/2) + width/diifRatioGroup + width/offsetRatio,
-            y: -(mousePosition.y - height/2) + height/diifRatioGroup + height/offsetRatio
+            x: -(mousePosition.x - width / 2) + width / diifRatioGroup + width / offsetRatio,
+            y: -(mousePosition.y - height / 2) + height / diifRatioGroup + height / offsetRatio
         };
     }
 
@@ -75,10 +75,10 @@ const Home = ({ category }) => {
     // const isCategoryFilmDisplay = category !== 'photo';
 
 
-    const [ title, setTitle ] = useState('');
+    const [title, setTitle] = useState('');
     // TODO: Change name.
     const onMouseOver = useCallback(newTitle => setTitle(newTitle), [setTitle]);
-    
+
     // const tmpFunc = async () => {
     //     let canvas = document.getElementById("canvas_test");
     //     var video = document.getElementById('video1');
@@ -97,14 +97,14 @@ const Home = ({ category }) => {
     //         // cx.drawImage(c, 0, 0, window.width, window.height);
     //     };
     // }
-    
+
     // tmpFunc();
 
     // const artistGroup1 = artists.current.filter(artist => artist.group === 'group1')
     // const artistGroup2 = artists.current.filter(artist => artist.group === 'group2')
 
-    
-    
+
+
 
     const zIndex = {
         film: (category !== 'photo' || category !== 'note') ? 3 : 1,
@@ -122,7 +122,7 @@ const Home = ({ category }) => {
     return (
         <div>
             <Helmet>
-                <title>{ pageTitle }</title>
+                <title>{pageTitle}</title>
             </Helmet>
             {/* <canvas id="canvas_test" width = {width} height = {height}
             style = {{position: 'absolute', left:'0px', right:'0px', "border": "1px solid black"}}>
@@ -152,12 +152,12 @@ const Home = ({ category }) => {
                     onMouseOver={onMouseOver}
                 />
             } */}
-            
+
             {
                 isDesktop &&
                 <Suspense fallback={<div>Loading...</div>}>
                     <FilmPage
-                        screenSize={{height, width}}
+                        screenSize={{ height, width }}
                         targetPos={[targetPos1.current, targetPos2.current]}
                         zIndex={zIndex.film}
                         onMouseOver={onMouseOver}
@@ -165,20 +165,20 @@ const Home = ({ category }) => {
                 </Suspense>
             }
             {
-                isMobile && 
+                isMobile &&
                 <Suspense fallback={<div>Loading...</div>}>
                     <FilmPageM zIndex={zIndex.film}></FilmPageM>
                 </Suspense>
             }
-            {category === 'client' && 
+            {category === 'client' &&
                 <ClientPage zIndex={zIndex.client} />
             }
 
-            {category === 'note' && 
+            {category === 'note' &&
                 <NotePage zIndex={zIndex.note} />
             }
 
-            {category === 'contact' &&     
+            {category === 'contact' &&
                 <ContactPage zIndex={zIndex.contact} />
             }
 

@@ -23,12 +23,12 @@ const NoteItem = ({ note }) => {
         padding: '0',
         margin: '0',
     }
-    
+
     // Summary, Needs and Solution is not being used. - No Contents.
     return (
         <Row>
             <Col xs={12}>
-                <h1 style={{paddingBottom: '0.8em',}}>{note.title}</h1>
+                <h1 style={{ paddingBottom: '0.8em', }}>{note.title}</h1>
             </Col>
             <Col xs={12}>
                 {note.content.map((line, i) => {
@@ -39,7 +39,7 @@ const NoteItem = ({ note }) => {
                 note.subItems.length > 0 &&
                 note.subItems.map((item) => {
                     return <Col xs={12} key={item.url}>
-                        <div style={{position: 'relative', paddingBottom: paddingBottomByRatio[item.ratio]}}>
+                        <div style={{ position: 'relative', paddingBottom: paddingBottomByRatio[item.ratio] }}>
                             <iframe
                                 style={styleIframe}
                                 title={note.title}
@@ -52,7 +52,7 @@ const NoteItem = ({ note }) => {
                 })
             }
             {
-                note.summary.length > 0 &&      
+                note.summary.length > 0 &&
                 <Col xs={12} md={4}>
                     <h1>Summary</h1>
                     <div>
@@ -63,7 +63,7 @@ const NoteItem = ({ note }) => {
                 </Col>
             }
             {
-                note.needs.length > 0 &&      
+                note.needs.length > 0 &&
                 <Col xs={12} md={4}>
                     <h1>Needs</h1>
                     <ul>
@@ -74,7 +74,7 @@ const NoteItem = ({ note }) => {
                 </Col>
             }
             {
-                note.solution.length > 0 &&      
+                note.solution.length > 0 &&
                 <Col xs={12} md={4}>
                     <h1>Solution</h1>
                     <div>
@@ -85,11 +85,10 @@ const NoteItem = ({ note }) => {
                 </Col>
             }
             <Col xs={12}>
-            <hr style={{color: 'white', borderTop: '3px solid', borderRadius: '3px'}}/>
+                <hr style={{ color: 'white', borderTop: '3px solid', borderRadius: '3px' }} />
             </Col>
         </Row>
     )
 }
-        
+
 export default React.memo(NoteItem)
-        

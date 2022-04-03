@@ -5,7 +5,7 @@ import { computeSizeFromWidth } from '../utils'
 
 
 const SamplePhotoFrameV1 = ({ photo, screenSize, targetPos, onMouseOver }) => {
-    const fixedImageSize = {width: 100, height: 140};
+    const fixedImageSize = { width: 100, height: 140 };
     const [isMouseOver, setIsMouseOver] = useState(false);
 
     const size = computeSizeFromWidth(fixedImageSize, screenSize.width);
@@ -18,7 +18,7 @@ const SamplePhotoFrameV1 = ({ photo, screenSize, targetPos, onMouseOver }) => {
         x: targetPos[targetGroup].x + col * size.width * OVERLAP_RATIO,
         y: targetPos[targetGroup].y + row * size.height * OVERLAP_RATIO,
     };
-    
+
     const motionStyle = {
         position: 'absolute',
         transition: isMouseOver ? 'all 0.8s linear' : 'all 2s linear',

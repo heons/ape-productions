@@ -1,12 +1,12 @@
 // Reference: For the animations - https://css-tricks.com/using-multi-step-animations-transitions/
 
-import React, { useState }  from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { computeSizeFromWidth } from '../utils'
 
 
 const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
-  const [naturalSize, setNaturalSize] = useState({width: 100, height: 100});
+  const [naturalSize, setNaturalSize] = useState({ width: 100, height: 100 });
   const [isMouseOver, setIsMouseOver] = useState(false);
 
   const size = computeSizeFromWidth(naturalSize, screenSize.width);
@@ -26,7 +26,7 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
     transform: isMouseOver ? `translate(${newTargetPos.x}px, ${newTargetPos.y}px) scale(1.5)` : `translate(${newTargetPos.x}px, ${newTargetPos.y}px)`,
     zIndex: isMouseOver ? 4 : 3,
     opacity: isMouseOver ? 1 : 0.5,
-    
+
   }
 
   return (
@@ -43,8 +43,8 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
           autoPlay
           playsInline
           onLoadedData={response => {
-            const { videoWidth, videoHeight } = response.target;      
-            setNaturalSize({width: videoWidth, height: videoHeight});
+            const { videoWidth, videoHeight } = response.target;
+            setNaturalSize({ width: videoWidth, height: videoHeight });
           }}
           onMouseOver={
             () => {

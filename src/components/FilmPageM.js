@@ -24,7 +24,7 @@ const FilmPageM = ({ zIndex }) => {
         overflowY: 'scroll',
         overflowX: 'hidden',
     };
-    
+
     return (
         <div
             style={pageStyle}
@@ -36,7 +36,7 @@ const FilmPageM = ({ zIndex }) => {
                         return (
                             <Col xs='12'
                                 key={`film-page-m-${idx}`}
-                                style={{'padding': '5px', 'textAlign': 'center'}}
+                                style={{ 'padding': '5px', 'textAlign': 'center' }}
                             >
                                 <Link to={`/${artist.id}`}>
                                     <video
@@ -51,12 +51,12 @@ const FilmPageM = ({ zIndex }) => {
                                     </video>
                                 </Link>
                             </Col>
-                    )})
+                        )
+                    })
                 }
             </Row>
         </div>
     )
 }
-        
+
 export default FilmPageM
-        

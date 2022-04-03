@@ -28,7 +28,7 @@ const ClientPage = ({ zIndex }) => {
     const horizontalMarginBetween = 10;
 
     const companyPosTop = width > widthBreakPoint ? verticalCenterTop : 100;
-    const companyPosLeft = width > widthBreakPoint ? (centerScreenX - textListWidth) - horizontalMarginBetween : (width-textListWidth) / 2;
+    const companyPosLeft = width > widthBreakPoint ? (centerScreenX - textListWidth) - horizontalMarginBetween : (width - textListWidth) / 2;
     const companyStyle = {
         position: 'absolute',
         paddingTop: `4.0em`,
@@ -38,16 +38,16 @@ const ClientPage = ({ zIndex }) => {
     };
 
     const artistPosTop = width > widthBreakPoint ? verticalCenterTop : 450;
-    const artistPosLeft = width > widthBreakPoint ? (centerScreenX) + horizontalMarginBetween : (width-textListWidth) / 2;
+    const artistPosLeft = width > widthBreakPoint ? (centerScreenX) + horizontalMarginBetween : (width - textListWidth) / 2;
     const artistStyle = {
         position: 'absolute',
         paddingTop: `4.0em`,
         top: `${artistPosTop}px`,
-        left:`${artistPosLeft}px`,
+        left: `${artistPosLeft}px`,
         color: 'white',
     };
 
-    
+
     return (
         <div
             style={pageStyle}
@@ -56,18 +56,17 @@ const ClientPage = ({ zIndex }) => {
                 style={companyStyle}
             >
                 <h1>Company</h1>
-                <TextList textList={clientCompanyList} width={`${textListWidth}px`} height='300px'/>
+                <TextList textList={clientCompanyList} width={`${textListWidth}px`} height='300px' />
             </div>
-            
+
             <div
                 style={artistStyle}
             >
                 <h1>Artist</h1>
-                <TextList textList={clientArtistList} width={`${textListWidth}px`} height='300px'/>
+                <TextList textList={clientArtistList} width={`${textListWidth}px`} height='300px' />
             </div>
         </div>
     )
 }
-        
+
 export default React.memo(ClientPage);
-        

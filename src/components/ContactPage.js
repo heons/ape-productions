@@ -16,7 +16,7 @@ const ContactPage = ({ zIndex }) => {
         border: '2px solid white',
         borderRadius: '25%',
     };
-    
+
     return (
         <div className="PagePaddingTop" style={pageStyle}>
             <Row>
@@ -57,6 +57,5 @@ const ContactPage = ({ zIndex }) => {
         </div>
     );
 }
-        
+
 export default React.memo(ContactPage);
-        

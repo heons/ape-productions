@@ -1,8 +1,8 @@
 import './TextList.css';
 import React from 'react'
 
-const TextList = ({ textList, width, height }) =>{
-    
+const TextList = ({ textList, width, height }) => {
+
     // const [idxMouseOver, setIdxMouseOver] = React.useState(0)
 
     const styleNoraml = {
@@ -30,17 +30,17 @@ const TextList = ({ textList, width, height }) =>{
             >
                 {textList.map((company, idx) => (
                     <h4
-                        key={company+idx}
+                        key={company + idx}
                         style={styleNoraml}
-                        // style={idx === idxMouseOver ? styleMouseOver : styleNoraml}
-                        // onMouseOver={() => setIdxMouseOver(idx)}
+                    // style={idx === idxMouseOver ? styleMouseOver : styleNoraml}
+                    // onMouseOver={() => setIdxMouseOver(idx)}
                     >
                         {company}
                     </h4>
                 ))}
             </div>
         </div>
-        
+
     )
 }
 
