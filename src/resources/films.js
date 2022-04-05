@@ -16,6 +16,15 @@ export const artistInfos = [
                 url: 'https://www.youtube.com/embed/GeTz0DkHZvo',
             },
         ],
+        sampleVideoSrc: 'video/APE_sins.mp4',
+        initPos: {
+            x: 0,
+            y: 0
+        },
+        seedPos: {
+            x: 0,
+            y: 0
+        },
     },
     {
         id: '2',
