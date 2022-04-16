@@ -62,37 +62,37 @@ const Menu = ({ category, pathname }) => {
                                     )
                                 })}
                             </NavDropdown>
-                            <Nav.Link eventKey="photo-1" >
-                                <Link
-                                    to={pathname === '/photo/0' ? `/` : `/photo/0`}
-                                    onClick={() => { setExpanded(false) }}
-                                >
-                                    Photo
-                                </Link>
+                            <Nav.Link
+                                as={Link}
+                                eventKey="photo-1"
+                                to={pathname === '/photo/0' ? `/` : `/photo/0`}
+                                onClick={() => { setExpanded(false) }}
+                            >
+                                Photo
                             </Nav.Link>
-                            <Nav.Link eventKey="note-1" >
-                                <Link
-                                    to={category === 'note' ? `/` : `/?category=${'note'}`}
-                                    onClick={() => { setExpanded(false) }}
-                                >
-                                    Note
-                                </Link>
+                            <Nav.Link
+                                as={Link}
+                                eventKey="note-1"
+                                to={category === 'note' ? `/` : `/?category=${'note'}`}
+                                onClick={() => { setExpanded(false) }}   
+                            >
+                                Note
                             </Nav.Link>
-                            <Nav.Link eventKey="client-1" >
-                                <Link
-                                    to={category === 'client' ? `/` : `/?category=${'client'}`}
-                                    onClick={() => { setExpanded(false) }}
-                                >
-                                    Client
-                                </Link>
+                            <Nav.Link 
+                                as={Link}
+                                eventKey="client-1"
+                                to={category === 'client' ? `/` : `/?category=${'client'}`}
+                                onClick={() => { setExpanded(false) }}
+                            >
+                                Client
                             </Nav.Link>
-                            <Nav.Link eventKey="contact-1" >
-                                <Link
-                                    to={category === 'contact' ? `/` : `/?category=${'contact'}`}
+                            <Nav.Link
+                                as={Link}
+                                eventKey="contact-1"
+                                to={category === 'contact' ? `/` : `/?category=${'contact'}`}
                                     onClick={() => { setExpanded(false) }}
-                                >
-                                    Info
-                                </Link>
+                            >
+                                Info
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
