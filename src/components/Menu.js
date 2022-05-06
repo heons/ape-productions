@@ -25,14 +25,14 @@ const Menu = ({ category, pathname }) => {
                 onClick={() => { setExpanded(false) }}
                 style={nameStyle}
             >
-                Oh Eun Ho
+                OH EUN HO
             </Link>
         </Container>
 
     const titleInNavBar = width < 767 &&
         <LinkContainer to='/' onClick={() => { setExpanded(false) }}>
             <Navbar.Brand>
-                Oh Eun Ho
+                OH EUN HO
             </Navbar.Brand>
         </LinkContainer>
 
@@ -47,7 +47,7 @@ const Menu = ({ category, pathname }) => {
                     <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <NavDropdown title="Film" className="dropdown-film">
+                            <NavDropdown title="FILM" className="dropdown-film">
                                 {artistInfos.map((artist, index) => {
                                     return (
                                         <LinkContainer
@@ -68,7 +68,7 @@ const Menu = ({ category, pathname }) => {
                                 to={pathname === '/photo/0' ? `/` : `/photo/0`}
                                 onClick={() => { setExpanded(false) }}
                             >
-                                Photo
+                                PHOTO
                             </Nav.Link>
                             <Nav.Link
                                 as={Link}
@@ -84,7 +84,7 @@ const Menu = ({ category, pathname }) => {
                                 to={category === 'note' ? `/` : `/?category=${'note'}`}
                                 onClick={() => { setExpanded(false) }}   
                             >
-                                Note
+                                NOTE
                             </Nav.Link>
                             <Nav.Link 
                                 as={Link}
@@ -92,7 +92,7 @@ const Menu = ({ category, pathname }) => {
                                 to={category === 'client' ? `/` : `/?category=${'client'}`}
                                 onClick={() => { setExpanded(false) }}
                             >
-                                Client
+                                CLIENT
                             </Nav.Link>
                             <Nav.Link
                                 as={Link}
@@ -100,7 +100,7 @@ const Menu = ({ category, pathname }) => {
                                 to={category === 'contact' ? `/` : `/?category=${'contact'}`}
                                     onClick={() => { setExpanded(false) }}
                             >
-                                Info
+                                INFO
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
