@@ -1,6 +1,54 @@
 export const noteList = [
     {
         id: 1,
+        title: `[Bleach Your Mind] GLEN CHECK ‘SINS’ M/V`,
+        subItems: [
+            {
+                url: `https://www.youtube.com/embed/6pFG-VYxr9Q`,
+                ratio: `16:9`,
+            },
+        ],
+        content: [
+            `갑작스러운 EMA 크리에이터 디렉터 ‘제프리’님의 연락을 받고 미팅을 했다.`,
+            `글렌체크의 공백기간을 걸쳐 만들어진 앨범의 타이틀 곡에 뮤직비디오 제작을 요청했다.`,
+            `타이틀 곡에 뮤직비디오라 하고 싶은 것들이 많았지만 평소에 멤버 ‘김준원’과 대화를 할때마다 `,
+            `립싱크 퍼포먼스를 제대로 보여주는 영상을 만들면 정말 멋진 그림이 나올 것 같다는 이야기를 많이 했기에 `,
+            `댄서 ‘아이반' 님과 함께하는 퍼포먼스 영상을 제대로 만들어 보기로 했다.`,
+            `‘죄악'을 뜻하는 RED LIGHT을 통해 아이반님의 퍼포먼스를 보여주었고 `,
+            `BLUE LIGHT를 통해 보여지는 ‘GLEN CHECK’가 결국 자신의 죄를 씻어내고 극복하는 모습을 보여주고 싶었다.`,
+            ` `,
+            `진정한 인간이란, 많은 지식도 능력도 자신감도 성공에 의해서도 아닌, `,
+            `자신의 나약함을 인정하고 받아들이며 눈물로 그것을 토로한 순간 가능해지는 것은 아닐까.`,
+            `것이 하나의 시작점이 되는 것은 아닌지, 생각해보게 되는 순간이었다.`,
+        ],
+        summary: [],
+        needs: [],
+        solution: [],
+    },
+    {
+        id: 2,
+        title: `[Bleach Your Mind] GLEN CHECK ‘4EVER’ M/V`,
+        subItems: [
+            {
+                url: `https://www.youtube.com/embed/GeTz0DkHZvo`,
+                ratio: `16:9`,
+            },
+        ],
+        content: [
+            `1.자신만의 공간에서 자신만의 삶을 누군가에게 보여준다는건 굉장히 큰 용기가 필요하다.`,
+            `GLEN CHECK에 프론트맨 ‘김준원’은 사람적인 면모를 사람들에게 비춰지길 꺼려했던 아티스트이다.`,
+            `이번 작업을 통해서 그 틀을 깨고 세상밖으로 나오기전 그가 평소에 자신의 공간에서 작업하던 모습들을 담아내고 싶었다.`,
+            ``,
+            `2.혼자만의 시간을 소중하게 여겼던 강박관념을 가진 소년은 밖을 동경하지만 한편으로는 밖에서 일어나는 돌발적인 상황들을 두려워하기도 한다.`,
+            `결국 그는 한발자국도 밖을 향해 내딛지 못하지만 반짝이는 빌딩들을 바라보며 자신만의 세계관 속에 자신만의 방식대로 그려낸 세상을 담아낸다.`,
+            `모든 것들이 영원할 수 있도록 ‘4EVER’.`,
+        ],
+        summary: [],
+        needs: [],
+        solution: [],
+    },
+    {
+        id: 3,
         title: `DVWN 'it's not your fault' Visualizer.`,
         subItems: [
             {
@@ -28,7 +76,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 2,
+        id: 4,
         title: `Dvwn '자유비행' 마음의 풍요를 찾아서. `,
         subItems: [
             {
@@ -48,7 +96,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 3,
+        id: 5,
         title: `뮤지션 Dvwn '서쪽 끝자리에 서서’.`,
         subItems: [
             {
@@ -67,7 +115,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 4,
+        id: 6,
         title: `Donny Hathaway ‘This Christmas’ A Cover Live by Dvwn & SOLE.`,
         subItems: [
             {
@@ -85,7 +133,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 5,
+        id: 7,
         title: `Teayeon ‘Sorrow’ Studio Live.`,
         subItems: [
             {
@@ -104,7 +152,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 6,
+        id: 8,
         title: `'NEW LOVE' ONEHUNNNIT 20FW FILM.`,
         subItems: [
             {
@@ -125,7 +173,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 7,
+        id: 9,
         title: `뮤지션 BLOO(본명 김현웅)와 함께한 아이즈매거진 촬영기.`,
         subItems: [
             {
@@ -145,7 +193,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 8,
+        id: 10,
         title: `A journey with 'LUC BELAIRE' : 주류회사 ‘아영FBC’ 와 함께한 프랑스 스파클링 와인 ‘LUC BELAIRE’ 의 광고영상제작기.`,
         subItems: [
             {
@@ -162,7 +210,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 9,
+        id: 11,
         title: `6개월간의 대장정 DOCUMENTARY 'WHO IS JUNEONE?' 제작기.`,
         subItems: [
             {
@@ -187,7 +235,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 10,
+        id: 12,
         title: `뮤지션 진보(JINBO·본명 한주현) 과 함께한 ‘비싸' 뮤직비디오 제작기.`,
         subItems: [
             {
@@ -209,7 +257,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 11,
+        id: 13,
         title: `뮤지션 진보(JINBO·본명 한주현) 과 함께한 전시회 필름제작.`,
         subItems: [
             {
