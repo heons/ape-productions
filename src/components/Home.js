@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useRef, useCallback, Suspense } from 'react';
 // import SampleVideoContainer from './SampleVideoContainer';
 import ClientPage from './ClientPage';
+import DvdPage from './DvdPage';
 import NotePage from './NotePage';
 import ContactPage from './ContactPage';
 
@@ -107,8 +108,9 @@ const Home = ({ category }) => {
 
 
     const zIndex = {
-        film: (category !== 'photo' || category !== 'note') ? 3 : 1,
+        film: (category !== 'photo' || category !== 'dvd' || category !== 'note') ? 3 : 1,
         photo: category === 'photo' ? 3 : 1,
+        dvd: category === 'dvd' ? 3 : 1,
         client: category === 'client' ? 3 : 1,
         note: category === 'note' ? 3 : 1,
         contact: category === 'contact' ? 3 : 1,
@@ -169,6 +171,9 @@ const Home = ({ category }) => {
                 <Suspense fallback={<div>Loading...</div>}>
                     <FilmPageM zIndex={zIndex.film}></FilmPageM>
                 </Suspense>
+            }
+            {category === 'dvd' &&
+                <DvdPage zIndex={zIndex.dvd} />
             }
             {category === 'client' &&
                 <ClientPage zIndex={zIndex.client} />

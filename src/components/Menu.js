@@ -72,6 +72,14 @@ const Menu = ({ category, pathname }) => {
                             </Nav.Link>
                             <Nav.Link
                                 as={Link}
+                                eventKey="dvd-1"
+                                to={category === 'dvd' ? `/` : `/?category=${'dvd'}`}
+                                onClick={() => { setExpanded(false) }}
+                            >
+                                DVD
+                            </Nav.Link>
+                            <Nav.Link
+                                as={Link}
                                 eventKey="note-1"
                                 to={category === 'note' ? `/` : `/?category=${'note'}`}
                                 onClick={() => { setExpanded(false) }}   
