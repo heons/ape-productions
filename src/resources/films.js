@@ -15,6 +15,10 @@ export const artistInfos = [
                 title: `4ever`,
                 url: 'https://www.youtube.com/embed/GeTz0DkHZvo',
             },
+            {
+                title: `[Bleach Diary] - June One`,
+                url: 'https://www.youtube.com/embed/zzTUQx6b4aY',
+            },
         ],
         sampleVideoSrc: 'video/APE_sins.mp4',
         initPos: {

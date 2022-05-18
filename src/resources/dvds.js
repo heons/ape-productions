@@ -39,5 +39,15 @@ export const dvdList = [
         url: `https://www.youtube.com/embed/brGRQ30xME8`,
         ratio: `16:9`,
     },
+    {
+        title: `GRAY - 하기나 해 JUST DO IT (Feat.Loco)👌 (Unofficial DVD)`,
+        url: `https://www.youtube.com/embed/L0k63-BCOBM`,
+        ratio: `16:9`,
+    },
+    {
+        title: `1 SHOT 1 OPPORTUNITY DVD 🤮 (Director's Cut)`,
+        url: `https://www.youtube.com/embed/BQEq_znFPtQ`,
+        ratio: `16:9`,
+    },
 ];
 
