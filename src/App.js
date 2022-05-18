@@ -3,7 +3,8 @@ import { useEffect } from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import Home from './components/Home';
 import Menu from './components/Menu';
-import ArtistDetail from './components/ArtistDetail';
+// import ArtistDetail from './components/ArtistDetail';
+import ArtistDetailPage from './components/ArtistDetailPage';
 import PhotoList from './components/PhotoList';
 import qs from 'qs';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -35,7 +36,7 @@ function App({ location }) {
                     <Home {...props} category={query.category} />
                 )}
             />
-            <Route path={`/:id`} component={ArtistDetail} exact={true} />
+            <Route path={`/:id`} component={ArtistDetailPage} exact={true} />
             <Route path={`/photo/:id`} component={PhotoList} />
         </div>
     );
