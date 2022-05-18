@@ -24,7 +24,7 @@ const DvdItem = ({ item }) => {
                 <h1 style={{ paddingBottom: '0.8em', }}>{item.title}</h1>
             </Col>
             <Col xs={12} key={item.url}>
-                <div style={{ position: 'relative', paddingBottom: paddingBottomByRatio[item.ratio] }}>
+                <div style={{ position: 'relative', paddingBottom: paddingBottomByRatio[item.ratio ? item.ratio : '16:9'] }}>
                     <iframe
                         style={styleIframe}
                         title={item.title}
