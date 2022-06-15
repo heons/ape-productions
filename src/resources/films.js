@@ -238,6 +238,29 @@ export const artistInfos = [
             y: 0
         },
     },
+    {
+        id: '10',
+        title: 'BLEACH DIARIES',
+        subItems: [
+            {
+                title: 'BLEACH DIARIES #1 - JUNE ONE',
+                url: 'https://www.youtube.com/embed/zzTUQx6b4aY',
+            },
+            {
+                title: 'BLEACH DIARIES #2 Hyuk Jun',
+                url: 'https://www.youtube.com/embed/mdDJJYyC2Vc',
+            },
+        ],
+        // sampleVideoSrc: 'video/APE_JINBOTHESUPERFREAK.mp4',
+        initPos: {
+            x: lineOffstX,
+            y: distY
+        },
+        seedPos: {
+            x: 0,
+            y: 0
+        },
+    },
 ];
 
 
