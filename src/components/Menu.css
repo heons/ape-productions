@@ -97,7 +97,7 @@
 
 .dropdown-film .dropdown-menu {
   height: 50vh;
-  max-height: 300px;
+  max-height: 350px;
   background-color: black !important;
   overflow-y: scroll !important;
   -ms-overflow-style: none;  /* IE and Edge */
