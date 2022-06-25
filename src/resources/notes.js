@@ -1,6 +1,30 @@
 export const noteList = [
     {
         id: 1,
+        title: `[Bleach Your Mind] GLEN CHECK ‘BLUSH (Feat. Sokodomo)’ M/V`,
+        subItems: [
+            {
+                url: `https://www.youtube.com/embed/uCGpI6Vt4c4`,
+                ratio: `16:9`,
+            },
+        ],
+        content: [
+            `한 남자가 한 여자에게 사랑에 빠졌을 때 그녀를 대하는 태도는 자신을 사랑하듯 그 사람을 인정하고 이해하며 꼭 안아주고 싶다는 것 같다.`,
+            `가장 무서운 것은 사랑을 시작함과 동시에 자신을 잃을 정도로 그녀를 사랑하여 자신도 모르는 사이 여유를 잃어버리고 절벽끝에서 허우적대는 자신에게 화가 차는 것을 그녀에게 떠넘기는 상황이 생기면서 돌아오는 슬픔도 곁에서 같이 시작된다는 것이다.`,
+            `모든 사람들은 이기적이다. 하지만 처음 가졌던 마음가짐을 잊지 않는다면 그 끝 또한 아름다울 것이다.`,
+            `글렌체크에 BLUSH를 듣다보면 앞서 말했던 한 없이 철없는 시절의 내가 생각난다. 열정과 활기가 넘쳐 모든 것들이 빛나보이고 할 수 있다는 믿음이 생겼던 나날들. (물론 지금 또한 다른 방식으로 그렇다.)`,
+            `그 나날들을 아름답게 표현할 공간을 물색하다가 힘찬 응원과 함성 소리가 끊이지 않았던 ‘경기장(농구장)’이 생각났다.`,
+            `글렌체크의 힘찬 응원가를 듣고 싶다면 지금 바로 ‘BLUSH’를 시청해보길 바란다.`,
+            `*상대의 사랑을 확인하고 싶거나 성공적인 연애 생활을 유지하기 위해서 항상 상대에게 반해 있어야 하는 것은 아니다.`,
+            `진정한 사랑은 시간과 노력이 필요하다. 사랑이 싹트는 데는 많은 주의가 필요하다. 사랑한다와 사랑하지 않는다라는 극단적인 선택만 남겨두는 사람은 안타깝게도 사랑의 중간 과정을 간과해버린다.`,
+            `사랑을 원만하게 유지하고 사소한 문제를 지나치게 따지지 말자. 상대는 그저 당신의 사랑을 확인하고 싶을 뿐이다.`,
+        ],
+        summary: [],
+        needs: [],
+        solution: [],
+    },
+    {
+        id: 2,
         title: `[Bleach Your Mind] GLEN CHECK ‘SINS’ M/V`,
         subItems: [
             {
@@ -22,7 +46,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 2,
+        id: 3,
         title: `[Bleach Your Mind] GLEN CHECK ‘4EVER’ M/V`,
         subItems: [
             {
@@ -44,7 +68,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 3,
+        id: 4,
         title: `DVWN 'it's not your fault' Visualizer.`,
         subItems: [
             {
@@ -72,7 +96,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 4,
+        id: 5,
         title: `Dvwn '자유비행' 마음의 풍요를 찾아서. `,
         subItems: [
             {
@@ -92,7 +116,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 5,
+        id: 6,
         title: `뮤지션 Dvwn '서쪽 끝자리에 서서’.`,
         subItems: [
             {
@@ -111,7 +135,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 6,
+        id: 7,
         title: `Donny Hathaway ‘This Christmas’ A Cover Live by Dvwn & SOLE.`,
         subItems: [
             {
@@ -129,7 +153,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 7,
+        id: 8,
         title: `Teayeon ‘Sorrow’ Studio Live.`,
         subItems: [
             {
@@ -148,7 +172,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 8,
+        id: 9,
         title: `'NEW LOVE' ONEHUNNNIT 20FW FILM.`,
         subItems: [
             {
@@ -169,7 +193,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 9,
+        id: 10,
         title: `뮤지션 BLOO(본명 김현웅)와 함께한 아이즈매거진 촬영기.`,
         subItems: [
             {
@@ -189,7 +213,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 10,
+        id: 11,
         title: `A journey with 'LUC BELAIRE' : 주류회사 ‘아영FBC’ 와 함께한 프랑스 스파클링 와인 ‘LUC BELAIRE’ 의 광고영상제작기.`,
         subItems: [
             {
@@ -206,7 +230,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 11,
+        id: 12,
         title: `6개월간의 대장정 DOCUMENTARY 'WHO IS JUNEONE?' 제작기.`,
         subItems: [
             {
@@ -231,7 +255,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 12,
+        id: 13,
         title: `뮤지션 진보(JINBO·본명 한주현) 과 함께한 ‘비싸' 뮤직비디오 제작기.`,
         subItems: [
             {
@@ -253,7 +277,7 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 13,
+        id: 14,
         title: `뮤지션 진보(JINBO·본명 한주현) 과 함께한 전시회 필름제작.`,
         subItems: [
             {

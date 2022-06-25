@@ -8,16 +8,16 @@ export const artistInfos = [
         title: `Glen Check`,
         subItems: [
             {
+                title: `Blush (ft. sokodomo)`,
+                url: 'https://www.youtube.com/embed/uCGpI6Vt4c4',
+            },
+            {
                 title: `Sins`,
                 url: 'https://www.youtube.com/embed/6pFG-VYxr9Q',
             },
             {
                 title: `4ever`,
                 url: 'https://www.youtube.com/embed/GeTz0DkHZvo',
-            },
-            {
-                title: `[Bleach Diary] - June One`,
-                url: 'https://www.youtube.com/embed/zzTUQx6b4aY',
             },
         ],
         sampleVideoSrc: 'video/APE_sins.mp4',
