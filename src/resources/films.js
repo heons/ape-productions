@@ -8,6 +8,10 @@ export const artistInfos = [
         title: `Glen Check`,
         subItems: [
             {
+                title: `I Feel Like Ridin Slow`,
+                url: 'https://www.youtube.com/embed/bdKnGhK1ySI',
+            },
+            {
                 title: `Blush (ft. sokodomo)`,
                 url: 'https://www.youtube.com/embed/uCGpI6Vt4c4',
             },
