@@ -25,9 +25,9 @@ const NotePage = ({ zIndex }) => {
             style={pageStyle}
         >
             <Container>
-                {noteList.map(note => {
+                {noteList.map((note, index) => {
                     return (
-                        <NoteItem note={note} key={note.id} />
+                        <NoteItem note={note} key={index} />
                     )
                 })}
             </Container>

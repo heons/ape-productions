@@ -1,6 +1,22 @@
 export const noteList = [
     {
-        id: 1,
+        title: `[Bleach Your Mind] GLEN CHECK ‘I Feel Like Ridin Slow’ M/V`,
+        subItems: [
+            {
+                url: `https://www.youtube.com/embed/bdKnGhK1ySI`,
+                ratio: `16:9`,
+            },
+        ],
+        content: [
+            `봄이 오면 꽃이 피고, 여름이면 꽃이 져서 가을이면 열매를 맺는다.`,
+            `이처럼 ‘대자연의 법칙'에 의해 이 세상은 쉬지 않고 움직인다.`,
+            `나에겐 이번 영상이 스케치북이 되었고 꽃향이 가득한 그림책을 만들었다.`,
+        ],
+        summary: [],
+        needs: [],
+        solution: [],
+    },
+    {
         title: `[Bleach Your Mind] GLEN CHECK ‘BLUSH (Feat. Sokodomo)’ M/V`,
         subItems: [
             {
@@ -24,7 +40,6 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 2,
         title: `[Bleach Your Mind] GLEN CHECK ‘SINS’ M/V`,
         subItems: [
             {
@@ -46,7 +61,6 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 3,
         title: `[Bleach Your Mind] GLEN CHECK ‘4EVER’ M/V`,
         subItems: [
             {
@@ -68,7 +82,6 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 4,
         title: `DVWN 'it's not your fault' Visualizer.`,
         subItems: [
             {
@@ -96,7 +109,6 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 5,
         title: `Dvwn '자유비행' 마음의 풍요를 찾아서. `,
         subItems: [
             {
@@ -116,7 +128,6 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 6,
         title: `뮤지션 Dvwn '서쪽 끝자리에 서서’.`,
         subItems: [
             {
@@ -135,7 +146,6 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 7,
         title: `Donny Hathaway ‘This Christmas’ A Cover Live by Dvwn & SOLE.`,
         subItems: [
             {
@@ -153,7 +163,6 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 8,
         title: `Teayeon ‘Sorrow’ Studio Live.`,
         subItems: [
             {
@@ -172,7 +181,6 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 9,
         title: `'NEW LOVE' ONEHUNNNIT 20FW FILM.`,
         subItems: [
             {
@@ -193,7 +201,6 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 10,
         title: `뮤지션 BLOO(본명 김현웅)와 함께한 아이즈매거진 촬영기.`,
         subItems: [
             {
@@ -213,7 +220,6 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 11,
         title: `A journey with 'LUC BELAIRE' : 주류회사 ‘아영FBC’ 와 함께한 프랑스 스파클링 와인 ‘LUC BELAIRE’ 의 광고영상제작기.`,
         subItems: [
             {
@@ -230,7 +236,6 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 12,
         title: `6개월간의 대장정 DOCUMENTARY 'WHO IS JUNEONE?' 제작기.`,
         subItems: [
             {
@@ -255,7 +260,6 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 13,
         title: `뮤지션 진보(JINBO·본명 한주현) 과 함께한 ‘비싸' 뮤직비디오 제작기.`,
         subItems: [
             {
@@ -277,7 +281,6 @@ export const noteList = [
         solution: [],
     },
     {
-        id: 14,
         title: `뮤지션 진보(JINBO·본명 한주현) 과 함께한 전시회 필름제작.`,
         subItems: [
             {
