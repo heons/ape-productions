@@ -36,6 +36,8 @@ const Menu = ({ category, pathname }) => {
             </Navbar.Brand>
         </LinkContainer>
 
+    const artistInfosMenu = artistInfos.filter(info => info.subItems.length > 0);
+
     return (
         <div className='MenuM'>
             {titleOnTop}
@@ -48,7 +50,7 @@ const Menu = ({ category, pathname }) => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <NavDropdown title="FILM" className="dropdown-film">
-                                {artistInfos.map((artist, index) => {
+                                {artistInfosMenu.map((artist, index) => {
                                     return (
                                         <LinkContainer
                                             key={`film-${index}`}
