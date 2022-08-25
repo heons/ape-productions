@@ -39,10 +39,6 @@ export const artistInfos = [
         title: `SM ENTERTAINMENT`,
         subItems: [
             {
-                title: `Teayeon ‘Sorrow’ Studio Live`,
-                url: 'https://player.vimeo.com/video/485249062',
-            },
-            {
                 title: `MAX CHANGMIN 최강창민 | 바람이 분다 (이소라)`,
                 url: 'https://www.youtube.com/embed/oRq5rY-1TPg',
             },
@@ -72,10 +68,6 @@ export const artistInfos = [
             {
                 title: `DVWN ‘BAD KID!!!’ Official Live`,
                 url: 'https://player.vimeo.com/video/546375592',
-            },
-            {
-                title: `DVWN  ‘Norman Fucking Rockwell’ A Cover Live`,
-                url: 'https://player.vimeo.com/video/496160223',
             },
             {
                 title: `DVWN ‘free flight’ Official Live`,
@@ -143,28 +135,12 @@ export const artistInfos = [
                 url: 'https://player.vimeo.com/video/384788952',
             },
             {
-                title: `CAKESSHOP PARTY`,
-                url: 'https://player.vimeo.com/video/381299108',
-            },
-            {
                 title: `SOAPSEOUL CLUB SHOE COVER`,
                 url: 'https://player.vimeo.com/video/390325332',
             },
             {
-                title: `987 PARTY VIDEO`,
-                url: 'https://player.vimeo.com/video/379467324',
-            },
-            {
-                title: `PEACH`,
-                url: 'https://player.vimeo.com/video/381098725',
-            },
-            {
                 title: `DHL SPACE DECO`,
                 url: 'https://player.vimeo.com/video/418797726',
-            },
-            {
-                title: `DJ FS GREEN`,
-                url: 'https://player.vimeo.com/video/381097915',
             },
         ],
         sampleVideoSrc: 'video/APE_KOREAN_PARTYS.mp4',
@@ -200,14 +176,6 @@ export const artistInfos = [
         id: '8',
         title: 'A PICTURES BOOK MAKERS',
         subItems: [
-            {
-                title: 'LEE HEE EUN',
-                url: 'https://player.vimeo.com/video/493065854',
-            },
-            {
-                title: 'KIM JI ANN',
-                url: 'https://player.vimeo.com/video/493064042'
-            },
         ],
         sampleVideoSrc: 'video/APE_A_pictures_book_makers.mp4',
         initPos: {
