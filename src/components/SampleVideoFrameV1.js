@@ -1,9 +1,8 @@
 // Reference: For the animations - https://css-tricks.com/using-multi-step-animations-transitions/
 
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { computeSizeFromWidth } from '../utils'
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { computeSizeFromWidth } from "../utils";
 
 const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
   const [naturalSize, setNaturalSize] = useState({ width: 100, height: 100 });
@@ -20,50 +19,51 @@ const SampleVideoFrame = ({ artist, screenSize, targetPos, onMouseOver }) => {
   };
 
   const motionStyle = {
-    position: 'absolute',
-    transition: isMouseOver ? 'all 1s linear' : 'all 2s linear',
+    position: "absolute",
+    transition: isMouseOver ? "all 1s linear" : "all 2s linear",
     // transform: `translate(${newTargetPos.x}px, ${newTargetPos.y}px)`,
-    transform: isMouseOver ? `translate(${newTargetPos.x}px, ${newTargetPos.y}px) scale(1.5)` : `translate(${newTargetPos.x}px, ${newTargetPos.y}px)`,
+    transform: isMouseOver
+      ? `translate(${newTargetPos.x}px, ${newTargetPos.y}px) scale(1.5)`
+      : `translate(${newTargetPos.x}px, ${newTargetPos.y}px)`,
     zIndex: isMouseOver ? 4 : 3,
     opacity: isMouseOver ? 1 : 0.5,
+  };
 
-  }
+  const elemVideo = (
+    <video
+      className={isMouseOver ? "FilterAdditionalBrightness" : null}
+      src={`${process.env.PUBLIC_URL}/${artist.sampleVideoSrc}`}
+      width={size.width}
+      height={size.height}
+      preload="auto"
+      loop
+      muted
+      autoPlay
+      playsInline
+      onLoadedData={(response) => {
+        const { videoWidth, videoHeight } = response.target;
+        setNaturalSize({ width: videoWidth, height: videoHeight });
+      }}
+      onMouseOver={() => {
+        setIsMouseOver(true);
+        onMouseOver(artist.title);
+      }}
+      onMouseLeave={() => {
+        setIsMouseOver(false);
+        onMouseOver("");
+      }}
+    >
+      Your browser does not support the HTML5 Video element.
+    </video>
+  );
 
-  return (
-    <div style={motionStyle}>
-      <Link to={`/${artist.id}`}>
-        <video
-          className={isMouseOver ? "FilterAdditionalBrightness" : null}
-          src={`${process.env.PUBLIC_URL}/${artist.sampleVideoSrc}`}
-          width={size.width}
-          height={size.height}
-          preload="auto"
-          loop
-          muted
-          autoPlay
-          playsInline
-          onLoadedData={response => {
-            const { videoWidth, videoHeight } = response.target;
-            setNaturalSize({ width: videoWidth, height: videoHeight });
-          }}
-          onMouseOver={
-            () => {
-              setIsMouseOver(true);
-              onMouseOver(artist.title);
-            }
-          }
-          onMouseLeave={
-            () => {
-              setIsMouseOver(false);
-              onMouseOver("");
-            }
-          }
-        >
-          Your browser does not support the HTML5 Video element.
-        </video>
-      </Link>
-    </div>
-  )
-}
+  const elemWithLink = artist.hasDetailPage ? (
+    <Link to={artist.hasDetailPage ? `/${artist.id}` : `/`}>{elemVideo}</Link>
+  ) : (
+    elemVideo
+  );
 
-export default SampleVideoFrame
+  return <div style={motionStyle}>{elemWithLink}</div>;
+};
+
+export default SampleVideoFrame;
