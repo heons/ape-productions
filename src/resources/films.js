@@ -224,6 +224,10 @@ export const artistInfos = [
   },
 ];
 
+// Init Ids
+let cntId = 1;
+artistInfos.forEach((item) => (item.id = `${cntId++}`));
+
 export const getInitSampleArtistsInfo = () => {
   const artistsWithSampleVideo = artistInfos.filter(
     (artist) => artist.sampleVideoSrc
