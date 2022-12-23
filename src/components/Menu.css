@@ -97,7 +97,7 @@
 
 .dropdown-film .dropdown-menu {
   height: 50vh;
-  max-height: 350px;
+  max-height: 280px; /* 1item: 35, TODO: find way to override. .dropdown-menu is hidden class? */
   background-color: black !important;
   overflow-y: scroll !important;
   -ms-overflow-style: none;  /* IE and Edge */
