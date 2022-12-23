@@ -4,7 +4,15 @@ const lineOffstX = 50;
 
 export const artistInfos = [
   {
-    id: "1",
+    title: "VERNON 'Black Eye' Official MV",
+    subItems: [
+      {
+        title: "VERNON 'Black Eye' Official MV",
+        url: "https://www.youtube.com/embed/vPQasPdd6fI",
+      },
+    ],
+  },
+  {
     title: `Glen Check`,
     subItems: [
       {
@@ -35,7 +43,6 @@ export const artistInfos = [
     },
   },
   {
-    id: "2",
     title: `SM ENTERTAINMENT`,
     subItems: [
       {
@@ -58,7 +65,6 @@ export const artistInfos = [
     },
   },
   {
-    id: "3",
     title: "KOZ ENTERTAINMENT",
     subItems: [
       {
@@ -89,7 +95,6 @@ export const artistInfos = [
     },
   },
   {
-    id: "4",
     title: "ADIDAS x MUSINSA (EK, BIG ONE)",
     subItems: [],
     sampleVideoSrc: "video/APE_musinsa_adidas_ape.mp4",
@@ -103,7 +108,6 @@ export const artistInfos = [
     },
   },
   {
-    id: "5",
     title: "Luc Belaire",
     subItems: [],
     sampleVideoSrc: "video/APE_Luc_Belaire.mp4",
@@ -117,7 +121,6 @@ export const artistInfos = [
     },
   },
   {
-    id: "6",
     title: "KOREAN PARTYS",
     subItems: [
       {
@@ -144,7 +147,6 @@ export const artistInfos = [
     },
   },
   {
-    id: "7",
     title: `Who Is June One? | Documentary`,
     subItems: [
       {
@@ -163,7 +165,6 @@ export const artistInfos = [
     },
   },
   {
-    id: "8",
     title: "A PICTURES BOOK MAKERS",
     subItems: [],
     sampleVideoSrc: "video/APE_A_pictures_book_makers.mp4",
@@ -177,7 +178,6 @@ export const artistInfos = [
     },
   },
   {
-    id: "9",
     title: "JINBO THE SUPERFREAK",
     subItems: [
       {
@@ -200,7 +200,6 @@ export const artistInfos = [
     },
   },
   {
-    id: "10",
     title: "BLEACH DIARIES",
     subItems: [
       {
