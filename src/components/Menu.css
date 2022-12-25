@@ -7,6 +7,10 @@
   font-size: 2.0em;
   text-align: left;
 }
+/* x times of MunuM*/
+.MenuM .title {
+  font-size: 1.3em;
+}
 .MenuM .navbar-brand{
   font-size: 2.0em;
 }
@@ -14,6 +18,10 @@
 @media (max-width: 1280px) {
   .MenuM{
     font-size: 1.7em;
+  }
+  /* x times of MunuM*/
+  .MenuM .title{
+    font-size: 1.3em; 
   }
   .MenuM .navbar-brand{
     font-size: 1.7em;
@@ -23,7 +31,11 @@
   .MenuM{
     font-size: 1.3em;
   }
-  .MenuM .navbar-brand{
+  /* x times of MunuM*/
+  .MenuM .title {
+    font-size: 1.3em;
+  }
+.MenuM .navbar-brand{
     font-size: 1.3em;
   }
 }
