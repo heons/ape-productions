@@ -75,7 +75,7 @@ const Menu = ({ category, pathname }) => {
                   );
                 })}
               </NavDropdown>
-              <Nav.Link
+              {/* <Nav.Link
                 as={Link}
                 eventKey="photo-1"
                 to={pathname === "/photo/0" ? `/` : `/photo/0`}
@@ -84,7 +84,7 @@ const Menu = ({ category, pathname }) => {
                 }}
               >
                 PHOTO
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link
                 as={Link}
                 eventKey="dvd-1"
@@ -95,7 +95,7 @@ const Menu = ({ category, pathname }) => {
               >
                 DVD
               </Nav.Link>
-              <Nav.Link
+              {/* <Nav.Link
                 as={Link}
                 eventKey="note-1"
                 to={category === "note" ? `/` : `/?category=${"note"}`}
@@ -104,7 +104,7 @@ const Menu = ({ category, pathname }) => {
                 }}
               >
                 NOTE
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link
                 as={Link}
                 eventKey="client-1"
