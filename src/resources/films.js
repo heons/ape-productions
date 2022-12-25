@@ -13,36 +13,6 @@ export const artistInfos = [
     ],
   },
   {
-    title: `Glen Check`,
-    subItems: [
-      {
-        title: `I Feel Like Ridin Slow`,
-        url: "https://www.youtube.com/embed/bdKnGhK1ySI",
-      },
-      {
-        title: `Blush (ft. sokodomo)`,
-        url: "https://www.youtube.com/embed/uCGpI6Vt4c4",
-      },
-      {
-        title: `Sins`,
-        url: "https://www.youtube.com/embed/6pFG-VYxr9Q",
-      },
-      {
-        title: `4ever`,
-        url: "https://www.youtube.com/embed/GeTz0DkHZvo",
-      },
-    ],
-    sampleVideoSrc: "video/APE_sins.mp4",
-    initPos: {
-      x: 0,
-      y: 0,
-    },
-    seedPos: {
-      x: 0,
-      y: 0,
-    },
-  },
-  {
     title: `SM ENTERTAINMENT`,
     subItems: [
       {
@@ -88,6 +58,36 @@ export const artistInfos = [
     initPos: {
       x: lineOffstX + distX * 2,
       y: distY,
+    },
+    seedPos: {
+      x: 0,
+      y: 0,
+    },
+  },
+  {
+    title: `Glen Check`,
+    subItems: [
+      {
+        title: `I Feel Like Ridin Slow`,
+        url: "https://www.youtube.com/embed/bdKnGhK1ySI",
+      },
+      {
+        title: `Blush (ft. sokodomo)`,
+        url: "https://www.youtube.com/embed/uCGpI6Vt4c4",
+      },
+      {
+        title: `Sins`,
+        url: "https://www.youtube.com/embed/6pFG-VYxr9Q",
+      },
+      {
+        title: `4ever`,
+        url: "https://www.youtube.com/embed/GeTz0DkHZvo",
+      },
+    ],
+    sampleVideoSrc: "video/APE_sins.mp4",
+    initPos: {
+      x: 0,
+      y: 0,
     },
     seedPos: {
       x: 0,
