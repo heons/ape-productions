@@ -1,4 +1,5 @@
 .App {
+  font-family: 'AkiraExpanded';
   text-align: center;
   background-color: black;
   min-height: 100vh;
@@ -11,7 +12,8 @@
 .App h1 {
   margin: 0.1em 0;
   color: white;
-  font-weight: bold;
+  font-weight: normal;
+  font-family: 'AkiraExpanded';
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 

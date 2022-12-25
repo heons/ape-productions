@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'AkiraExpanded';
+  font-weight: 300;
+  src: url('./AkiraExpanded.otf') format('opentype');
+}
+
 body {
   margin: 0;
   font-family: 'Helvetica', 'Helvetica Neue', 'Segoe UI', 'Roboto', 'Oxygen',
