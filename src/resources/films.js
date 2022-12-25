@@ -4,7 +4,7 @@ const lineOffstX = 50;
 
 export const artistInfos = [
   {
-    title: "VERNON 'Black Eye' Official MV",
+    title: "PLEDIS ENTERTAINMENT",
     subItems: [
       {
         title: "VERNON 'Black Eye' Official MV",
