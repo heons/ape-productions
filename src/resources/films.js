@@ -4,6 +4,15 @@ const lineOffstX = 50;
 
 export const artistInfos = [
   {
+    title: "AOMG",
+    subItems: [
+      {
+        title: "DJ Wegun - 'Ground Zero (Feat. 펀치넬로) Official Music Video",
+        url: "https://www.youtube.com/embed/zhIlt7qdsV8",
+      },
+    ],
+  },
+  {
     title: "PLEDIS ENTERTAINMENT",
     subItems: [
       {
