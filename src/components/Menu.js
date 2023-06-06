@@ -95,7 +95,7 @@ const Menu = ({ category, pathname }) => {
               >
                 DVD
               </Nav.Link>
-              {/* <Nav.Link
+              <Nav.Link
                 as={Link}
                 eventKey="note-1"
                 to={category === "note" ? `/` : `/?category=${"note"}`}
@@ -104,7 +104,7 @@ const Menu = ({ category, pathname }) => {
                 }}
               >
                 NOTE
-              </Nav.Link> */}
+              </Nav.Link>
               <Nav.Link
                 as={Link}
                 eventKey="client-1"
