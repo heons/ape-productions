@@ -131,7 +131,7 @@ export const noteList = [
         title: `뮤지션 Dvwn '서쪽 끝자리에 서서’.`,
         subItems: [
             {
-                url: `https://player.vimeo.com/video/496160223`,
+                url: `https://www.youtube.com/embed/G-uMzkrpELE`,
                 ratio: `16:9`,
             },
         ],
@@ -149,7 +149,7 @@ export const noteList = [
         title: `Donny Hathaway ‘This Christmas’ A Cover Live by Dvwn & SOLE.`,
         subItems: [
             {
-                url: `https://player.vimeo.com/video/493617230`,
+                url: `https://www.youtube.com/embed/S1h2fvrvahQ`,
                 ratio: `16:9`,
             },
         ],
@@ -166,7 +166,7 @@ export const noteList = [
         title: `Teayeon ‘Sorrow’ Studio Live.`,
         subItems: [
             {
-                url: `https://player.vimeo.com/video/485249062`,
+                url: `https://www.youtube.com/embed/rZO7Fe-6pxo`,
                 ratio: `16:9`,
             },
         ],
