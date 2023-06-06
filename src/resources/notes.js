@@ -181,61 +181,6 @@ export const noteList = [
         solution: [],
     },
     {
-        title: `'NEW LOVE' ONEHUNNNIT 20FW FILM.`,
-        subItems: [
-            {
-                url: `https://player.vimeo.com/video/460090338`,
-                ratio: `16:9`,
-            },
-        ],
-        content: [
-            `우리를 살아있게 하고 숨쉬게 하는 것들은 어떤 것이 있을까?`,
-            `제일 먼저 생각나는 건 '사랑'이다.`,
-            `모든 것에 감사할 줄 알며 서로를 위해 따뜻하게 감싸줄 수 있는 것.`,
-            `사랑에는 종류가 많지만 남녀 간에 사랑에는 하는 순간부터 시작의 행복과 언젠간 끝나게 될 거라는 불안의 크기가 비례한다.`,
-            `그렇기에 '새로운 사랑'은 시간이 지날수록 더 빠져들기 힘겨워지며 자신을 보호하는 마음속에 벽을 만들어 낸다.`,
-            `결국 자신을 사랑하는 법을 배우고 난 다음에야 다른 것들을 사랑하는 법을 배우기에 더 사랑하는 법을 배우는 계기가 되었던 작업이었다.`,
-        ],
-        summary: [],
-        needs: [],
-        solution: [],
-    },
-    {
-        title: `뮤지션 BLOO(본명 김현웅)와 함께한 아이즈매거진 촬영기.`,
-        subItems: [
-            {
-                url: `https://player.vimeo.com/video/443831300`,
-                ratio: `16:9`,
-            },
-        ],
-        content: [
-            `‘놀면 뭐하니' 이효리의 선곡으로 2년만에 음원차트 역주행에 성공한 ‘Downtown baby’의 주인공 ‘BLOO’의 촬영을 요청하는 연락이 왔다.`,
-            `뮤직비디오나 SNS를 통해서 본 그의 몸짓과 연기는 수준급이라는 생각에 촬영전부터 기대가 되었다.`,
-            `약간은 무거운듯한 실내의 분위기 속에서 촬영이 시작되었지만 결과물 자체는 원했던 그림 만큼 나오게 된 것 같아 보람찬 작업이었다.`,
-            `차가운 얼굴 속에 소년같은 함박 미소를 띄고 있었던 ‘BLOO’. 그의 행보에 희망찬 응원의 박수를 보낸다.`,
-
-        ],
-        summary: [],
-        needs: [],
-        solution: [],
-    },
-    {
-        title: `A journey with 'LUC BELAIRE' : 주류회사 ‘아영FBC’ 와 함께한 프랑스 스파클링 와인 ‘LUC BELAIRE’ 의 광고영상제작기.`,
-        subItems: [
-            {
-                url: `https://player.vimeo.com/video/443832322`,
-                ratio: `1:1`,
-            },
-        ],
-        content: [
-            `프랑스 스파클링 와인 ‘LUC BELAIRE’가 지향하는 올카인드 컬쳐문화 도약의 의지를 담아 대중들이 
-            흥미를 가지고 볼 수 있는 패션필름적 재해석을 통한 광고를 기획 제작.`,
-        ],
-        summary: [],
-        needs: [],
-        solution: [],
-    },
-    {
         title: `6개월간의 대장정 DOCUMENTARY 'WHO IS JUNEONE?' 제작기.`,
         subItems: [
             {
