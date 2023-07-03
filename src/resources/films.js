@@ -19,6 +19,10 @@ export const artistInfos = [
         title: "VERNON 'Black Eye' Official MV",
         url: "https://www.youtube.com/embed/vPQasPdd6fI",
       },
+      {
+        title: "[SPECIAL VIDEO] VERNON - 'Black Eye' Band Live Session",
+        url: "https://www.youtube.com/embed/AJIzboxLYKk",
+      },
     ],
   },
   {
