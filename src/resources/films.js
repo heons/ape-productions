@@ -4,15 +4,6 @@ const lineOffstX = 50;
 
 export const artistInfos = [
   {
-    title: "AOMG",
-    subItems: [
-      {
-        title: "DJ Wegun - 'Ground Zero (Feat. 펀치넬로) Official Music Video",
-        url: "https://www.youtube.com/embed/zhIlt7qdsV8",
-      },
-    ],
-  },
-  {
     title: "PLEDIS ENTERTAINMENT",
     subItems: [
       {
@@ -22,6 +13,24 @@ export const artistInfos = [
       {
         title: "[SPECIAL VIDEO] VERNON - 'Black Eye' Band Live Session",
         url: "https://www.youtube.com/embed/AJIzboxLYKk",
+      },
+    ],
+  },
+  {
+    title: "AOMG",
+    subItems: [
+      {
+        title: "DJ Wegun - 'Ground Zero (Feat. 펀치넬로) Official Music Video",
+        url: "https://www.youtube.com/embed/zhIlt7qdsV8",
+      },
+    ],
+  },
+  {
+    title: "The dial music",
+    subItems: [
+      {
+        title: "BIGONE (빅원) - Pop Punk (feat. Dive, 도한세)",
+        url: "https://www.youtube.com/embed/6-7Jr0WHIyE",
       },
     ],
   },
