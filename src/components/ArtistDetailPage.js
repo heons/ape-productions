@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { Helmet } from "react-helmet-async";
+
+import SEO from "./SEO";
 import DvdItem from "./DvdItem";
 import { getBasePageStyle } from "../utils";
 
@@ -21,11 +22,12 @@ const ArtistDetailPage = ({ match }) => {
     overflowY: "auto",
   };
 
+  const itemTitles = artist.subItems.map(item => item.title);
+  const description = `${artist.title}, ${itemTitles.join(", ")}`;
+
   return (
     <div className="PagePaddingTop" style={pageStyle}>
-      <Helmet>
-        <title>{`OH EUN HO - ${artist.title}`}</title>
-      </Helmet>
+      <SEO title={`OH EUN HO - ${artist.title}`} description={description}/>
       <h1 style={{ textAlign: "center" }}>{artist && artist.title}</h1>
 
       <Container>

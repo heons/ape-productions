@@ -1,7 +1,7 @@
 import "./ArtistDetail.css";
 import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
-import { Helmet } from "react-helmet-async";
+import SEO from "./SEO";
 
 // Resources
 import { getArtistDetailById } from "../resources/films";
@@ -24,9 +24,7 @@ const ArtistDetail = ({ match }) => {
 
   return (
     <div className="ArtistDetail">
-      <Helmet>
-        <title>{`OH EUN HO - ${artist.title}`}</title>
-      </Helmet>
+      <SEO title={`OH EUN HO - ${artist.title}`}/>
       <h1>{artist && artist.title}</h1>
       <Carousel
         interval={null}

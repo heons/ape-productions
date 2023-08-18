@@ -1,14 +1,18 @@
 import './App.css';
 import { useEffect } from 'react';
 import { Route, withRouter } from 'react-router-dom';
+
+import qs from 'qs';
+import ReactGA from 'react-ga';
+
 import Home from './components/Home';
 import Menu from './components/Menu';
 // import ArtistDetail from './components/ArtistDetail';
 import ArtistDetailPage from './components/ArtistDetailPage';
 import PhotoList from './components/PhotoList';
-import qs from 'qs';
+import SEO from './components/SEO';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ReactGA from 'react-ga';
 
 function App({ location }) {
     const query = qs.parse(location.search, { ignoreQueryPrefix: true });
@@ -28,6 +32,11 @@ function App({ location }) {
             style = {{"border": "1px solid black"}}>
                 {}
             </canvas> */}
+            <SEO 
+                title={`OH EUN HO`} 
+                description={`OH EUN HO production`}
+                keywords={'OH EUN HO, OH EUNHO, EUNHO OH, 오은호, artist, 아티스트, film director, 필름 디렉터'}
+            />
             <Menu category={query.category} pathname={location.pathname} />
             <Route
                 path={`/`}
