@@ -12,9 +12,12 @@ import { getArtistDetailById } from "../resources/films";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
 const ArtistDetailPage = ({ match }) => {
-  const artist = getArtistDetailById(match.params.id);
-
   const { height, width } = useWindowDimensions();
+
+  const artist = getArtistDetailById(match.params.id);
+  if (!artist) {
+    return null;
+  }
 
   const pageStyle = {
     ...getBasePageStyle(width, height, 1),
