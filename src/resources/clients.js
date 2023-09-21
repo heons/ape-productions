@@ -44,4 +44,5 @@ export const clientArtistList = [
   "JINBO THE SUPERFREAK",
   "MBA EK",
   "BIG ONE",
+  "GENNEO",
 ];

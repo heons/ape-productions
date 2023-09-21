@@ -105,8 +105,30 @@ export const artistInfos = [
         title: `4ever`,
         url: "https://www.youtube.com/embed/GeTz0DkHZvo",
       },
+      {
+        title: `One Right Now (The Weekend, Post Malone)`,
+        url: "https://www.youtube.com/embed/7DlFWVzZMYU",
+      },
     ],
     sampleVideoSrc: "video/APE_sins.mp4",
+    initPos: {
+      x: 0,
+      y: 0,
+    },
+    seedPos: {
+      x: 0,
+      y: 0,
+    },
+  },
+  {
+    title: `GENNEO`,
+    subItems: [
+      {
+        title: `Stay`,
+        url: "https://www.youtube.com/embed/3HE5ArkOSZ0",
+      },
+    ],
+    // sampleVideoSrc: 'none',
     initPos: {
       x: 0,
       y: 0,
