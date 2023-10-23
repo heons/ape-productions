@@ -265,6 +265,24 @@ export const artistInfos = [
       y: 0,
     },
   },
+  {
+    title: "TAMAGO PRODUTION ",
+    subItems: [
+      {
+        title: "QWER 'Discord (디스코드)' Official MV",
+        url: "https://www.youtube.com/embed/WGm2HmXeeRI",
+      },
+    ],
+    // sampleVideoSrc: 'none',
+    initPos: {
+      x: lineOffstX,
+      y: distY,
+    },
+    seedPos: {
+      x: 0,
+      y: 0,
+    },
+  },
 ];
 
 // Init Ids
