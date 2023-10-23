@@ -26,6 +26,8 @@ function App({ location }) {
   }, []);
   // ReactGA.ga('send', 'event', 'Video', 'play', 'cats.mp4', { dimension1: 'UserGroup1' });
 
+  const description = 'EUNHO OH is a film director who is focused on documenting the most richest and unseen experiences found within the various music scenes and culture.';
+
   return (
     <div className="App">
       {/* <canvas id="canvas_test" width = "600" height = "600"
@@ -34,7 +36,7 @@ function App({ location }) {
             </canvas> */}
       <SEO
         title={`OH EUN HO`}
-        description={`OH EUN HO production`}
+        description={description}
         keywords={'OH EUN HO, OH EUNHO, EUNHO OH, 오은호, artist, 아티스트, film director, 필름 디렉터'}
       />
       <Menu category={query.category} pathname={location.pathname} />
