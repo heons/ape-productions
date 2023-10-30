@@ -26,6 +26,15 @@ export const artistInfos = [
     ],
   },
   {
+    title: "YOU.WILL.KNOVV",
+    subItems: [
+      {
+        title: "Tabber - Being (feat. 백예린) (Official Video)",
+        url: "https://www.youtube.com/embed/JWqb9mSTnD8",
+      },
+    ],
+  },
+  {
     title: "The dial music",
     subItems: [
       {
