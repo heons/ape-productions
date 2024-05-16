@@ -4,8 +4,21 @@ const lineOffstX = 50;
 
 export const artistInfos = [
   {
+    title: "THE BOYZ",
+    subItems: [
+      {
+        title: "THE BOYZ(더보이즈) Special Unit ‘Honey’ MV",
+        url: "https://www.youtube.com/embed/JEqSqfAXN4g",
+      },
+    ],
+  },
+  {
     title: "PLEDIS ENTERTAINMENT",
     subItems: [
+      {
+        title: "BAEKHO&BIGONE 'Love or Die' Official MV",
+        url: "https://www.youtube.com/embed/zB8u4jkJMYI",
+      },
       {
         title: "VERNON 'Black Eye' Official MV",
         url: "https://www.youtube.com/embed/vPQasPdd6fI",
@@ -275,11 +288,47 @@ export const artistInfos = [
     },
   },
   {
-    title: "TAMAGO PRODUTION ",
+    title: "TAMAGO PRODUTION",
     subItems: [
       {
         title: "QWER 'Discord (디스코드)' Official MV",
         url: "https://www.youtube.com/embed/WGm2HmXeeRI",
+      },
+    ],
+    // sampleVideoSrc: 'none',
+    initPos: {
+      x: lineOffstX,
+      y: distY,
+    },
+    seedPos: {
+      x: 0,
+      y: 0,
+    },
+  },
+  {
+    title: "CONVERSE X KASINA",
+    subItems: [
+      {
+        title: "CONVERSE X KASINA",
+        url: "https://player.vimeo.com/video/944704181",
+      },
+    ],
+    // sampleVideoSrc: 'none',
+    initPos: {
+      x: lineOffstX,
+      y: distY,
+    },
+    seedPos: {
+      x: 0,
+      y: 0,
+    },
+  },
+  {
+    title: "VANS BY RAREBIRTH",
+    subItems: [
+      {
+        title: "VANS BY RAREBIRTH",
+        url: "https://player.vimeo.com/video/944410387",
       },
     ],
     // sampleVideoSrc: 'none',
