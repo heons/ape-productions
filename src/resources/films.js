@@ -4,6 +4,23 @@ const lineOffstX = 50;
 
 export const artistInfos = [
   {
+    title: "EVAN",
+    subItems: [
+      {
+        title: "EVAN - Star Below (Feat. pH-1) (Official Video)",
+        url: "https://www.youtube.com/embed/zepkkqREZe8",
+      },
+      {
+        title: "EVAN - 1 (Feat. Coogie)",
+        url: "https://www.youtube.com/embed/NhvWxs_lF_M",
+      },
+      {
+        title: "EVAN - Can’t Help It (Official Video)",
+        url: "https://www.youtube.com/embed/Wu5ZLlIqXlY",
+      },
+    ],
+  },
+  {
     title: "THE BOYZ",
     subItems: [
       {
